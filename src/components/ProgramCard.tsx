@@ -1,27 +1,35 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { MainCarousel } from './MainCarousel';
+import { theme } from '../theme/theme';
 
 const Container = styled.div`
   padding: 40px 0;
   background: #f8f9fa;
-  min-height: 100vh;
+  height: 100vh;
 
   @media (max-width: 768px) {
     padding: 20px 0;
   }
 `;
 
-const Title = styled.h1`
+const Title = styled.h3`
   text-align: center;
-  font-size: 32px;
-  font-weight: 700;
-  color: #333;
+  font-size: ${({ theme }) => theme.fontSizes.md};
+  font-weight: ${({ theme }) => theme.fontWeights.medium};
+  color: ${({ theme }) => theme.colors.text};
   margin-bottom: 40px;
+  line-height: 1.6;
 
   @media (max-width: 768px) {
-    font-size: 24px;
+    font-size: ${({ theme }) => theme.fontSizes.md};
     margin-bottom: 24px;
+  }
+
+  h3 {
+    margin: 0 8px;  
+    display: inline-block;
+    color: ${({ theme }) => theme.colors.primary};
   }
 `;
 
@@ -39,23 +47,33 @@ const ProgramSelector = styled.div`
 `;
 
 const ProgramButton = styled.button<{ $isActive: boolean }>`
+  border: none;
+  border-radius: 0;
+
+  background: transparent;
+  border-bottom: 4px solid ${({ $isActive, theme }) => $isActive ? theme.colors.primary : 'transparent'};
+  color: ${({ theme }) => theme.colors.text};
   padding: 12px 24px;
-  border: 2px solid ${({ $isActive, theme }) => $isActive ? theme.colors.primary : '#ddd'};
-  background: ${({ $isActive, theme }) => $isActive ? theme.colors.primary : 'white'};
-  color: ${({ $isActive, theme }) => $isActive ? 'white' : theme.colors.text};
-  border-radius: 8px;
   cursor: pointer;
   font-weight: 600;
+  font-size: 16px;
   transition: all 0.3s ease;
+  position: relative;
+  margin-right: 4px;
 
   &:hover {
+   border: none;
+  border-radius: 0;
+
     background: ${({ $isActive, theme }) => $isActive ? theme.colors.primary : theme.colors.primaryHover};
-    color: white;
+    color: ${({ $isActive }) => $isActive ? 'white' : 'white'};
   }
 
+  // 모바일 
   @media (max-width: 768px) {
-    padding: 8px 16px;
+    padding: 10px 16px;
     font-size: 14px;
+    margin-right: 2px;
   }
 `;
 
@@ -63,103 +81,84 @@ const ProgramButton = styled.button<{ $isActive: boolean }>`
 const programData = {
   SS: {
     title: '파라스파 : SS',
-    cards: [
-      {
-        id: 'ss-1',
-        images: [
-          '/src/assets/carousel1.jpg',
-          '/src/assets/carousel2.jpg',
-          '/src/assets/carousel3.jpg',
-        ],
-        title: '파라스파 SS 프로그램',
-        content: '파라스파 SS는 최고급 탈모 치료 프로그램입니다. 혁신적인 기술과 검증된 방법을 통해 탈모 문제를 근본적으로 해결합니다.',
-      },
-      {
-        id: 'ss-2',
-        images: [
-          '/src/assets/carousel2.jpg',
-          '/src/assets/carousel3.jpg',
-          '/src/assets/carousel4.jpg',
-        ],
-        title: 'SS 특화 치료',
-        content: '개인 맞춤형 치료 계획을 통해 각 환자의 상태에 최적화된 치료를 제공합니다.',
-      },
-    ]
+    card: {
+      id: 'ss-1',
+      images: [
+        '/src/assets/ss1.jpg',
+        '/src/assets/ss2.jpg',
+      ],
+      title: '파라스파 KEY POINT',
+      content: `
+
+      <h3>
+      ✓ 탄산 클리닉
+      </h3>
+      <br />
+      · 모리셋 탄산 클리닉은 모공을 막는 피지 얼룩을 제거하여 두피 혈액 촉진을 도모하며, 모발과 모공에 남아있는 샴푸 찌꺼기나 염색 잔여물 또는 미세먼지를 말끔히 제거하여 헤모글로빈 모발 클리닉의 흡수율을 높여줍니다. 
+      <br />
+      · 모리셋 탄산 클리닉은 단순히 두피 스케일링에만 집중하는 것이 아닌 두피 면역력을 키울 수 있도록 줄기세포까지 영양투하하는 솔루션입니다. 
+      <br />
+      · 탄산 클리닉에 주가 되는 탄산 성분은 모발 내 이산화탄소를 일시적으로 증가시켜 두피의 산소 흡수율을 높이고, 혈관을 확장하여 혈액순
+
+      <br />
+      <br />
+      <h3>
+      ✓ 헤모글로빈 모발 클리닉 
+      </h3>
+      <br />
+      · 산소를 운반하는 적혈구의 주 구성 요소인 헤모글로빈은 단백질과 결합하여 손상된 모발을 회복시킵니다. 
+      <br />
+      · 드라이, 염색, 매직 등을 자주하는 고객님께 효과가 큰 프리미엄 모발 클리닉입니다. 
+      <br />
+      <br />      
+
+      <h3>
+      ✓ 추천대상
+      </h3>
+      <br />
+      · 샴푸를해도 피지, 각질이 제거가 안되시는 분
+      <br />
+      · 염색이나 펌을 주기적으로 하시는 분
+      <br />
+      · 두피가 가렵고 기름지는 지루성두피이신 분
+      `,
+    },
   },
   SC: {
     title: '모낭플란트 : SC',
-    cards: [
-      {
-        id: 'sc-1',
-        images: [
-          '/src/assets/carousel3.jpg',
-          '/src/assets/carousel4.jpg',
-          '/src/assets/carousel1.jpg',
-        ],
-        title: '모낭플란트 SC 프로그램',
-        content: '모낭플란트 SC는 모낭 이식 전문 프로그램입니다. 정밀한 기술로 자연스러운 모발 복원을 실현합니다.',
-      },
-      {
-        id: 'sc-2',
-        images: [
-          '/src/assets/carousel4.jpg',
-          '/src/assets/carousel1.jpg',
-          '/src/assets/carousel2.jpg',
-        ],
-        title: 'SC 고급 기술',
-        content: '최신 모낭 이식 기술을 활용하여 최고의 결과를 보장합니다.',
-      },
-    ]
+    card:{
+      id: 'ss-1',
+      images: [
+        '/src/assets/ss1.jpg',
+        '/src/assets/ss2.jpg',
+      ],
+      title: '파라스파 SS 프로그램',
+      content: '파라스파 SS는 최고급 탈모 치료 프로그램입니다. 혁신적인 기술과 검증된 방법을 통해 탈모 문제를 근본적으로 해결합니다.',
+    },
   },
   SR: {
     title: '모플란트 : SR',
-    cards: [
-      {
-        id: 'sr-1',
-        images: [
-          '/src/assets/carousel1.jpg',
-          '/src/assets/carousel3.jpg',
-          '/src/assets/carousel4.jpg',
-        ],
-        title: '모플란트 SR 프로그램',
-        content: '모플란트 SR은 종합적인 탈모 치료 솔루션입니다. 다양한 치료 방법을 조합하여 최적의 효과를 달성합니다.',
-      },
-      {
-        id: 'sr-2',
-        images: [
-          '/src/assets/carousel2.jpg',
-          '/src/assets/carousel4.jpg',
-          '/src/assets/carousel1.jpg',
-        ],
-        title: 'SR 통합 치료',
-        content: '약물 치료부터 수술까지 모든 영역을 포괄하는 통합 치료 시스템입니다.',
-      },
-    ]
+    card: {
+      id: 'ss-1',
+      images: [
+        '/src/assets/ss1.jpg',
+        '/src/assets/ss2.jpg',
+      ],
+      title: '파라스파 SS 프로그램',
+      content: '파라스파 SS는 최고급 탈모 치료 프로그램입니다. 혁신적인 기술과 검증된 방법을 통해 탈모 문제를 근본적으로 해결합니다.',
+    },
   },
   ST: {
     title: 'Cindy : ST',
-    cards: [
-      {
-        id: 'st-1',
-        images: [
-          '/src/assets/carousel3.jpg',
-          '/src/assets/carousel1.jpg',
-          '/src/assets/carousel2.jpg',
-        ],
-        title: 'Cindy ST 프로그램',
-        content: 'Cindy ST는 여성 전용 탈모 치료 프로그램입니다. 여성의 특성을 고려한 맞춤형 치료를 제공합니다.',
-      },
-      {
-        id: 'st-2',
-        images: [
-          '/src/assets/carousel4.jpg',
-          '/src/assets/carousel2.jpg',
-          '/src/assets/carousel3.jpg',
-        ],
-        title: 'ST 여성 특화',
-        content: '여성의 호르몬 특성과 탈모 패턴을 분석하여 최적의 치료 방법을 제시합니다.',
-      },
-    ]
+    card: {
+      id: 'ss-1',
+      images: [
+        '/src/assets/ss1.jpg',
+        '/src/assets/ss2.jpg',
+      ],
+      title: '파라스파 SS 프로그램',
+      content: '파라스파 SS는 최고급 탈모 치료 프로그램입니다. 혁신적인 기술과 검증된 방법을 통해 탈모 문제를 근본적으로 해결합니다.',
+    },
   }
 };
 
@@ -167,6 +166,7 @@ export const ProgramCard = () => {
   const [selectedProgram, setSelectedProgram] = useState<string>('SS');
   const [initialIndex, setInitialIndex] = useState<number>(0);
   const [isInitialized, setIsInitialized] = useState<boolean>(false);
+  const [title, setTitle] = useState<string>('프로그램 소개');
 
   useEffect(() => {
     // localStorage에서 선택된 프로그램 확인
@@ -200,16 +200,47 @@ export const ProgramCard = () => {
 
   const currentProgram = programData[selectedProgram as keyof typeof programData];
 
-  // 프로그램 타입별로 Carousel 인덱스 설정
-  const getCarouselIndex = (programType: string) => {
-    switch (programType) {
-      case 'SS': return 0;
-      case 'SC': return 0;
-      case 'SR': return 0;
-      case 'ST': return 0;
-      default: return 0;
+  useEffect(() => {
+    switch (selectedProgram) {
+      case 'SS':
+        setTitle(
+
+`
+두피의 원인과 증상을 정확히 파악해 
+<br />
+두피 유수분 밸런스와 피지산화물을 제거하여 두피환경을 개선하는 프로그램`
+
+        );
+        break;
+      case 'SC':
+        setTitle(
+`
+ 모낭까지 영양분을 주입시키는 국내유일 비침습 탈모 특허기술
+<br />
+탈모완화에 도움되는 쏘팔메토 줄기세포를 두피에 투하하여
+<br />
+약해진 헤어사이클을 정상으로 되돌려 발모 촉진
+`
+
+
+        );
+        break;
+      case 'SR':
+        setTitle(`
+          모낭 플란트 이후 요요현상이 없이 모발의 성장기를 지연시켜
+<br />
+최소 2년에서 7년 까지 모발굵기, 밀도, 윤기, 흰머리 지연시키는 단계
+          `);
+        break;
+      case 'ST':
+        setTitle(``);
+        break;
+      default:
+        setTitle('프로그램 소개');
+        break;
     }
-  };
+
+  }, [selectedProgram]);
 
   // 초기화가 완료되지 않았으면 로딩 상태 표시
   if (!isInitialized) {
@@ -221,10 +252,10 @@ export const ProgramCard = () => {
     );
   }
 
+  
+
   return (
     <Container>
-      <Title>프로그램 소개</Title>
-      
       <ProgramSelector>
         {Object.keys(programData).map((programType) => (
           <ProgramButton
@@ -237,8 +268,10 @@ export const ProgramCard = () => {
         ))}
       </ProgramSelector>
 
+      <Title dangerouslySetInnerHTML={{ __html: title }} />
+
       <MainCarousel 
-        cards={currentProgram.cards} 
+        card={currentProgram.card} 
         initialIndex={initialIndex}
       />
     </Container>

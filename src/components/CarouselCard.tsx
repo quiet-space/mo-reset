@@ -14,8 +14,7 @@ const CardContainer = styled.div`
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  height: 300px;
-  min-width: 600px;
+  height: 100%;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -47,7 +46,7 @@ const ContentSection = styled.div`
 `;
 
 const Title = styled.h2`
-  font-size: 24px;
+  font-size: ${({ theme }) => theme.fontSizes.lg};
   font-weight: 600;
   color: #333;
   margin: 0 0 16px 0;
@@ -59,12 +58,33 @@ const Title = styled.h2`
   }
 `;
 
-const Content = styled.p`
-  font-size: 16px;
-  color: #666;
+const Content = styled.div`
+  font-size: ${({ theme }) => theme.fontSizes.md};
+  color: ${({ theme }) => theme.colors.textLight};
   line-height: 1.6;
   margin: 0;
   flex: 1;
+
+  h3 {
+    margin-left:8px;
+    margin-bottom:8px;
+    display: inline-block;
+    font-size: ${({ theme }) => theme.fontSizes.md};
+    font-weight: ${({ theme }) => theme.fontWeights.bold};
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 60%;
+      background-color: ${({ theme }) => `${theme.colors.primary}80`};
+      z-index: -1;
+    }
+  }
 
   @media (max-width: 768px) {
     font-size: 14px;
@@ -81,9 +101,10 @@ export const CarouselCard: React.FC<CarouselCardProps> = ({
       <ImageSection>
         <ImageCarousel images={images} />
       </ImageSection>
+
       <ContentSection>
         <Title>{title}</Title>
-        <Content>{content}</Content>
+        <Content dangerouslySetInnerHTML={{ __html: content }} />
       </ContentSection>
     </CardContainer>
   );

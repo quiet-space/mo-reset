@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { IoChevronBack, IoChevronForward } from 'react-icons/io5';
 
 interface ImageCarouselProps {
   images: string[];
@@ -9,7 +8,7 @@ interface ImageCarouselProps {
 const CarouselContainer = styled.div`
   position: relative;
   width: 100%;
-  height: 300px;
+  height: 100%;
   overflow: hidden;
   border-radius: 8px;
 `;
@@ -32,35 +31,6 @@ const CarouselImage = styled.img`
   object-fit: cover;
 `;
 
-const CarouselButton = styled.button`
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: background 0.2s;
-  z-index: 2;
-
-  &:hover {
-    background: rgba(0, 0, 0, 0.7);
-  }
-
-  &:first-child {
-    left: 10px;
-  }
-
-  &:last-child {
-    right: 10px;
-  }
-`;
 
 const CarouselDots = styled.div`
   position: absolute;
@@ -73,25 +43,18 @@ const CarouselDots = styled.div`
 `;
 
 const Dot = styled.button<{ active: boolean }>`
-  width: 8px;
+  width: 50px;
   height: 8px;
-  border-radius: 50%;
-  border: none;
+  padding: 0;
+  border: 1px solid ${props => props.active ? 'rgba(0,0,0, 0.5)' : 'rgba(0,0,0, 0.2)'};
   background: ${props => props.active ? 'white' : 'rgba(255, 255, 255, 0.5)'};
+  
   cursor: pointer;
   transition: background 0.2s;
 `;
 
 export const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % images.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
-  };
 
   const goToSlide = (index: number) => {
     setCurrentIndex(index);
@@ -112,13 +75,6 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
       </CarouselTrack>
 
       {images.length > 1 && (
-        <>
-          <CarouselButton onClick={prevSlide}>
-            <IoChevronBack size={20} />
-          </CarouselButton>
-          <CarouselButton onClick={nextSlide}>
-            <IoChevronForward size={20} />
-          </CarouselButton>
           <CarouselDots>
             {images.map((_, index) => (
               <Dot
@@ -128,7 +84,6 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
               />
             ))}
           </CarouselDots>
-        </>
       )}
     </CarouselContainer>
   );
