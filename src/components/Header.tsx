@@ -230,11 +230,26 @@ export const Header = ({ backgroundColor }: HeaderProps) => {
 
   // 스크롤 이동 함수
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const headerHeight = 60; // Header 높이
-      const elementPosition = element.offsetTop - headerHeight;
-      window.scrollTo({ top: elementPosition, behavior: 'smooth' });
+    // 현재 페이지가 홈페이지가 아니면 먼저 홈페이지로 이동
+    if (window.location.pathname !== '/') {
+      navigate('/');
+      // 페이지 이동 후 스크롤을 위해 약간의 지연 추가
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const headerHeight = 60; // Header 높이
+          const elementPosition = element.offsetTop - headerHeight;
+          window.scrollTo({ top: elementPosition, behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      // 이미 홈페이지에 있으면 바로 스크롤
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const headerHeight = 60; // Header 높이
+        const elementPosition = element.offsetTop - headerHeight;
+        window.scrollTo({ top: elementPosition, behavior: 'smooth' });
+      }
     }
     setMobileMenuOpen(false);
     setDropdownOpen(false);
@@ -242,19 +257,54 @@ export const Header = ({ backgroundColor }: HeaderProps) => {
 
   // 홈으로 이동
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // 현재 페이지가 홈페이지가 아니면 먼저 홈페이지로 이동
+    if (window.location.pathname !== '/') {
+      navigate('/');
+      // 페이지 이동 후 스크롤을 위해 약간의 지연 추가
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 100);
+    } else {
+      // 이미 홈페이지에 있으면 바로 스크롤
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
     setMobileMenuOpen(false);
     setDropdownOpen(false);
   };
 
   // 프로그램 선택 시 해당 프로그램으로 이동
   const scrollToProgram = (programType: string) => {
-    scrollToSection('program-section');
-    // 프로그램 타입을 localStorage에 저장하여 ProgramCard에서 사용
-    localStorage.setItem('selectedProgram', programType);
-    // 프로그램별 카드 인덱스도 저장
-    const cardIndex = getProgramCardIndex(programType);
-    localStorage.setItem('selectedCardIndex', cardIndex.toString());
+    // 현재 페이지가 홈페이지가 아니면 먼저 홈페이지로 이동
+    if (window.location.pathname !== '/') {
+      navigate('/');
+      // 페이지 이동 후 스크롤을 위해 약간의 지연 추가
+      setTimeout(() => {
+        const element = document.getElementById('program-section');
+        if (element) {
+          const headerHeight = 60; // Header 높이
+          const elementPosition = element.offsetTop - headerHeight;
+          window.scrollTo({ top: elementPosition, behavior: 'smooth' });
+        }
+        // 프로그램 타입을 localStorage에 저장하여 ProgramCard에서 사용
+        localStorage.setItem('selectedProgram', programType);
+        // 프로그램별 카드 인덱스도 저장
+        const cardIndex = getProgramCardIndex(programType);
+        localStorage.setItem('selectedCardIndex', cardIndex.toString());
+      }, 100);
+    } else {
+      // 이미 홈페이지에 있으면 바로 스크롤
+      const element = document.getElementById('program-section');
+      if (element) {
+        const headerHeight = 60; // Header 높이
+        const elementPosition = element.offsetTop - headerHeight;
+        window.scrollTo({ top: elementPosition, behavior: 'smooth' });
+      }
+      // 프로그램 타입을 localStorage에 저장하여 ProgramCard에서 사용
+      localStorage.setItem('selectedProgram', programType);
+      // 프로그램별 카드 인덱스도 저장
+      const cardIndex = getProgramCardIndex(programType);
+      localStorage.setItem('selectedCardIndex', cardIndex.toString());
+    }
     setDropdownOpen(false);
     setMobileMenuOpen(false);
   };
