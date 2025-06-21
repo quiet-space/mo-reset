@@ -2,8 +2,9 @@ import { useState } from 'react';
 import styled from 'styled-components';
 
 import StyledExample from './components/StyledExample';
-import { Header } from './Header';
-
+import { Header } from './components/Header';
+import { MainTopCard } from './components/MainTopCard';
+  
 const AppContainer = styled.div`
   min-height: 100vh;
   width: 100vw;
@@ -82,6 +83,8 @@ function App() {
   return (
     <AppContainer>
       <Header />
+      <MainTopCard />
+
       <MainContent>
         <Title>Vite + React + Styled Components</Title>
         <Card>
