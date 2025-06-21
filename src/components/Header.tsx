@@ -1,27 +1,35 @@
 import styled from 'styled-components';
 import { useState, useRef, useEffect } from 'react';
-import { MdMenu, MdClose, MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md';
+import { useNavigate } from 'react-router-dom';
+import { MdMenu, MdClose, MdKeyboardArrowDown, MdKeyboardArrowUp, MdPhone } from 'react-icons/md';
 
 const MOBILE_BREAKPOINT = '768px';
 
-const HeaderContainer = styled.header`
+const HeaderContainer = styled.header<{ $backgroundColor?: string }>`
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 60px;
 
-  background-color: ${({ theme }) => theme.colors.background};
+  background-color: ${({ $backgroundColor, theme }) => $backgroundColor || theme.colors.background};
   color: ${({ theme }) => theme.colors.text};
 
   padding: 0 20px;
   font-size: 20px;
   font-weight: bold;
   font-family: ${({ theme }) => theme.fonts.body};
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+  // box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 `;
 
 const Logo = styled.img`
   height: 40px;
+  cursor: pointer;
 `;
 
 const LeftContainer = styled.div`
@@ -53,7 +61,7 @@ const RightContainer = styled.div<{ $mobileOpen?: boolean }>`
   }
 `;
 
-const MenuItem = styled.a`
+const MenuItem = styled.button`
   display: flex;
   align-items: center;
   color: ${({ theme }) => theme.colors.text};
@@ -65,6 +73,8 @@ const MenuItem = styled.a`
   padding: 8px 12px;
   border-radius: 4px;
   transition: background 0.2s;
+  background: none;
+  border: none;
   &:hover {
     background: ${({ theme }) => theme.colors.primaryHover};
   }
@@ -130,7 +140,7 @@ const DropdownMenu = styled.ul`
 
 const DropdownMenuItem = styled.li`
   width: 100%;
-  & > a {
+  & > button {
     display: block;
     width: 100%;
     padding: 10px 20px;
@@ -140,6 +150,8 @@ const DropdownMenuItem = styled.li`
     font-weight: 500;
     border-radius: 0;
     background: none;
+    border: none;
+    cursor: pointer;
     transition: background 0.2s;
     &:hover {
       background: #f5f5f5;
@@ -179,12 +191,96 @@ const Overlay = styled.div`
   }
 `;
 
-export const Header = () => {
+const ConsultIconButton = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: ${({ theme }) => theme.colors.primary};
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-left: 10px;
+
+  &:hover {
+    background: ${({ theme }) => theme.colors.primaryHover};
+  }
+
+  @media (max-width: ${MOBILE_BREAKPOINT}) {
+    width: 50px;
+    height: 50px;
+    margin: 10px 0;
+  }
+`;
+
+interface HeaderProps {
+  backgroundColor?: string;
+}
+
+export const Header = ({ backgroundColor }: HeaderProps) => {
+  const navigate = useNavigate();
   const logo = '/src/assets/brand_logo.png';
   const logoAlt = 'brand_logo';
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+
+  // 스크롤 이동 함수
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const headerHeight = 60; // Header 높이
+      const elementPosition = element.offsetTop - headerHeight;
+      window.scrollTo({ top: elementPosition, behavior: 'smooth' });
+    }
+    setMobileMenuOpen(false);
+    setDropdownOpen(false);
+  };
+
+  // 홈으로 이동
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setMobileMenuOpen(false);
+    setDropdownOpen(false);
+  };
+
+  // 프로그램 선택 시 해당 프로그램으로 이동
+  const scrollToProgram = (programType: string) => {
+    scrollToSection('program-section');
+    // 프로그램 타입을 localStorage에 저장하여 ProgramCard에서 사용
+    localStorage.setItem('selectedProgram', programType);
+    // 프로그램별 카드 인덱스도 저장
+    const cardIndex = getProgramCardIndex(programType);
+    localStorage.setItem('selectedCardIndex', cardIndex.toString());
+    setDropdownOpen(false);
+    setMobileMenuOpen(false);
+  };
+
+  // 프로그램별 카드 인덱스 반환
+  const getProgramCardIndex = (programType: string) => {
+    switch (programType) {
+      case 'SS': return 0;
+      case 'SC': return 0;
+      case 'SR': return 0;
+      case 'ST': return 0;
+      default: return 0;
+    }
+  };
+
+  // 페이지 이동 함수
+  const navigateToPage = (path: string) => {
+    navigate(path);
+    setMobileMenuOpen(false);
+    setDropdownOpen(false);
+  };
+
+  // 상담하기 버튼 클릭 핸들러
+  const handleConsultClick = () => {
+    window.open('https://pf.kakao.com/_bNapxj', '_blank', 'noopener,noreferrer');
+  };
 
   // 외부 클릭 시 드롭다운 닫기
   useEffect(() => {
@@ -229,14 +325,12 @@ export const Header = () => {
   }, [mobileMenuOpen]);
 
   return (
-    <HeaderContainer>
+    <HeaderContainer $backgroundColor={backgroundColor}>
       <LeftContainer>
         <Logo
           src={logo}
           alt={logoAlt}
-          onClick={() => {
-            window.location.href = '/';
-          }}
+          onClick={() => navigate('/')}
         />
       </LeftContainer>
       
@@ -253,9 +347,9 @@ export const Header = () => {
 
       {mobileMenuOpen && <Overlay onClick={() => setMobileMenuOpen(false)} />}
       <RightContainer id='right-menu-mobile' $mobileOpen={mobileMenuOpen}>
-        <MenuItem href='/'>Home</MenuItem>
-        <MenuItem href='/about'>기업소개</MenuItem>
-        <DropdownWrapper ref={dropdownRef}>
+        <MenuItem onClick={scrollToTop}>Home</MenuItem>
+        <MenuItem onClick={() => scrollToSection('brand-section')}>기업소개</MenuItem>
+        {/* <DropdownWrapper ref={dropdownRef}>
           <DropdownButton
             onClick={() => setDropdownOpen(open => !open)}
             aria-haspopup='true'
@@ -271,22 +365,30 @@ export const Header = () => {
           {dropdownOpen && (
             <DropdownMenu>
               <DropdownMenuItem>
-                <MenuItem href='/contact'>파라스파 : SS</MenuItem>
+                <button onClick={() => scrollToProgram('SS')}>파라스파 : SS</button>
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <MenuItem href='/contact'>모낭플란트 : SC</MenuItem>
+                <button onClick={() => scrollToProgram('SC')}>모낭플란트 : SC</button>
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <MenuItem href='/contact'>모플란트 : SR</MenuItem>
+                <button onClick={() => scrollToProgram('SR')}>모플란트 : SR</button>
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <MenuItem href='/contact'>Cindy : ST</MenuItem>
+                <button onClick={() => scrollToProgram('ST')}>Cindy : ST</button>
               </DropdownMenuItem>
             </DropdownMenu>
           )}
-        </DropdownWrapper>
-        <MenuItem href='/contact'>창업 및 교육</MenuItem>
-        <MenuItem href='/contact'>문의사항</MenuItem>
+        </DropdownWrapper> */}
+        <MenuItem onClick={() => scrollToSection('program-section')}>프로그램 소개</MenuItem>
+        <MenuItem onClick={() => scrollToSection('product-section')}>제품 소개</MenuItem>
+        <MenuItem onClick={() => navigateToPage('/member')}>창업 및 교육</MenuItem>
+        <MenuItem onClick={() => navigateToPage('/inquiry')}>문의사항</MenuItem>
+        <ConsultIconButton 
+          onClick={handleConsultClick}
+          aria-label="상담하기"
+        >
+          <MdPhone size={20} />
+        </ConsultIconButton>
       </RightContainer>
     </HeaderContainer>
   );

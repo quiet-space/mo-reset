@@ -1,8 +1,5 @@
-
-
 import styled from 'styled-components';
 import { useState, useEffect } from 'react';
-import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
 
 const CarouselContainer = styled.div`
   position: relative;

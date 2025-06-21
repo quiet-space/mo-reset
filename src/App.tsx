@@ -1,109 +1,104 @@
-import { useState } from 'react';
 import styled from 'styled-components';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
-import StyledExample from './components/StyledExample';
 import { Header } from './components/Header';
 import { MainTopCard } from './components/MainTopCard';
 import { BrandCard } from './components/BrandCard';
+import { ProgramCard } from './components/ProgramCard';
+import { ProductSectionComponent } from './components/ProductCard';
+import { Footer } from './components/Footer';
+import ConsultButtonComponent from './components/ConsultButton';
+import { InfoCard } from './components/InfoCard';
+import { Member } from './pages/Member';
+import { Inquiry } from './pages/Inquiry';
 
 const AppContainer = styled.div`
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
   background-color: ${({ theme }) => theme.colors.background};
   color: ${({ theme }) => theme.colors.text};
   font-family: ${({ theme }) => theme.fonts.body};
   font-size: ${({ theme }) => theme.fontSizes.md};
   font-weight: ${({ theme }) => theme.fontWeights.normal};
+  padding-top: 60px; /* Header 높이만큼 상단 여백 추가 */
 `;
 
-const MainContent = styled.main`
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: ${({ theme }) => theme.spacing.xl};
-`;
-
-const Title = styled.h1`
-  font-size: ${({ theme }) => theme.fontSizes['4xl']};
-  line-height: 1.1;
-  margin-bottom: ${({ theme }) => theme.spacing.xl};
-  text-align: center;
-  color: ${({ theme }) => theme.colors.primary};
-`;
-
-const Card = styled.div`
-  padding: ${({ theme }) => theme.spacing.xl};
-  margin-bottom: ${({ theme }) => theme.spacing.xl};
-  background: white;
-  border-radius: ${({ theme }) => theme.borderRadius.lg};
-  box-shadow: ${({ theme }) => theme.shadows.md};
-  text-align: center;
-`;
-
-const Button = styled.button`
-  border-radius: ${({ theme }) => theme.borderRadius.md};
-  border: 1px solid transparent;
-  padding: ${({ theme }) => theme.spacing.md} ${({ theme }) => theme.spacing.xl};
-  font-size: ${({ theme }) => theme.fontSizes.md};
-  font-weight: ${({ theme }) => theme.fontWeights.medium};
-  font-family: inherit;
-  background-color: ${({ theme }) => theme.colors.primary};
-  color: white;
-  cursor: pointer;
-  transition: all 0.25s ease;
-
-  &:hover {
-    background-color: ${({ theme }) => theme.colors.primaryHover};
-    transform: translateY(-2px);
-  }
-
-  &:focus,
-  &:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
-  }
-`;
-
-const Code = styled.code`
-  background-color: ${({ theme }) => theme.colors.secondary};
-  color: ${({ theme }) => theme.colors.textLight};
-  padding: ${({ theme }) => theme.spacing.xs} ${({ theme }) => theme.spacing.sm};
-  border-radius: ${({ theme }) => theme.borderRadius.sm};
-  font-family: ${({ theme }) => theme.fonts.monospace};
-  font-size: ${({ theme }) => theme.fontSizes.sm};
-`;
-
-const ReadTheDocs = styled.p`
-  color: ${({ theme }) => theme.colors.textLight};
-  text-align: center;
-  margin-top: ${({ theme }) => theme.spacing.xl};
-  font-size: ${({ theme }) => theme.fontSizes.sm};
-`;
-
-function App() {
-  const [count, setCount] = useState(0);
+const HomePage = () => {
+  useEffect(() => {
+    // 홈페이지 진입 시 최상단으로 스크롤
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
-    <AppContainer>
-      <Header />
+    <div style={{ margin: 0 }}>
       <MainTopCard />
 
-      <BrandCard />
+      <div id="brand-section" style={{ margin: 0 }}>
+        <BrandCard />
+      </div>
+      
+      <div id="program-section" style={{ margin: 0 }}>
+        <ProgramCard />
+      </div>
+      
+      <ProductSectionComponent />
+      
+      <div data-section="info" style={{ margin: 0 }}>
+        <InfoCard />
+      </div>
+      
+      <ConsultButtonComponent />
 
-      <MainContent>
-        <Title>Vite + React + Styled Components</Title>
-        <Card>
-          <Button onClick={() => setCount(count => count + 1)}>
-            count is {count}
-          </Button>
-          <p>
-            Edit <Code>src/App.tsx</Code> and save to test HMR
-          </p>
-        </Card>
-        <StyledExample />
-        <ReadTheDocs>
-          Click on the Vite and React logos to learn more
-        </ReadTheDocs>
-      </MainContent>
-    </AppContainer>
+      <Footer />
+    </div>
+  );
+};
+
+function App() {
+  const [headerBackgroundColor, setHeaderBackgroundColor] = useState<string | undefined>(undefined);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const headerHeight = 60;
+
+      // 각 섹션의 위치 계산
+      const programSection = document.getElementById('program-section');
+      const productSection = document.getElementById('product-section');
+      const infoCard = document.querySelector('[data-section="info"]');
+
+      if (programSection && scrollPosition >= programSection.offsetTop - headerHeight && 
+          scrollPosition < (productSection?.offsetTop || Infinity) - headerHeight) {
+        setHeaderBackgroundColor('#f8f9fa'); // ProgramCard 배경색
+      } else if (productSection && scrollPosition >= productSection.offsetTop - headerHeight && 
+                 scrollPosition < (infoCard?.getBoundingClientRect().top || Infinity) + scrollPosition - headerHeight) {
+        setHeaderBackgroundColor('#f8f9fa'); // ProductSection 배경색
+      } else if (infoCard && scrollPosition >= infoCard.getBoundingClientRect().top + scrollPosition - headerHeight) {
+        setHeaderBackgroundColor('#f8f9fa'); // InfoCard 배경색 (linear-gradient의 시작 색상)
+      } else {
+        setHeaderBackgroundColor(undefined); // 기본 배경색
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    // 초기 실행
+    handleScroll();
+    
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <Router>
+      <AppContainer>
+        <Header backgroundColor={headerBackgroundColor} />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/member" element={<Member />} />
+          <Route path="/inquiry" element={<Inquiry />} />
+        </Routes>
+      </AppContainer>
+    </Router>
   );
 }
 
