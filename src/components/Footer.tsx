@@ -6,6 +6,7 @@ const FooterContainer = styled.footer`
   color: ${({ theme }) => theme.colors.textLight};
   padding: ${({ theme }) => theme.spacing.xl};
   margin-top: auto;
+  padding-bottom: 50px;
 `;
 
 const FooterContent = styled.div`

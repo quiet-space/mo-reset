@@ -81,23 +81,6 @@ const Description = styled.p`
   }
 `;
 
-const PointText = styled.h3`
-  font-size: ${({ theme }) => theme.fontSizes['2xl']};
-  font-weight: ${({ theme }) => theme.fontWeights.bold};
-  color: ${({ theme }) => theme.colors.textLight};
-  text-align: center;
-  margin: 40px 0;
-
-
-  h1 {
-    display: inline-block;
-    font-size: ${({ theme }) => theme.fontSizes['3xl']};
-    font-weight: ${({ theme }) => theme.fontWeights.bold};
-    color: ${({ theme }) => theme.colors.primary};
-    text-align: center;
-    margin-right: 8px;
-  }
-`;
 
 const DescText = styled.p`
    font-size: ${({ theme }) => theme.fontSizes.lg};
@@ -121,13 +104,16 @@ const DescText = styled.p`
 export const BrandCard = () => { 
     return (
         <BrandCardContainer>
-            <PointText>
-                <h1>    
-                모리셋
+
+            <DescText>
+                <h1>
+                모리셋, 당신의 두피를 스위스과학으로 되살리다 
                 </h1>
                 <br />
-                모낭플란트의 미래를 만들어갑니다
-            </PointText>
+                스위스 기술과 함께하는 탈모 재생 솔루션의 기준.
+                <br />
+                이제, 모리셋이 만들어갑니다.
+            </DescText>
 
 
             <BrandLayout>
@@ -207,15 +193,7 @@ export const BrandCard = () => {
                 </ContentContainer>
             </BrandLayout>
 
-            <DescText>
-                <h1>
-                모리셋, 당신의 두피를 스위스과학으로 되살리다 
-                </h1>
-                <br />
-                스위스 기술과 함께하는 탈모 재생 솔루션의 기준.
-                <br />
-                이제, 모리셋이 만들어갑니다.
-            </DescText>
+           
         </BrandCardContainer>
     );
 };

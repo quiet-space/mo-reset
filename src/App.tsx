@@ -44,11 +44,11 @@ const HomePage = () => {
       
       <ProductSectionComponent />
       
-      <div data-section="info" style={{ margin: 0 }}>
+      <div id="info-section" style={{ margin: 0 }}>
         <InfoCard />
       </div>
       
-      <ConsultButtonComponent />
+      {/* <ConsultButtonComponent /> */}
 
       <Footer />
     </div>
