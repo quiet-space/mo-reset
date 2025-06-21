@@ -4,7 +4,8 @@ import styled from 'styled-components';
 import StyledExample from './components/StyledExample';
 import { Header } from './components/Header';
 import { MainTopCard } from './components/MainTopCard';
-  
+import { BrandCard } from './components/BrandCard';
+
 const AppContainer = styled.div`
   min-height: 100vh;
   width: 100vw;
@@ -84,6 +85,8 @@ function App() {
     <AppContainer>
       <Header />
       <MainTopCard />
+
+      <BrandCard />
 
       <MainContent>
         <Title>Vite + React + Styled Components</Title>
