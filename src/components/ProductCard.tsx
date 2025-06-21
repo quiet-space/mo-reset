@@ -15,7 +15,7 @@ interface ProductCardProps {
 
 // ProductSection 컨테이너
 export const ProductSection = styled.section`
-//   margin: ${({ theme }) => theme.spacing.xl} 0;
+  margin: ${({ theme }) => theme.spacing.xl} 0;
   min-height: 100vh;
   background: #f8f9fa;
   padding: 40px 0;
@@ -47,7 +47,7 @@ export const ProductGrid = styled.div`
   /* PC: 2x2 그리드 (최대 4개 아이템) */
   @media (min-width: 1024px) {
     grid-template-columns: repeat(2, 1fr);
-    max-width: 90%;
+    max-width: 60%;
     margin: ${({ theme }) => theme.spacing.xl} auto;
   }
 `;

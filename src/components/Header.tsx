@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { MdMenu, MdClose, MdKeyboardArrowDown, MdKeyboardArrowUp, MdPhone } from 'react-icons/md';
+import { MdMenu, MdClose,  } from 'react-icons/md';
 
 const MOBILE_BREAKPOINT = '768px';
 
@@ -16,7 +16,7 @@ const HeaderContainer = styled.header<{ $backgroundColor?: string }>`
 
   padding: 0 20px;
   font-size: 20px;
-  font-weight: bold;
+  // font-weight: bold;
   font-family: ${({ theme }) => theme.fonts.body};
   position: fixed;
   top: 0;
@@ -28,20 +28,20 @@ const HeaderContainer = styled.header<{ $backgroundColor?: string }>`
 `;
 
 const Logo = styled.img`
-  height: 40px;
+  height: 50px;
   cursor: pointer;
 `;
 
 const LeftContainer = styled.div`
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 6px;
 `;
 
 const RightContainer = styled.div<{ $mobileOpen?: boolean }>`
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 6px;
 
   @media (max-width: ${MOBILE_BREAKPOINT}) {
     display: ${({ $mobileOpen }) => ($mobileOpen ? 'flex' : 'none')};
@@ -65,8 +65,8 @@ const MenuItem = styled.button`
   display: flex;
   align-items: center;
   color: ${({ theme }) => theme.colors.text};
-  font-size: 16px;
-  font-weight: bold;
+  font-size: ${({ theme }) => theme.fontSizes.md};
+  // font-weight: bold;
   font-family: ${({ theme }) => theme.fonts.body};
   text-decoration: none;
   cursor: pointer;
@@ -192,23 +192,16 @@ const Overlay = styled.div`
 `;
 
 const ConsultIconButton = styled.button`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background: ${({ theme }) => theme.colors.primary};
-  color: white;
-  border: none;
-  border-radius: 50%;
+  background-image: url('/src/assets/kakao_logo.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+
+  width: 30px;
+  height: 30px;
   cursor: pointer;
-  transition: background 0.3s ease;
-  margin-left: 10px;
-
-  &:hover {
-    background: ${({ theme }) => theme.colors.primaryHover};
-  }
-
+  
   @media (max-width: ${MOBILE_BREAKPOINT}) {
     width: 50px;
     height: 50px;
@@ -404,7 +397,7 @@ export const Header = ({ backgroundColor }: HeaderProps) => {
 
       {mobileMenuOpen && <Overlay onClick={() => setMobileMenuOpen(false)} />}
       <RightContainer id='right-menu-mobile' $mobileOpen={mobileMenuOpen}>
-        <MenuItem onClick={scrollToTop}>Home</MenuItem>
+        <MenuItem onClick={scrollToTop}>처음으로</MenuItem>
         <MenuItem onClick={() => scrollToSection('brand-section')}>기업소개</MenuItem>
         {/* <DropdownWrapper ref={dropdownRef}>
           <DropdownButton
@@ -440,12 +433,11 @@ export const Header = ({ backgroundColor }: HeaderProps) => {
         <MenuItem onClick={() => scrollToSection('product-section')}>제품 소개</MenuItem>
         <MenuItem onClick={() => navigateToPage('/member')}>창업 및 교육</MenuItem>
         <MenuItem onClick={() => navigateToPage('/inquiry')}>문의사항</MenuItem>
+        
         <ConsultIconButton 
           onClick={handleConsultClick}
           aria-label="상담하기"
-        >
-          <MdPhone size={20} />
-        </ConsultIconButton>
+        />
       </RightContainer>
     </HeaderContainer>
   );

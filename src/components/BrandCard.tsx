@@ -13,7 +13,7 @@ const BrandLayout = styled.div`
   padding: 20px;
   
   @media (min-width: 768px) {
-    max-width: 90%;
+    max-width: 60%;
     margin: 0 auto;
     justify-content: center;
   }
@@ -47,7 +47,6 @@ const Description = styled.p`
   line-height: 1.6;
   color: ${({ theme }) => theme.colors.textLight};
   margin: 0;
-
   text-align: left;
 
   h3 {
@@ -172,7 +171,7 @@ export const BrandCard = () => {
                     <BrandImage src="/path/to/your/image.jpg" alt="Brand" />
                 </ImageContainer>
                 <ContentContainer>
-                    <Title> 전 세대를 위한 두피 전문 프로그램</Title>
+                    <Title>전 세대를 위한 두피 전문 프로그램</Title>
                     <Description>
                         모리셋의 모낭플란트는 
                         <h3>
