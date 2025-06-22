@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 const CarouselContainer = styled.div`
   position: relative;
   width: 100%;
-  height: 80vh;
+  height: 85vh;
   overflow: hidden;
 
   @media (max-width: 768px) {
@@ -33,11 +33,9 @@ const CarouselImage = styled.img`
 `;
 
 const TextBox = styled.div<{ $active: boolean; $position: 'left' | 'center' | 'right' }>`
-  position: absolute;
-//   top: 50%;
-//   transform: translateY(-50%);
+    position: absolute;
     bottom: 0;
-    padding: 50px;
+    padding: 30px 40px;
 
   ${({ $position }) => {
     switch ($position) {
@@ -55,7 +53,6 @@ const TextBox = styled.div<{ $active: boolean; $position: 'left' | 'center' | 'r
   
   text-align: center;
   max-width: 40%;
-  min-height: 45%;
 
   opacity: ${({ $active }) => ($active ? '1' : '0')};
   transition: opacity 0.5s ease-in-out;
@@ -76,24 +73,24 @@ const TextBox = styled.div<{ $active: boolean; $position: 'left' | 'center' | 'r
 `;
 
 const Title = styled.h2`
-text-align: left;
-    font-size: ${({ theme }) => theme.fontSizes['2xl']};
+  text-align: left;
+  font-size: ${({ theme }) => theme.fontSizes.xl};
   font-weight: ${({ theme }) => theme.fontWeights.bold};
   color: ${({ theme }) => theme.colors.text};
   line-height: 1.2;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 `;
 
 const Content = styled.div`
-  font-size: ${({ theme }) => theme.fontSizes.lg};
-  line-height: 1.6;
-  color: ${({ theme }) => theme.colors.textLight};
+  font-size: ${({ theme }) => theme.fontSizes.md};
+  line-height: 1.4;
+  color: ${({ theme }) => theme.colors.textL};
   margin: 0;
   text-align: left;
 
   h3 {
     display: inline-block;
-    font-size: ${({ theme }) => theme.fontSizes.lg};
+    font-size: ${({ theme }) => theme.fontSizes.md};
     font-weight: ${({ theme }) => theme.fontWeights.bold};
     margin: 0;
   }
