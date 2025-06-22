@@ -23,6 +23,18 @@ const Content = styled.div`
   & > *:last-child {
     flex: 0 0 55%;
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 20px;
+
+    & > *:first-child,
+    & > *:last-child {
+      flex: 1;
+      width: 100%;
+    }
+  }
 `;
 
 const InfoSection = styled.div`
@@ -106,20 +118,6 @@ font-size: 16px;
   justify-self: end;
 `;
 
-const MapContainer = styled.div`
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #1976d2;
-  font-weight: 600;
-  font-size: 18px;
-`;
-
 
 const PointText = styled.h3`
   font-size: ${({ theme }) => theme.fontSizes['2xl']};
@@ -150,9 +148,8 @@ export const InfoCard = () => {
                 <br />
                 모낭플란트의 미래를 만들어갑니다
         </PointText>
+        
       <Content>
-
-
         <InfoSection>
           <SectionTitle>
             문의사항

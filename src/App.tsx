@@ -49,7 +49,6 @@ const HomePage = () => {
       </div>
       
       {/* <ConsultButtonComponent /> */}
-
       <Footer />
     </div>
   );

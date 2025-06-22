@@ -380,7 +380,10 @@ export const Header = ({ backgroundColor }: HeaderProps) => {
         <Logo
           src={logo}
           alt={logoAlt}
-          onClick={() => navigate('/')}
+          onClick={() => {
+            scrollToTop();
+            navigate('/');
+          }}
         />
       </LeftContainer>
       
@@ -431,9 +434,9 @@ export const Header = ({ backgroundColor }: HeaderProps) => {
         </DropdownWrapper> */}
         <MenuItem onClick={() => scrollToSection('program-section')}>프로그램 소개</MenuItem>
         <MenuItem onClick={() => scrollToSection('product-section')}>제품 소개</MenuItem>
-        <MenuItem onClick={() => scrollToSection('info-section')}>문의사항</MenuItem>
-
         <MenuItem onClick={() => navigateToPage('/member')}>창업 및 교육</MenuItem>
+
+        <MenuItem onClick={() => scrollToSection('info-section')}>문의사항</MenuItem>
         
         <ConsultIconButton 
           onClick={handleConsultClick}

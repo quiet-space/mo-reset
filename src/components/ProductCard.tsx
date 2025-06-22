@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import styled from 'styled-components';
 
 interface Product {
@@ -15,9 +14,8 @@ interface ProductCardProps {
 
 // ProductSection 컨테이너
 export const ProductSection = styled.section`
-  // height: 100vh;
   background: #f8f9fa;
-  padding: 40px 0;
+padding: 40px 0 120px;
 `;
 
 // ProductSectionTitle
@@ -42,7 +40,7 @@ const CardContainer = styled.div`
   overflow: hidden;
   transition: transform 0.2s ease;
   width: fit-content;
-  max-width: 70vw;
+  width: 50vw;
   height: 100%;
   padding: 20px 10px 40px 10px;
 
