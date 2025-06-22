@@ -89,8 +89,8 @@ const programData = {
     card: {
       id: 'ss-1',
       images: [
-        '/src/assets/ss2.jpg',
-        '/src/assets/ss1.png',
+        'https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/ss2-1upYgC7xhfZPlVshGxZ6c3y1bHrWHZ.jpg',
+        'https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/ss1-mQ8ZDdrh8O6cdNRf3Zp1Td5INsa5Fm.png',
       ],
       title: '파라스파 KEY POINT',
       content: `
@@ -182,7 +182,7 @@ const programData = {
     card:{
       id: 'ss-1',
       images: [
-        '/src/assets/sc1.png',
+        'https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/sc1-VIGiYC7Al3D01XNleH0LcOkFbULSl8.png',
    
       ],
       title: "모낭플란트란?",
@@ -202,12 +202,12 @@ const programData = {
     card: {
       id: 'ss-1',
       images: [
-        '/src/assets/sc2.jpg',
-        '/src/assets/sc3.jpg',
-        '/src/assets/sc4.jpg',
-        '/src/assets/sc5.jpg',
-        '/src/assets/sc6.jpg',
-        '/src/assets/sc7.jpg',
+        'https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/sc2-iH8xk5Hb2u7TuKynzv2trVv06skSIM.jpg',
+        'https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/sc3-BfbYAKGTfjmg0lKrUAWC6S4qDzO7f2.jpg',
+        'https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/sc4-0v6vjxWmhOEgv8XMwugTn7wYW4cVrB.jpg',
+        'https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/sc5-a25Xfr8PXlvlY2tWfBOescC0GsSF6G.jpg',
+        'https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/sc6-Olx6t0ZimVO8tmV94RHwQTCsuoKaOR.jpg',
+        'https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/sc7-fMzgbKRBLjmjgcbIbWnDF9YUYacuVA.jpg',
       ],
       title: '모플란트 : SR',
       content: `
@@ -262,8 +262,8 @@ const programData = {
     card: {
       id: 'ss-1',
       images: [
-        '/src/assets/st1.jpg',
-        '/src/assets/st2.png',
+        'https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/st1-y5P0PGNupLZy2CWRvzU2WWLkJKFPb3.jpg',
+        'https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/st2-PYVR0Fg0PjroKlEcwYfRfQbMvdZN2S.png',
       ],
       title: 'Cindy : ST',
       content: `

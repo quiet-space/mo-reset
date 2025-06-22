@@ -121,7 +121,7 @@ const Overlay = styled.div`
 `;
 
 const ConsultIconButton = styled.button`
-  background-image: url('/src/assets/kakao_logo.png');
+  background-image: url('https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/kakao_logo-zfxEPodS3OJc9dHl1Fbfm3t9NY4gOx.png');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -144,7 +144,7 @@ interface HeaderProps {
 
 export const Header = ({ backgroundColor }: HeaderProps) => {
   const navigate = useNavigate();
-  const logo = '/src/assets/brand_logo.png';
+  const logo = 'https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/brand_logo-3bgUmN7TKd2f0DzcDCf5vIfBKO1K9y.png';
   const logoAlt = 'brand_logo';
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

@@ -94,7 +94,7 @@ export const Member = () => {
         <Section>
           <FlexContainer>
             <ImageContainer>
-              <img src="/src/assets/room.jpg" alt="모리셋 치료실" />
+              <img src="https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/room-dJmX8DpyQgfT0eIf6OSiFMUqj3B6F9.jpg" alt="모리셋 치료실" />
             </ImageContainer>
             <TextContainer>
               <h3>모리셋은 25년 간의 연구개발을 통해 
@@ -127,7 +127,7 @@ export const Member = () => {
           <SectionTitle>창업 세미나</SectionTitle>
 
            <ImageContainer>
-              <img src="/src/assets/edu.png" alt="창업 세미나" />
+              <img src="https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/edu-Aslmt6aWaWLqJDvLd0pLyJ4k72uR1L.png" alt="창업 세미나" />
             </ImageContainer>
         </Section>
 
@@ -135,7 +135,7 @@ export const Member = () => {
           <SectionTitle>창업 절차</SectionTitle>
 
            <ImageContainer>
-              <img src="/src/assets/step.png" alt="창업 절차" />
+              <img src="https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/step-OHYeL5lArgevSBtshYZltCrN8y1Aj0.png" alt="창업 절차" />
             </ImageContainer>
         </Section>
 

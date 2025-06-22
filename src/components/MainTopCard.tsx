@@ -133,9 +133,9 @@ const Dot = styled.button<{ $active: boolean }>`
 
 const images = [
   'https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/top1-ObxAq9J8FnnpAYCX8FLz3G1zd0BQ9K.mp4',
-  '/src/assets/carousel2.jpg',
-  '/src/assets/carousel3.jpg',
-  '/src/assets/carousel4.jpg',
+  'https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/carousel2-6rlWyf519v9mwj6u8qmXXjFDpcj4LG.jpg',
+  'https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/carousel3-mRBSmIt9LugsUUgxZeQLBU1MucXq8y.jpg',
+  'https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/carousel4-6juw2TN0XP8avHxDSLvQRxtFVCuOY1.jpg',
 ];
 
 const carouselData = [

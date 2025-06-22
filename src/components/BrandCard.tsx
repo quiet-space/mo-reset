@@ -117,7 +117,7 @@ export const BrandCard = () => {
 
             <BrandLayout>
                 <ImageContainer>
-                    <BrandImage src="/src/assets/doc.jpg" alt="Brand" />
+                    <BrandImage src="https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/doc-60UdJXHVqd5vyCqZXzO0GPZ4B8A2cw.jpg" alt="Brand" />
                 </ImageContainer>
                 <ContentContainer>
                     <Title>이보영 대표원장</Title>
@@ -147,7 +147,7 @@ export const BrandCard = () => {
 
             <BrandLayout>
                 <ImageContainer>
-                    <BrandImage src="/src/assets/lab1.jpg" alt="Brand" />
+                    <BrandImage src="https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/lab1-lJkiDcrPmuIM3zRRZmplt2N74n5SoQ.jpg" alt="Brand" />
                 </ImageContainer>
                 <ContentContainer>
                     <Title>오직, 
@@ -169,7 +169,7 @@ export const BrandCard = () => {
 
             <BrandLayout>
                 <ImageContainer>
-                    <BrandImage src="/src/assets/cell.jpg" alt="Brand" />
+                    <BrandImage src="https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/cell-Bjx3ketpR41WlXE0Dn4Xn36MVSZHvu.jpg" alt="Brand" />
                 </ImageContainer>
                 <ContentContainer>
                     <Title>모리셋 특허기술의 핵심,
@@ -198,7 +198,7 @@ export const BrandCard = () => {
                   }}
             >
                 <ImageContainer>
-                    <BrandImage src="/src/assets/cert1.jpg" alt="Brand" 
+                    <BrandImage src="https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/cert1-PNsy67OCxao0QdKaLkw7pFhMoJDWns.jpg" alt="Brand" 
                     style={{
                         width: '90%',
                         height: '90%',
@@ -207,7 +207,7 @@ export const BrandCard = () => {
                     />
                 </ImageContainer>
                 <ImageContainer>
-                    <BrandImage src="/src/assets/cert2.jpg" alt="Brand" 
+                    <BrandImage src="https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/cert2-FnCV7zzsB9VpXsLsCstzd2MRiEavHI.jpg" alt="Brand" 
                     style={{
                         width: '90%',
                         height: '90%',

@@ -126,7 +126,7 @@ export const sampleProducts = [
   {
     id: 1,
     name: "Hair Loss Control",
-    image: "/src/assets/product/1.png",
+    image: "https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/1-fznpFnHMbzRrdeDXKPk2ynBuR1F44a.png",
     title: "프리미엄 스킨케어 세트 - 완벽한 피부 관리",
     description: `
     Hair Loss Control은 비침습적 모낭플란트 관리에 사용됩니다. 
@@ -183,7 +183,7 @@ export const sampleProducts = [
   {
     id: 2,
     name: "Hair Loss Control+",
-    image: "/src/assets/product/2.png",
+    image: "https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/2-blttVKIfaD0iRUanMyTQltHUOl0RNu.png",
     title: "자연주의 바디워시 - 순한 클렌징",
     description: `
     Hair Loss Control+는 혈류를 개선시켜 두피에 수분과 산소를 공급하는 데 도움이 됩니다. 과학적으로 구성된 비타민, 아미노산 및 미네랄의 조화는 최적의 신체대사를 지원하며 탈모를 촉진하는 모든 요소에 작용하는 고농축 제품입니다.
@@ -218,7 +218,7 @@ export const sampleProducts = [
   {
     id: 3,
     name: "Tricocure 헤어 세럼",
-    image: "/src/assets/product/3.jpg",
+    image: "https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/3-Gj0KqSpKUBO0MTW5N7yBVcYq8PS6U5.JPG",
     title: "아로마테라피 디퓨저 - 편안한 공간 연출",
     description: `
     Tricocure는 홈케어용으로 특별히 개발된 세럼입니다. 
@@ -272,7 +272,7 @@ export const sampleProducts = [
   {
     id: 4,
     name: "Tricocure 무스 탈모 샴푸",
-    image: "/src/assets/product/4.png",
+    image: "https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/4-370bc4wikrEFYyIESc15wT0uOpTL8l.png",
     title: "유기농 핸드크림 - 촉촉한 손 관리",
     description: `
     Tricocure 무스 탈모 샴푸는 포도당 기반 원료의 결합을 통해 카페인과 케라틴의 조화로운 효과를 가지고 있습니다. 
@@ -326,7 +326,7 @@ export const sampleProducts = [
   {
     id: 5,
     name: "Tricocure 무스 포스트 임플란트 샴푸",
-    image: "/src/assets/product/5.png",
+    image: "https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/5-AOsZfackszaJi8GwHoP2xKwqt23rve.png",
     title: "천연 마스크팩 - 집중 케어",
     description: `
     Tricocure 무스 포스트 임플란트 샴푸는 모발이식 후 두피 및 모발의 세정을 위해 만들어진 샴푸입니다. 

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import brandLogo from '../assets/brand_logo.png';
 
 const FooterContainer = styled.footer`
   background-color: ${({ theme }) => theme.colors.backgroundLight};
@@ -39,7 +38,7 @@ export const Footer = () => {
   return (
     <FooterContainer>
       <FooterContent>
-        <LogoImage src={brandLogo} alt="모리셋 브랜드 로고" />
+        <LogoImage src={'https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/brand_logo-3bgUmN7TKd2f0DzcDCf5vIfBKO1K9y.png'} alt="모리셋 브랜드 로고" />
         <FooterTextContainer>
           <FooterText>
           모리셋두피재생센터 | 책임자: 이숙 | 사업자등록번호: 661-27-01494 
