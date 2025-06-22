@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { useState, useEffect } from 'react';
+import { isVideoFile } from '../utils/vercelBlob';
 
 const CarouselContainer = styled.div`
   position: relative;
@@ -131,7 +132,7 @@ const Dot = styled.button<{ $active: boolean }>`
 `;
 
 const images = [
-  '/src/assets/top1.mp4',
+  'https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/top1-ObxAq9J8FnnpAYCX8FLz3G1zd0BQ9K.mp4',
   '/src/assets/carousel2.jpg',
   '/src/assets/carousel3.jpg',
   '/src/assets/carousel4.jpg',
@@ -257,14 +258,17 @@ const useCarousel = (totalSlides: number) => {
 };
 
 const MediaContent = ({ src, alt }: { src: string; alt: string }) => {
-  const isVideo = src.toLowerCase().endsWith('.mp4');
+  const isVideo = isVideoFile(src);
   
   if (isVideo) {
     return (
-      <CarouselVideo autoPlay muted loop playsInline>
-        <source src={src} type={`video/${src.split('.').pop()}`} />
-        {alt}
-      </CarouselVideo>
+      <CarouselVideo
+        src={src}
+        autoPlay={true}
+        muted={true}
+        loop={true}
+        controls={false}
+      />
     );
   }
   

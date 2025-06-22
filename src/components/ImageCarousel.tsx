@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { isVideoFile } from '../utils/vercelBlob';
 
 interface ImageCarouselProps {
   images: string[];
@@ -60,14 +61,17 @@ const Dot = styled.button<{ active: boolean }>`
 `;
 
 const MediaContent = ({ src, alt }: { src: string; alt: string }) => {
-  const isVideo = src.toLowerCase().endsWith('.mp4');
+  const isVideo = isVideoFile(src);
   
   if (isVideo) {
     return (
-      <CarouselVideo autoPlay muted loop playsInline>
-        <source src={src} type={`video/${src.split('.').pop()}`} />
-        {alt}
-      </CarouselVideo>
+      <CarouselVideo
+        src={src}
+        autoPlay={true}
+        muted={true}
+        loop={true}
+        controls={false}
+      />
     );
   }
   
