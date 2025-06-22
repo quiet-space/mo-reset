@@ -23,16 +23,20 @@ const CarouselTrack = styled.div<{ currentIndex: number }>`
 const CarouselSlide = styled.div`
   min-width: 100%;
   height: 100%;
-padding: 10px;
+  padding: 10px;
 `;
 
 const CarouselImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: contain;
-
 `;
 
+const CarouselVideo = styled.video`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;
 
 const CarouselDots = styled.div`
   position: absolute;
@@ -55,6 +59,21 @@ const Dot = styled.button<{ active: boolean }>`
   transition: background 0.2s;
 `;
 
+const MediaContent = ({ src, alt }: { src: string; alt: string }) => {
+  const isVideo = src.toLowerCase().endsWith('.mp4');
+  
+  if (isVideo) {
+    return (
+      <CarouselVideo autoPlay muted loop playsInline>
+        <source src={src} type={`video/${src.split('.').pop()}`} />
+        {alt}
+      </CarouselVideo>
+    );
+  }
+  
+  return <CarouselImage src={src} alt={alt} />;
+};
+
 export const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -71,7 +90,7 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
       <CarouselTrack currentIndex={currentIndex}>
         {images.map((image, index) => (
           <CarouselSlide key={index}>
-            <CarouselImage src={image} alt={`Slide ${index + 1}`} />
+            <MediaContent src={image} alt={`Slide ${index + 1}`} />
           </CarouselSlide>
         ))}
       </CarouselTrack>
@@ -89,4 +108,4 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
       )}
     </CarouselContainer>
   );
-}; 
+};

@@ -32,6 +32,16 @@ const CarouselImage = styled.img`
   }
 `;
 
+const CarouselVideo = styled.video`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  @media (max-width: 768px) {
+    width: 150%;
+  }
+`;
+
 const TextBox = styled.div<{ $active: boolean; $position: 'left' | 'center' | 'right' }>`
     position: absolute;
     bottom: 0;
@@ -84,7 +94,7 @@ const Title = styled.h2`
 const Content = styled.div`
   font-size: ${({ theme }) => theme.fontSizes.md};
   line-height: 1.4;
-  color: ${({ theme }) => theme.colors.textL};
+  color: ${({ theme }) => theme.colors.text};
   margin: 0;
   text-align: left;
 
@@ -121,7 +131,7 @@ const Dot = styled.button<{ $active: boolean }>`
 `;
 
 const images = [
-  '/src/assets/carousel1.jpg',
+  '/src/assets/top1.mp4',
   '/src/assets/carousel2.jpg',
   '/src/assets/carousel3.jpg',
   '/src/assets/carousel4.jpg',
@@ -246,6 +256,21 @@ const useCarousel = (totalSlides: number) => {
   };
 };
 
+const MediaContent = ({ src, alt }: { src: string; alt: string }) => {
+  const isVideo = src.toLowerCase().endsWith('.mp4');
+  
+  if (isVideo) {
+    return (
+      <CarouselVideo autoPlay muted loop playsInline>
+        <source src={src} type={`video/${src.split('.').pop()}`} />
+        {alt}
+      </CarouselVideo>
+    );
+  }
+  
+  return <CarouselImage src={src} alt={alt} />;
+};
+
 export const MainTopCard = () => {
   const { currentSlide, setCurrentSlide } = useCarousel(images.length);
 
@@ -253,7 +278,7 @@ export const MainTopCard = () => {
     <CarouselContainer>
       {images.map((image, index) => (
         <CarouselSlide key={index} $active={index === currentSlide}>
-          <CarouselImage src={image} alt={`Carousel ${index + 1}`} />
+          <MediaContent src={image} alt={`Carousel ${index + 1}`} />
           <TextBox $active={index === currentSlide} $position={carouselData[index].position}>
             <Title>{carouselData[index].title}</Title>
             <Content dangerouslySetInnerHTML={{ __html: carouselData[index].content }} />
