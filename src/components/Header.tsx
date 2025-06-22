@@ -38,26 +38,24 @@ const LeftContainer = styled.div`
   gap: 6px;
 `;
 
-const RightContainer = styled.div<{ $mobileOpen?: boolean }>`
+const RightContainer = styled.div<{ $mobileOpen: boolean }>`
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 20px;
 
   @media (max-width: ${MOBILE_BREAKPOINT}) {
     display: ${({ $mobileOpen }) => ($mobileOpen ? 'flex' : 'none')};
     flex-direction: column;
     position: fixed;
-    top: 0;
-    right: 0;
-    width: 80vw;
-    max-width: 320px;
-    height: 100vh;
+    top: 60px;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 60px);
     background: #fff;
-    color: #222;
-    box-shadow: -2px 0 16px rgba(0,0,0,0.12);
-    padding: 80px 24px 24px 24px;
     z-index: 200;
-    transition: transform 0.3s;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
   }
 `;
 
@@ -84,75 +82,6 @@ const MenuItem = styled.button`
     width: 100%;
     justify-content: flex-start;
     background: none;
-    &:hover {
-      background: #f5f5f5;
-    }
-  }
-`;
-
-const DropdownWrapper = styled.div`
-  position: relative;
-`;
-
-const DropdownButton = styled.button`
-  display: flex;
-  align-items: center;
-  background: none;
-  border: none;
-  color: ${({ theme }) => theme.colors.text};
-  font-size: 16px;
-  font-weight: bold;
-  font-family: ${({ theme }) => theme.fonts.body};
-  cursor: pointer;
-  padding: 8px 12px;
-  border-radius: 4px;
-  transition: background 0.2s;
-  &:hover, &:focus {
-    background: ${({ theme }) => theme.colors.primaryHover};
-    outline: none;
-  }
-  @media (max-width: ${MOBILE_BREAKPOINT}) {
-    color: #222;
-    font-size: 18px;
-    width: 100%;
-    justify-content: flex-start;
-    background: none;
-    &:hover {
-      background: #f5f5f5;
-    }
-  }
-`;
-
-const DropdownMenu = styled.ul`
-  position: absolute;
-  top: 110%;
-  left: 0;
-  min-width: 180px;
-  background: #fff;
-  color: #222;
-  border-radius: 8px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
-  padding: 8px 0;
-  margin: 0;
-  z-index: 100;
-  list-style: none;
-`;
-
-const DropdownMenuItem = styled.li`
-  width: 100%;
-  & > button {
-    display: block;
-    width: 100%;
-    padding: 10px 20px;
-    color: #222;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 500;
-    border-radius: 0;
-    background: none;
-    border: none;
-    cursor: pointer;
-    transition: background 0.2s;
     &:hover {
       background: #f5f5f5;
     }
@@ -282,44 +211,6 @@ export const Header = ({ backgroundColor }: HeaderProps) => {
     }
   };
 
-  // 프로그램 선택 시 해당 프로그램으로 이동
-  const scrollToProgram = (programType: string) => {
-    // 현재 페이지가 홈페이지가 아니면 먼저 홈페이지로 이동
-    if (window.location.pathname !== '/') {
-      navigate('/');
-      // 페이지 이동 후 스크롤을 위해 더 긴 지연 추가 (모바일 대응)
-      setTimeout(() => {
-        scrollToElement('program-section');
-        // 프로그램 타입을 localStorage에 저장하여 ProgramCard에서 사용
-        localStorage.setItem('selectedProgram', programType);
-        // 프로그램별 카드 인덱스도 저장
-        const cardIndex = getProgramCardIndex(programType);
-        localStorage.setItem('selectedCardIndex', cardIndex.toString());
-      }, 300);
-    } else {
-      // 이미 홈페이지에 있으면 바로 스크롤
-      scrollToElement('program-section');
-      // 프로그램 타입을 localStorage에 저장하여 ProgramCard에서 사용
-      localStorage.setItem('selectedProgram', programType);
-      // 프로그램별 카드 인덱스도 저장
-      const cardIndex = getProgramCardIndex(programType);
-      localStorage.setItem('selectedCardIndex', cardIndex.toString());
-    }
-    setDropdownOpen(false);
-    setMobileMenuOpen(false);
-  };
-
-  // 프로그램별 카드 인덱스 반환
-  const getProgramCardIndex = (programType: string) => {
-    switch (programType) {
-      case 'SS': return 0;
-      case 'SC': return 0;
-      case 'SR': return 0;
-      case 'ST': return 0;
-      default: return 0;
-    }
-  };
-
   // 페이지 이동 함수
   const navigateToPage = (path: string) => {
     navigate(path);
@@ -380,7 +271,10 @@ export const Header = ({ backgroundColor }: HeaderProps) => {
         <Logo
           src={logo}
           alt={logoAlt}
-          onClick={() => navigate('/')}
+          onClick={() => {
+            scrollToTop();
+            navigate('/');
+          }}
         />
       </LeftContainer>
       
@@ -431,9 +325,9 @@ export const Header = ({ backgroundColor }: HeaderProps) => {
         </DropdownWrapper> */}
         <MenuItem onClick={() => scrollToSection('program-section')}>프로그램 소개</MenuItem>
         <MenuItem onClick={() => scrollToSection('product-section')}>제품 소개</MenuItem>
-        <MenuItem onClick={() => scrollToSection('info-section')}>문의사항</MenuItem>
-
         <MenuItem onClick={() => navigateToPage('/member')}>창업 및 교육</MenuItem>
+
+        <MenuItem onClick={() => scrollToSection('info-section')}>문의사항</MenuItem>
         
         <ConsultIconButton 
           onClick={handleConsultClick}

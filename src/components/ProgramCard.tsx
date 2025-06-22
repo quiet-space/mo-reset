@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { MainCarousel } from './MainCarousel';
-import { theme } from '../theme/theme';
 
 const Container = styled.div`
-  padding: 40px 0;
+  padding: 40px 0 120px;
   background: #f8f9fa;
 
   @media (max-width: 768px) {
@@ -30,6 +29,13 @@ const Title = styled.h3`
     display: inline-block;
     color: ${({ theme }) => theme.colors.primary};
   }
+`;
+
+export const ProgramSectionTitle = styled.h2`
+  font-size: ${({ theme }) => theme.fontSizes['2xl']};
+  color: ${({ theme }) => theme.colors.text};
+  text-align: center;
+  margin-bottom: ${({ theme }) => theme.spacing.xl};
 `;
 
 const ProgramSelector = styled.div`
@@ -361,6 +367,8 @@ export const ProgramCard = () => {
 
   return (
     <Container>
+            <ProgramSectionTitle>프로그램 소개</ProgramSectionTitle>
+
       <ProgramSelector>
         {Object.keys(programData).map((programType) => (
           <ProgramButton
@@ -373,12 +381,14 @@ export const ProgramCard = () => {
         ))}
       </ProgramSelector>
 
+<div>
       <Title dangerouslySetInnerHTML={{ __html: title }} />
 
       <MainCarousel 
         card={currentProgram.card} 
         initialIndex={initialIndex}
       />
+      </div>
     </Container>
   );
 };

@@ -8,7 +8,6 @@ import { BrandCard } from './components/BrandCard';
 import { ProgramCard } from './components/ProgramCard';
 import { ProductSectionComponent } from './components/ProductCard';
 import { Footer } from './components/Footer';
-import ConsultButtonComponent from './components/ConsultButton';
 import { InfoCard } from './components/InfoCard';
 import { Member } from './pages/Member';
 import { Inquiry } from './pages/Inquiry';
@@ -48,8 +47,6 @@ const HomePage = () => {
         <InfoCard />
       </div>
       
-      {/* <ConsultButtonComponent /> */}
-
       <Footer />
     </div>
   );
