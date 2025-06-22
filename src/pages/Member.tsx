@@ -133,6 +133,63 @@ const ContactButton = styled.button`
     background: ${({ theme }) => theme.colors.primaryHover};
   }
 `;
+const FlexContainer = styled.div`
+display: flex;
+align-items: center;
+gap: 40px;
+margin: 40px 0;
+
+@media (max-width: 768px) {
+  flex-direction: column;
+}
+`;
+
+const ImageContainer = styled.div`
+flex: 1;
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+`;
+
+const TextContainer = styled.div`
+flex: 1;
+
+h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: ${({ theme }) => theme.colors.primary};
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+`;
+
+const BenefitsList = styled.ul`
+list-style: none;
+padding: 0;
+margin: 0;
+`;
+
+const BenefitItem = styled.li`
+position: relative;
+padding-left: 24px;
+margin-bottom: 12px;
+font-size: 16px;
+
+&:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: ${({ theme }) => theme.colors.primary};
+}
+`;
 
 export const Member = () => {
   useEffect(() => {
@@ -146,113 +203,44 @@ export const Member = () => {
       <Content>
         <Title>창업 및 교육</Title>
         <Subtitle>
-          모리셋과 함께 성공적인 창업을 시작하세요.<br />
-          체계적인 교육 시스템과 지속적인 지원을 제공합니다.
+          모리셋은 25년 간의 연구개발을 통해 두피탈모 관리를 선도하는 브랜드입니다. 
         </Subtitle>
 
+
         <Section>
-          <SectionTitle>창업 지원 프로그램</SectionTitle>
-          <CardGrid>
-            <Card>
-              <CardTitle>초기 창업 지원</CardTitle>
-              <CardContent>
-                창업 초기 단계에서 필요한 모든 것을 지원합니다. 
-                전문적인 컨설팅과 함께 성공적인 창업을 도와드립니다.
-              </CardContent>
-              <FeatureList>
-                <FeatureItem>창업 컨설팅 제공</FeatureItem>
-                <FeatureItem>사업계획서 작성 지원</FeatureItem>
-                <FeatureItem>자금 조달 방법 안내</FeatureItem>
-                <FeatureItem>법적 절차 지원</FeatureItem>
-              </FeatureList>
-            </Card>
+          <FlexContainer>
+            <ImageContainer>
+              <img src="/src/assets/room.jpg" alt="모리셋 치료실" />
+            </ImageContainer>
+            <TextContainer>
+              <h3>모리셋은 25년 간의 연구개발을 통해 두피탈모 관리를 선도하는 브랜드입니다. </h3>
+              <p>
+              모리셋은 유럽의 역사 깊은 기초과학 연구를 기반으로 약물이나 두피케어에 의존하지 않는 혁신적 대체 시스템을 설계하였으며, 모리셋의 특허기술은 쉽게 모방할 수 없는 독보적인 경쟁력을 가졌습니다. 
 
-            <Card>
-              <CardTitle>교육 프로그램</CardTitle>
-              <CardContent>
-                체계적인 교육 프로그램을 통해 필요한 모든 기술과 
-                노하우를 습득할 수 있습니다.
-              </CardContent>
-              <FeatureList>
-                <FeatureItem>기술 교육 과정</FeatureItem>
-                <FeatureItem>운영 노하우 전수</FeatureItem>
-                <FeatureItem>마케팅 전략 교육</FeatureItem>
-                <FeatureItem>고객 관리 시스템</FeatureItem>
-              </FeatureList>
-            </Card>
+두피시장의 성장세에 따라 수많은 두피 센터들이 생겨나고 있습니다. 그러나 타 탈모관리와는 차원이 다르게 모리셋은 모든 결과를 오직 임상으로 증명합니다. 그렇기에 모리셋 창업은 고객들의 신뢰와 그로 인한 매출 보장을 장담하며, 안정적인 사업을 위한 수익 창출 솔루션 및 지속적인 사후관리를 약속합니다.
+              </p>
+            </TextContainer>
+          </FlexContainer>
+        </Section>
 
-            <Card>
-              <CardTitle>지속적 지원</CardTitle>
-              <CardContent>
-                창업 후에도 지속적인 지원을 통해 안정적인 
-                사업 운영을 도와드립니다.
-              </CardContent>
-              <FeatureList>
-                <FeatureItem>정기 컨설팅 제공</FeatureItem>
-                <FeatureItem>문제 해결 지원</FeatureItem>
-                <FeatureItem>네트워킹 기회 제공</FeatureItem>
-                <FeatureItem>신기술 업데이트</FeatureItem>
-              </FeatureList>
-            </Card>
-          </CardGrid>
+
+
+        <Section>
+          <SectionTitle>창업 세미나</SectionTitle>
+
+           <ImageContainer>
+              <img src="/src/assets/edu.png" alt="창업 세미나" />
+            </ImageContainer>
         </Section>
 
         <Section>
-          <SectionTitle>교육 과정</SectionTitle>
-          <CardGrid>
-            <Card>
-              <CardTitle>기초 과정 (2주)</CardTitle>
-              <CardContent>
-                창업에 필요한 기본 지식과 기술을 습득하는 과정입니다.
-              </CardContent>
-              <FeatureList>
-                <FeatureItem>업계 동향 분석</FeatureItem>
-                <FeatureItem>기본 기술 습득</FeatureItem>
-                <FeatureItem>시장 조사 방법</FeatureItem>
-                <FeatureItem>사업 모델 이해</FeatureItem>
-              </FeatureList>
-            </Card>
+          <SectionTitle>창업 절차</SectionTitle>
 
-            <Card>
-              <CardTitle>심화 과정 (4주)</CardTitle>
-              <CardContent>
-                실제 창업에 필요한 심화 기술과 운영 노하우를 
-                학습하는 과정입니다.
-              </CardContent>
-              <FeatureList>
-                <FeatureItem>고급 기술 교육</FeatureItem>
-                <FeatureItem>운영 시스템 구축</FeatureItem>
-                <FeatureItem>마케팅 전략 수립</FeatureItem>
-                <FeatureItem>재무 관리 교육</FeatureItem>
-              </FeatureList>
-            </Card>
-
-            <Card>
-              <CardTitle>실습 과정 (2주)</CardTitle>
-              <CardContent>
-                실제 환경에서 실습을 통해 배운 내용을 
-                적용해보는 과정입니다.
-              </CardContent>
-              <FeatureList>
-                <FeatureItem>실제 운영 체험</FeatureItem>
-                <FeatureItem>고객 응대 실습</FeatureItem>
-                <FeatureItem>문제 해결 실습</FeatureItem>
-                <FeatureItem>최종 평가 및 피드백</FeatureItem>
-              </FeatureList>
-            </Card>
-          </CardGrid>
+           <ImageContainer>
+              <img src="/src/assets/step.png" alt="창업 절차" />
+            </ImageContainer>
         </Section>
 
-        <ContactSection>
-          <SectionTitle>창업 문의</SectionTitle>
-          <Subtitle>
-            창업에 관심이 있으시거나 궁금한 점이 있으시면 언제든 연락주세요.<br />
-            전문 상담사가 상세히 안내해드립니다.
-          </Subtitle>
-          <ContactButton onClick={() => window.location.href = '/inquiry'}>
-            창업 상담 신청하기
-          </ContactButton>
-        </ContactSection>
       </Content>
       <Footer />
     </Container>

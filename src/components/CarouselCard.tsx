@@ -10,11 +10,11 @@ interface CarouselCardProps {
 
 const CardContainer = styled.div`
   display: flex;
+  flex-direction: column;
   background: white;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  height: 100%;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -85,6 +85,18 @@ const Content = styled.div`
       z-index: -1;
     }
   }
+
+  span {
+  font-size: ${({ theme }) => theme.fontSizes.sm};
+  line-height: 1;
+    h2 {
+    font-size: ${({ theme }) => theme.fontSizes.sm};
+    font-weight: ${({ theme }) => theme.fontWeights.bold};
+    
+  }
+  }
+
+
 
   @media (max-width: 768px) {
     font-size: 14px;

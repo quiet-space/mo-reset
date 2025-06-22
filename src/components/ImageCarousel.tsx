@@ -8,7 +8,7 @@ interface ImageCarouselProps {
 const CarouselContainer = styled.div`
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 65vh;
   overflow: hidden;
   border-radius: 8px;
 `;
@@ -23,12 +23,14 @@ const CarouselTrack = styled.div<{ currentIndex: number }>`
 const CarouselSlide = styled.div`
   min-width: 100%;
   height: 100%;
+padding: 10px;
 `;
 
 const CarouselImage = styled.img`
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+
 `;
 
 

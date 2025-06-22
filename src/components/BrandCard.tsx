@@ -5,8 +5,7 @@ const BrandCardContainer = styled.div`
 width: 100%;
 height: 100%;
 
-padding: 40px 0;
-
+padding: 40px 0 120px;
 `;
 
 const BrandLayout = styled.div`
@@ -24,7 +23,7 @@ const BrandLayout = styled.div`
 `;
 
 const ImageContainer = styled.div`
-  flex: 0 0 40%;
+  flex: 0 0 30%;
 `;
 
 const BrandImage = styled.img`
@@ -193,6 +192,30 @@ export const BrandCard = () => {
                 </ContentContainer>
             </BrandLayout>
 
+            <BrandLayout
+                    style={{
+                      marginTop: '40px',
+                  }}
+            >
+                <ImageContainer>
+                    <BrandImage src="/src/assets/cert1.jpg" alt="Brand" 
+                    style={{
+                        width: '90%',
+                        height: '90%',
+                        objectFit: 'cover',
+                    }}
+                    />
+                </ImageContainer>
+                <ImageContainer>
+                    <BrandImage src="/src/assets/cert2.jpg" alt="Brand" 
+                    style={{
+                        width: '90%',
+                        height: '90%',
+                        objectFit: 'cover',
+                    }}
+                    />
+                </ImageContainer>
+            </BrandLayout>
            
         </BrandCardContainer>
     );
