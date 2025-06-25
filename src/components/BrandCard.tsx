@@ -1,4 +1,7 @@
+'use client'
+
 import styled from 'styled-components';
+import { useState, useEffect } from 'react';
 
 
 const BrandCardContainer = styled.div`
@@ -13,7 +16,6 @@ const BrandLayout = styled.div`
   align-items: center;
   gap: 100px;
   padding-bottom: 200px;
-
   
   @media (min-width: 768px) {
     max-width: 60%;
@@ -107,10 +109,24 @@ const DescText = styled.p`
 
 
 export const BrandCard = () => { 
-    return (
-        <BrandCardContainer>
+    const [activeSection, setActiveSection] = useState('brand-info-1');
 
-            <DescText>
+    const scrollToSection = (sectionId: string) => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+            window.scrollTo({ top: element.getBoundingClientRect().top + window.scrollY - 150, behavior: 'smooth' });
+        }
+    };
+
+    return (
+        <BrandCardContainer
+        style={{
+          position: 'relative',
+        }}
+        >
+            <DescText
+            id="brand-card-container"
+            >
                 <h1>
                 모리셋, 당신의 두피를 스위스과학으로 되살리다 
                 </h1>
@@ -120,8 +136,114 @@ export const BrandCard = () => {
                 이제, 모리셋이 만들어갑니다.
             </DescText>
 
+                 <div 
+                  style={{
+                    position: 'sticky',
+                    top: '60px',
+                    zIndex: '100',
+                    width: '100%',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    gap: '20px',
+                    padding: '20px 0',
+                    backgroundColor: '#f1f3f5',
+                    margin: '0',
+                    boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+                  }}>
+              <button
+                onClick={() => scrollToSection('brand-info-1')}
+                style={{
+                  padding: '10px 20px',
+                  border: 'none',
+                  borderRadius: '8px',
+                  background: activeSection === 'brand-1' ? '#007bff' : '#f1f3f5',
+                  color: activeSection === 'brand-1' ? 'white' : '#495057',
+                  cursor: 'pointer',
+                  transition: 'all 0.3s ease',
+                  fontWeight: activeSection === 'brand-1' ? 'bold' : 'normal',
+                }}
+              >
+                이보영 대표원장
+              </button>
+              <button
+                onClick={() => scrollToSection('brand-info-2')}
+                style={{
+                  padding: '10px 20px', 
+                  border: 'none',
+                  borderRadius: '8px',
+                  background: activeSection === 'brand-2' ? '#007bff' : '#f1f3f5',
+                  color: activeSection === 'brand-2' ? 'white' : '#495057',
+                  cursor: 'pointer',
+                  transition: 'all 0.3s ease',
+                  fontWeight: activeSection === 'brand-2' ? 'bold' : 'normal',
+                }}
+              >
+                모리셋 모낭플란트
+              </button>
+              <button
+                onClick={() => scrollToSection('brand-info-3')}
+                style={{
+                  padding: '10px 20px',
+                  border: 'none', 
+                  borderRadius: '8px',
+                  background: activeSection === 'brand-3' ? '#007bff' : '#f1f3f5',
+                  color: activeSection === 'brand-3' ? 'white' : '#495057',
+                  cursor: 'pointer',
+                  transition: 'all 0.3s ease',
+                  fontWeight: activeSection === 'brand-3' ? 'bold' : 'normal',
+                }}
+              >
+                쏘팔메토 줄기세포
+              </button>
+              <button
+                onClick={() => scrollToSection('brand-info-4')}
+                style={{
+                  padding: '10px 20px',
+                  border: 'none',
+                  borderRadius: '8px', 
+                  background: activeSection === 'brand-4' ? '#007bff' : '#f1f3f5',
+                  color: activeSection === 'brand-4' ? 'white' : '#495057',
+                  cursor: 'pointer',
+                  transition: 'all 0.3s ease',
+                  fontWeight: activeSection === 'brand-4' ? 'bold' : 'normal',
+                }}
+              >
+                우리의 가치
+              </button>
+              <button
+                onClick={() => scrollToSection('brand-info-5')}
+                style={{
+                  padding: '10px 20px',
+                  border: 'none',
+                  borderRadius: '8px', 
+                  background: activeSection === 'brand-4' ? '#007bff' : '#f1f3f5',
+                  color: activeSection === 'brand-4' ? 'white' : '#495057',
+                  cursor: 'pointer',
+                  transition: 'all 0.3s ease',
+                  fontWeight: activeSection === 'brand-4' ? 'bold' : 'normal',
+                }}
+              >
+                환자 후기
+              </button>
+              <button
+                onClick={() => scrollToSection('brand-info-6')}
+                style={{
+                  padding: '10px 20px',
+                  border: 'none',
+                  borderRadius: '8px', 
+                  background: activeSection === 'brand-4' ? '#007bff' : '#f1f3f5',
+                  color: activeSection === 'brand-4' ? 'white' : '#495057',
+                  cursor: 'pointer',
+                  transition: 'all 0.3s ease',
+                  fontWeight: activeSection === 'brand-4' ? 'bold' : 'normal',
+                }}
+              >
+                세계 총판 지도 & 국내 지점 지도
+              </button>
+            </div>
 
-            <BrandLayout>
+
+            <BrandLayout id='brand-info-1'>
                 <ImageContainer>
                     <BrandImage src="https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/doc-60UdJXHVqd5vyCqZXzO0GPZ4B8A2cw.jpg" alt="Brand" />
                 </ImageContainer>
@@ -151,7 +273,7 @@ export const BrandCard = () => {
             </BrandLayout>
 
 
-            <BrandLayout>
+            <BrandLayout id='brand-info-2'>
                 <ImageContainer>
                     <BrandImage src="https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/br-left1-uLBSAZDaUMDtyHJDEpneiaN0kwyLIX.png" alt="Brand" />
                 </ImageContainer>
@@ -193,7 +315,7 @@ export const BrandCard = () => {
                 </ContentContainer>
             </BrandLayout>
 
-            <BrandLayout>
+            <BrandLayout id='brand-info-3'>
                 <ImageContainer>
                     <BrandImage src="https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/br2-3-GqmI7kdzF8YHIkak9fViAp0P9cjrji.png" alt="Brand" />
                 </ImageContainer>
@@ -219,12 +341,14 @@ export const BrandCard = () => {
             </BrandLayout>
             
 
-            <BrandLayout style={{
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}>
+            <BrandLayout id='brand-info-4' 
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              >
             <ContentContainer>
                 <Title>
                   <h2>
@@ -303,6 +427,7 @@ export const BrandCard = () => {
             </BrandLayout>
 
             <BrandLayout
+            id='brand-info-5'
                     style={{
                       marginTop: '30px',
                       display: 'flex',
@@ -334,7 +459,9 @@ export const BrandCard = () => {
                     </div>
 
             </BrandLayout>
-            <BrandLayout   style={{
+            <BrandLayout
+            id='brand-info-6'
+            style={{
                       marginTop: '30px',
                       display: 'flex',
                       flexDirection: 'column',
