@@ -182,7 +182,7 @@ const programData = {
     card:{
       id: 'ss-1',
       images: [
-        'https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/sc1-VIGiYC7Al3D01XNleH0LcOkFbULSl8.png',
+        'https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/sc1r-VOdoEALwL39BwkA7IgAqa2CYOiPZOM.png',
    
       ],
       title: "모낭플란트란?",

@@ -133,9 +133,10 @@ const Dot = styled.button<{ $active: boolean }>`
 
 const images = [
   'https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/top1-ObxAq9J8FnnpAYCX8FLz3G1zd0BQ9K.mp4',
-  'https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/carousel2-6rlWyf519v9mwj6u8qmXXjFDpcj4LG.jpg',
-  'https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/carousel3-mRBSmIt9LugsUUgxZeQLBU1MucXq8y.jpg',
-  'https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/carousel4-6juw2TN0XP8avHxDSLvQRxtFVCuOY1.jpg',
+  'https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/beach-ccQwfPJpQr4G5CrM8O572ocxa2jHU5.png',
+  'https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/family-EkDqRINCW1WbIQIrns88t7ZhfICDG6.jpg',
+  'https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/swiss-ZUO1AQpS2jXmdkbudVaPBUAzaqiyl0.jpg',
+  // 'https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/carousel5-6k9h6ZNOZmoFKPleF5xuYn2OdAN2b8.png'
 ];
 
 const carouselData = [
@@ -235,7 +236,7 @@ const carouselData = [
                         입니다.
                         우리는 탈모로부터 자유로운 삶을 꿈꾸는 모든 이들에게, 신뢰와 과학, 그리고 확실한 결과를 약속드립니다.`,
     position: 'left' as const
-  }
+  },
 ];
 
 const AUTO_SLIDE_INTERVAL = 100000; // 10초 = 10000
@@ -283,9 +284,9 @@ export const MainTopCard = () => {
       {images.map((image, index) => (
         <CarouselSlide key={index} $active={index === currentSlide}>
           <MediaContent src={image} alt={`Carousel ${index + 1}`} />
-          <TextBox $active={index === currentSlide} $position={carouselData[index].position}>
-            <Title>{carouselData[index].title}</Title>
-            <Content dangerouslySetInnerHTML={{ __html: carouselData[index].content }} />
+          <TextBox $active={index === currentSlide} $position={carouselData[index]?.position}>
+            <Title>{carouselData[index]?.title}</Title>
+            <Content dangerouslySetInnerHTML={{ __html: carouselData[index]?.content }} />
           </TextBox>
         </CarouselSlide>
       ))}

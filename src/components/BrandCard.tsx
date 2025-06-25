@@ -11,8 +11,8 @@ padding: 40px 0 120px;
 const BrandLayout = styled.div`
   display: flex;
   align-items: center;
-  gap: 50px;
-  padding-bottom: 50px;
+  gap: 100px;
+  padding-bottom: 250px;
 
   
   @media (min-width: 768px) {
@@ -23,7 +23,7 @@ const BrandLayout = styled.div`
 `;
 
 const ImageContainer = styled.div`
-  flex: 0 0 30%;
+  flex: 0 0 40%;
 `;
 
 const BrandImage = styled.img`
@@ -66,9 +66,9 @@ const Title = styled.h2`
 `;
 
 const Description = styled.p`
-  font-size: ${({ theme }) => theme.fontSizes.sm};
+  font-size: ${({ theme }) => theme.fontSizes.md};
   line-height: 1.6;
-  color: ${({ theme }) => theme.colors.textLight};
+  color: ${({ theme }) => theme.colors.text};
   margin: 0;
   text-align: left;
 
@@ -77,6 +77,12 @@ const Description = styled.p`
     font-size: ${({ theme }) => theme.fontSizes.sm};
     font-weight: ${({ theme }) => theme.fontWeights.bold};
     margin: 0;
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+    font-weight: ${({ theme }) => theme.fontWeights.bold};
   }
 `;
 
@@ -147,7 +153,7 @@ export const BrandCard = () => {
 
             <BrandLayout>
                 <ImageContainer>
-                    <BrandImage src="https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/lab1-lJkiDcrPmuIM3zRRZmplt2N74n5SoQ.jpg" alt="Brand" />
+                    <BrandImage src="https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/br-left1-uLBSAZDaUMDtyHJDEpneiaN0kwyLIX.png" alt="Brand" />
                 </ImageContainer>
                 <ContentContainer>
                     <Title>오직, 
@@ -155,21 +161,41 @@ export const BrandCard = () => {
                       모리셋 모낭플란트
                       </h2>
                       </Title>
+
+
                     <Description>
-                    
-                    모리셋은 25년간 누적된 메조스킨라인의 연구와 두피 개선 단계를 기반으로 '모낭플란트'를 개발하였으며, 
+                    <p>
+                      모리셋은 25년간 누적된 메조스킨라인의 연구와 두피 개선 단계를 기반으로 '모낭플란트'를 개발하였으며, 
+                      <br />
+                      필요한 모든 관리기간 및 단계 또한 과학적으로 설계되었습니다. 
+                    </p>
                     <br />
-                    필요한 모든 관리기간 및 단계 또한 과학적으로 설계되었습니다. 
+                    Only, Morisette Follicular Implant
+                    Moriset developed 'Follic Implant' based on 35 years of accumulated Swiss stem cell research and scalp improvement stages,
+                    <br />
+                    and all necessary management periods and stages were also scientifically designed.
                     <br />
                     <br />
+                    <p>
                     모리셋의 혁신적 기술력과 메조스킨라인의 제품이 만나 탄생한 모낭플란트는 두피 계의 완전한 솔루션임을 자부합니다. 
+                    </p>
+                    <br />
+                    Moriset's innovative technology and Swiss stem cells meet to create Follicular Implant, which is proud to be a complete solution for the scalp.
                     </Description>
+                    <br />
+                    <BrandImage 
+                    style={{
+                        width: '100%',
+                        height: '90%',
+                        objectFit: 'cover',
+                    }}
+                    src="https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/br-right1-USUShbM6XB8NKL3gx0qdSP7imHJlAw.png" alt="Brand" />
                 </ContentContainer>
             </BrandLayout>
 
             <BrandLayout>
                 <ImageContainer>
-                    <BrandImage src="https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/cell-Bjx3ketpR41WlXE0Dn4Xn36MVSZHvu.jpg" alt="Brand" />
+                    <BrandImage src="https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/br2-3-GqmI7kdzF8YHIkak9fViAp0P9cjrji.png" alt="Brand" />
                 </ImageContainer>
                 <ContentContainer>
                     <Title>모리셋 특허기술의 핵심,
@@ -189,6 +215,10 @@ export const BrandCard = () => {
                     <br />
                     모리셋의 모낭플란트는 두피 건강을 위한 완전한 솔루션입니다. 
                     </Description>
+                    <div style={{ display: 'flex', gap: '20px', justifyContent: 'flex-start', width: '70%',  }}>
+                      <BrandImage src="https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/br2-1-4vdj5FsOavPkHU6Req0TaBOBSU7A1H.png" alt="Brand" />
+                      <BrandImage src="https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/br2-2-ZujU9pgkFGl92PjgLiF4cnCEWglrPe.png" alt="Brand" />
+                    </div>
                 </ContentContainer>
             </BrandLayout>
 
@@ -197,8 +227,10 @@ export const BrandCard = () => {
                       marginTop: '40px',
                   }}
             >
-                <ImageContainer>
-                    <BrandImage src="https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/cert1-PNsy67OCxao0QdKaLkw7pFhMoJDWns.jpg" alt="Brand" 
+                  <BrandImage 
+                  src="https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/carousel5-6k9h6ZNOZmoFKPleF5xuYn2OdAN2b8.png"
+                  />
+                    {/* <BrandImage src="https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/cert1-PNsy67OCxao0QdKaLkw7pFhMoJDWns.jpg" alt="Brand" 
                     style={{
                         width: '90%',
                         height: '90%',
@@ -213,8 +245,7 @@ export const BrandCard = () => {
                         height: '90%',
                         objectFit: 'cover',
                     }}
-                    />
-                </ImageContainer>
+                    /> */}
             </BrandLayout>
            
         </BrandCardContainer>
