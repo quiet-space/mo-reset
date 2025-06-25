@@ -1,6 +1,6 @@
 'use client'
 
-import { Inquiry } from '@/pages/Inquiry'
+import Inquiry from '@/pages/Inquiry'
 
 export default function InquiryPage() {
   return <Inquiry />
