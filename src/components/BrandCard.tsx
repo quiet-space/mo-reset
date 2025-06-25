@@ -12,7 +12,7 @@ const BrandLayout = styled.div`
   display: flex;
   align-items: center;
   gap: 100px;
-  padding-bottom: 250px;
+  padding-bottom: 200px;
 
   
   @media (min-width: 768px) {
@@ -41,14 +41,14 @@ const ContentContainer = styled.div`
 `;
 
 const Title = styled.h2`
-  font-size: ${({ theme }) => theme.fontSizes.lg};
+  font-size: ${({ theme }) => theme.fontSizes['2xl']};
   font-weight: ${({ theme }) => theme.fontWeights.bold};
   margin: 0;
 
   h2 {
     margin-left:8px;
     display: inline-block;
-    font-size: ${({ theme }) => theme.fontSizes.lg};
+    font-size: ${({ theme }) => theme.fontSizes['2xl']};
     font-weight: ${({ theme }) => theme.fontWeights.bold};
     position: relative;
     z-index: 1;
@@ -304,28 +304,51 @@ export const BrandCard = () => {
 
             <BrandLayout
                     style={{
-                      marginTop: '40px',
+                      marginTop: '30px',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      justifyContent: 'center',
+                      alignItems: 'center',
                   }}
             >
+                  <Title>
+                    <h2>
+                      모리셋 모낭플란트 환자 후기 
+                    </h2>
+                  </Title>
+                    <div style={{ display: 'flex', gap: '70px', width: '100%', justifyContent: 'center' }}>
+                      <video 
+                        controls
+                        muted={false}
+                        style={{ height: '50%', borderRadius: '12px' }}
+                      >
+                        <source src="https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/review1-7QbW1npXwRTcI70Di4p3jxiKqf6DD1.mp4" type="video/mp4" />
+                      </video>
+                      <video
+                        controls
+                        muted={false}
+                        style={{ height: '50%', borderRadius: '12px' }}
+                      >
+                        <source src="https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/review2-NMaEbqE8hlJMi7oSlHWYl27hFJQXcY.mp4" type="video/mp4" />
+                      </video>
+                    </div>
+
+            </BrandLayout>
+            <BrandLayout   style={{
+                      marginTop: '30px',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                  }}> 
+            <Title style={{ marginTop: '40px' }}  >
+                    <h2>
+                      세계 총판 지도 & 국내 지점 지도 
+                    </h2>
+                  </Title>
                   <BrandImage 
-                  src="https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/carousel5-6k9h6ZNOZmoFKPleF5xuYn2OdAN2b8.png"
-                  />
-                    {/* <BrandImage src="https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/cert1-PNsy67OCxao0QdKaLkw7pFhMoJDWns.jpg" alt="Brand" 
-                    style={{
-                        width: '90%',
-                        height: '90%',
-                        objectFit: 'cover',
-                    }}
-                    />
-                </ImageContainer>
-                <ImageContainer>
-                    <BrandImage src="https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/cert2-FnCV7zzsB9VpXsLsCstzd2MRiEavHI.jpg" alt="Brand" 
-                    style={{
-                        width: '90%',
-                        height: '90%',
-                        objectFit: 'cover',
-                    }}
-                    /> */}
+                    src="https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/carousel5-6k9h6ZNOZmoFKPleF5xuYn2OdAN2b8.png"
+                  />  
             </BrandLayout>
            
         </BrandCardContainer>

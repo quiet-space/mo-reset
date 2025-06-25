@@ -47,6 +47,31 @@ export const Footer = () => {
               전화번호: 02)-535-2033 | 주소: 서울특별시 서초구 서초중앙로 230 동화반포프라자 304호
           </FooterText>
         </FooterTextContainer>
+
+
+        <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
+          <a href="https://pf.kakao.com/_bNapxj" target="_blank" rel="noopener noreferrer">
+            <img 
+              src="https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/kakao-TzmZd59xWdDvuUSl6YZ5rwy74QJp5S.png"
+              alt="카카오톡 채널"
+              style={{ width: '30px', height: '30px', objectFit: 'contain' }}
+            />
+          </a>
+          <a href="https://www.instagram.com/mo_reset/" target="_blank" rel="noopener noreferrer">
+            <img
+              src="https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/insta-01XRiX9TX21xIwKBUpzQENckH2ZeZZ.png"
+              alt="인스타그램"
+              style={{ width: '30px', height: '30px', objectFit: 'contain' }}
+            />
+          </a>
+          <a href="https://naver.me/xoH8tl8W" target="_blank" rel="noopener noreferrer">
+            <img
+              src="https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/naver-gil8IjE2cl6HB7CeOchn43IuyeEJLS.png"
+              alt="네이버 플레이스"
+              style={{ width: '30px', height: '30px', objectFit: 'contain' }}
+            />
+          </a>
+        </div>
       </FooterContent>
     </FooterContainer>
   );

@@ -227,6 +227,66 @@ export const InfoCard = () => {
           />
         </InfoSection>
       </Content>
+
+
+    <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+        <InfoSection 
+        style={{ 
+          display: 'flex',
+          flexDirection: 'column',
+          border: '2px solid #e9ecef',
+          borderRadius: '12px',
+          padding: '30px',
+          background: 'white',
+          transition: 'all 0.3s ease',
+          marginTop: '40px',
+        }}>
+            <SectionTitle>
+              상담 신청
+            </SectionTitle>
+            <p style={{ fontSize: '16px', fontWeight: '400', color: '#323232', marginBottom: '20px' }}>
+              상담을 신청하시거나, 모리셋의 새로운 소식을 받아보시려면 연락처를 남겨주세요.
+            </p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', marginTop: '20px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <input
+                  type="email"
+                  placeholder="이메일을 입력해주세요"
+                  style={{
+                    padding: '10px',
+                    borderRadius: '5px',
+                    border: '1px solid #ddd',
+                    flex: 1
+                  }}
+                />
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <input
+                  type="tel"
+                  placeholder="휴대폰 번호를 입력해주세요"
+                  style={{
+                    padding: '10px',
+                    borderRadius: '5px', 
+                    border: '1px solid #ddd',
+                    flex: 1
+                  }}
+                />
+              </div>
+              <InfoButton
+                onClick={() => {
+                  alert('상담 신청이 완료되었습니다.');
+                }}
+                style={{
+                  width: '100%',
+                  padding: '15px',
+                  fontSize: '16px'
+                }}
+              >
+                상담 신청하기
+              </InfoButton>
+            </div>
+        </InfoSection>
+      </div>
     </Container>
   );
 }; 

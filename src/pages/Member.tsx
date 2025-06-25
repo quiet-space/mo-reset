@@ -50,7 +50,7 @@ margin: 40px 0;
 
 const ImageContainer = styled.div`
 flex: 1;
-max-width: 60%;
+max-width: 100%;
 
 img {
   width: 100%;
@@ -91,6 +91,34 @@ export const Member = () => {
     <Container>
       <Header />
       <Content>
+        <Section>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+            <video 
+              controls
+              muted={false}
+              style={{ width: '100%', borderRadius: '12px' }}
+            >
+              <source src="https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/edu1-DUirBKvUmvYekhpIdoNo7HXeHHQiZs.mp4" type="video/mp4" />
+            </video>
+
+            <video
+              controls 
+              muted={false}
+              style={{ width: '100%', borderRadius: '12px' }}
+            >
+              <source src="https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/edu2-Oq4BvsxSvlZavUFsCE1uGv4TaAY3hm.mp4" type="video/mp4" />
+            </video>
+
+            <video
+              controls
+              muted={false} 
+              style={{ width: '100%', borderRadius: '12px' }}
+            >
+              <source src="https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/edu3-7wvGL9ua0ZK75mzRfHjEe5CcD1jKe7.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+        </Section>
         <Section>
           <FlexContainer>
             <ImageContainer>
