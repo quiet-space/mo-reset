@@ -195,7 +195,7 @@ const SuccessMessage = styled.div`
   border: 1px solid #c3e6cb;
 `;
 
-export const Inquiry = () => {
+const Inquiry = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -373,3 +373,5 @@ export const Inquiry = () => {
     </Container>
   );
 }; 
+
+export default Inquiry;

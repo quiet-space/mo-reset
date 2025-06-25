@@ -81,7 +81,7 @@ p {
 `;
 
 
-export const Member = () => {
+const Member = () => {
   useEffect(() => {
     // 페이지 진입 시 최상단으로 스크롤
     window.scrollTo(0, 0);
@@ -172,3 +172,5 @@ export const Member = () => {
     </Container>
   );
 }; 
+
+export default Member;
