@@ -1,6 +1,8 @@
+'use client'
+
 import styled from 'styled-components';
 import { useState, useRef, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/navigation';
 import { MdMenu, MdClose,  } from 'react-icons/md';
 
 const MOBILE_BREAKPOINT = '768px';
@@ -143,7 +145,7 @@ interface HeaderProps {
 }
 
 export const Header = ({ backgroundColor }: HeaderProps) => {
-  const navigate = useNavigate();
+  const router = useRouter();
   const logo = 'https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/brand_logo-3bgUmN7TKd2f0DzcDCf5vIfBKO1K9y.png';
   const logoAlt = 'brand_logo';
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -154,7 +156,7 @@ export const Header = ({ backgroundColor }: HeaderProps) => {
   const scrollToSection = (sectionId: string) => {
     // 현재 페이지가 홈페이지가 아니면 먼저 홈페이지로 이동
     if (window.location.pathname !== '/') {
-      navigate('/');
+      router.push('/');
       // 페이지 이동 후 스크롤을 위해 더 긴 지연 추가 (모바일 대응)
       setTimeout(() => {
         scrollToElement(sectionId);
@@ -188,7 +190,7 @@ export const Header = ({ backgroundColor }: HeaderProps) => {
   const scrollToTop = () => {
     // 현재 페이지가 홈페이지가 아니면 먼저 홈페이지로 이동
     if (window.location.pathname !== '/') {
-      navigate('/');
+      router.push('/');
       // 페이지 이동 후 스크롤을 위해 더 긴 지연 추가 (모바일 대응)
       setTimeout(() => {
         scrollToTopElement();
@@ -213,7 +215,7 @@ export const Header = ({ backgroundColor }: HeaderProps) => {
 
   // 페이지 이동 함수
   const navigateToPage = (path: string) => {
-    navigate(path);
+    router.push(path);
     setMobileMenuOpen(false);
     setDropdownOpen(false);
   };
@@ -273,7 +275,7 @@ export const Header = ({ backgroundColor }: HeaderProps) => {
           alt={logoAlt}
           onClick={() => {
             scrollToTop();
-            navigate('/');
+            router.push('/');
           }}
         />
       </LeftContainer>

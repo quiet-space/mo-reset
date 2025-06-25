@@ -1,7 +1,7 @@
 import { put, del, list, head } from '@vercel/blob';
 
 // Vercel Blob 설정
-const BLOB_READ_WRITE_TOKEN = import.meta.env.VITE_BLOB_READ_WRITE_TOKEN || '';
+const BLOB_READ_WRITE_TOKEN = process.env.NEXT_PUBLIC_BLOB_READ_WRITE_TOKEN || '';
 
 // 파일 업로드 함수
 export const uploadToBlob = async (file: File, filename?: string): Promise<string> => {

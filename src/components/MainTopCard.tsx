@@ -1,3 +1,5 @@
+'use client'
+
 import styled from 'styled-components';
 import { useState, useEffect } from 'react';
 import { isVideoFile } from '../utils/vercelBlob';

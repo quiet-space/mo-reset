@@ -1,10 +1,8 @@
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
-import { createGlobalStyle, ThemeProvider } from 'styled-components';
-import App from './App.tsx';
-import { theme } from './theme/theme';
+'use client'
 
-const GlobalStyle = createGlobalStyle`
+import { createGlobalStyle } from 'styled-components'
+
+export const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
   }
@@ -81,13 +79,4 @@ const GlobalStyle = createGlobalStyle`
   button:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
   }
-`;
-
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <App />
-    </ThemeProvider>
-  </StrictMode>
-);
+` 

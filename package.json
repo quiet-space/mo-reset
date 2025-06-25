@@ -2,27 +2,24 @@
   "name": "mo-reset",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
-    "dev": "vite",
-    "server": "node server.js",
-    "dev:all": "concurrently \"npm run dev\" \"npm run server\"",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
     "format": "prettier --write .",
-    "format:check": "prettier --check .",
-    "preview": "vite preview"
+    "format:check": "prettier --check ."
   },
   "dependencies": {
     "@vercel/blob": "^1.1.1",
     "cors": "^2.8.5",
     "express": "^5.1.0",
+    "next": "^15.0.0",
     "node-fetch": "^3.3.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-icons": "^5.5.0",
-    "react-router-dom": "^7.6.2",
     "styled-components": "^6.1.19"
   },
   "devDependencies": {
@@ -33,22 +30,18 @@
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "@types/styled-components": "^5.1.34",
-    "@vitejs/plugin-react": "^4.4.1",
-    "concurrently": "^9.1.2",
     "eslint": "^9.25.0",
+    "eslint-config-next": "^15.0.0",
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-prettier": "^5.5.0",
     "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^16.0.0",
     "prettier": "^3.5.3",
     "typescript": "~5.8.3",
-    "typescript-eslint": "^8.30.1",
-    "vite": "^6.3.5"
+    "typescript-eslint": "^8.30.1"
   },
-  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
-  "main": "eslint.config.js",
-  "keywords": [],
+  "description": "모리셋 - 스위스과학 두피 재생 솔루션",
+  "keywords": ["nextjs", "react", "typescript", "styled-components"],
   "author": "",
   "license": "ISC"
 }

@@ -215,11 +215,91 @@ export const BrandCard = () => {
                     <br />
                     모리셋의 모낭플란트는 두피 건강을 위한 완전한 솔루션입니다. 
                     </Description>
-                    <div style={{ display: 'flex', gap: '20px', justifyContent: 'flex-start', width: '70%',  }}>
-                      <BrandImage src="https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/br2-1-4vdj5FsOavPkHU6Req0TaBOBSU7A1H.png" alt="Brand" />
-                      <BrandImage src="https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/br2-2-ZujU9pgkFGl92PjgLiF4cnCEWglrPe.png" alt="Brand" />
-                    </div>
                 </ContentContainer>
+            </BrandLayout>
+            
+
+            <BrandLayout style={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}>
+            <ContentContainer>
+                <Title>
+                  <h2>
+                    우리의 가치
+                  </h2>
+                </Title>
+              </ContentContainer>
+              <ContentContainer style={{
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'center',
+                alignItems: 'flex-start',
+                gap: '20px',
+              }}>
+                <Description   
+                style={{
+                  width: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  gap: '10px',
+                  }}>
+                    <BrandImage 
+                    style={{
+                      width: '100%',
+                      objectFit: 'cover',
+                    }}
+                    src="https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/br2-2-ZujU9pgkFGl92PjgLiF4cnCEWglrPe.png" alt="Brand" />
+                      <p>
+                        혁신
+                      </p>
+                       당사의 연구 개발 부서는 혁신적인 미적 솔루션을 개발할 수 있는 새로운 기술(예: 특허받은 CHAC 기술)을 개발하는 데 전념하고 있습니다.
+                  </Description>
+                  <Description
+                  style={{
+                    width: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    gap: '10px',
+                  }}>
+                  <BrandImage 
+                  style={{
+                    width: '100%',
+                    objectFit: 'cover',
+                  }}
+                  src="https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/br2-1-4vdj5FsOavPkHU6Req0TaBOBSU7A1H.png" alt="Brand" />
+                    <p>우수
+                    </p>
+                      품질, 안전, 효율성은 제품 개발 프로세스를 안내합니다. Suisselle의 제품은 환자의 안전과 피부 건강을 염두에 두고 설계되었으며
+                      화장품 및 의료 기기 제조의 최고 품질 기준(ISO 22716, ISO 13485 및 ISO 9001 및 GMP)에 따라 제조됩니다.
+                  </Description>
+                  <Description
+                  style={{
+                    width: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    gap: '10px',
+                  }}> 
+                  <BrandImage 
+                  style={{
+                    width: '100%',
+                    objectFit: 'cover',
+                  }}
+                  src="https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/value-hhPWrdwGcVFlhLw0HpOn16cyE8LrYu.jpg" alt="Brand" />
+                  <p>
+                    고객 중심
+                  </p>
+                    의사와 환자의 만족은 완벽을 향한 노력의 주요 목표입니다.
+                  </Description>
+              </ContentContainer>
             </BrandLayout>
 
             <BrandLayout
