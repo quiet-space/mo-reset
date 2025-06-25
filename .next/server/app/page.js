@@ -1,0 +1,454 @@
+(()=>{var e={};e.id=974,e.ids=[974],e.modules={522:(e,t,i)=>{Promise.resolve().then(i.bind(i,1143))},846:e=>{"use strict";e.exports=require("next/dist/compiled/next-server/app-page.runtime.prod.js")},1143:(e,t,i)=>{"use strict";i.r(t),i.d(t,{default:()=>ez});var r=i(687),n=i(3210),o=i(7218),s=i(1891);process.env.NEXT_PUBLIC_BLOB_READ_WRITE_TOKEN;let l=e=>[".mp4",".webm",".ogg",".mov",".avi"].some(t=>e.toLowerCase().endsWith(t)),a=o.Ay.div.withConfig({componentId:"sc-31767575-0"})(["position:relative;width:100%;height:85vh;overflow:hidden;@media (max-width:768px){height:calc(100vh - 60px);}"]),d=o.Ay.div.withConfig({componentId:"sc-31767575-1"})(["position:absolute;top:0;left:0;width:100%;height:100%;opacity:",";transition:opacity 0.5s ease-in-out;"],({$active:e})=>e?"1":"0"),c=o.Ay.img.withConfig({componentId:"sc-31767575-2"})(["width:100%;height:100%;object-fit:cover;@media (max-width:768px){width:150%;}"]),p=o.Ay.video.withConfig({componentId:"sc-31767575-3"})(["width:100%;height:100%;object-fit:cover;@media (max-width:768px){width:150%;}"]),x=o.Ay.div.withConfig({componentId:"sc-31767575-4"})(["position:absolute;bottom:0;padding:30px 40px;"," background:rgba(255,255,255,0.75);text-align:center;max-width:40%;opacity:",";transition:opacity 0.5s ease-in-out;backdrop-filter:blur(5px);@media (max-width:768px){top:auto;bottom:0;left:0 !important;right:0 !important;transform:none !important;width:100vw;max-width:100vw;padding:20px 20px 60px 20px;border-radius:0;}"],({$position:e})=>{switch(e){case"left":return"left: 0%; transform: translateY(-20%); padding-left: 5%;";case"right":return"right: 0%; transform: translateY(-20%); padding-right: 5%";default:return"left: 50%; transform: translate(-50%, 0%);"}},({$active:e})=>e?"1":"0"),h=o.Ay.h2.withConfig({componentId:"sc-31767575-5"})(["text-align:left;font-size:",";font-weight:",";color:",";line-height:1.2;margin-bottom:12px;"],({theme:e})=>e.fontSizes.xl,({theme:e})=>e.fontWeights.bold,({theme:e})=>e.colors.text),b=o.Ay.div.withConfig({componentId:"sc-31767575-6"})(["font-size:",";line-height:1.4;color:",";margin:0;text-align:left;h3{display:inline-block;font-size:",";font-weight:",";margin:0;}"],({theme:e})=>e.fontSizes.md,({theme:e})=>e.colors.text,({theme:e})=>e.fontSizes.md,({theme:e})=>e.fontWeights.bold),g=o.Ay.div.withConfig({componentId:"sc-31767575-7"})(["position:absolute;bottom:20px;left:50%;transform:translateX(-50%);display:flex;gap:10px;"]),m=o.Ay.button.withConfig({componentId:"sc-31767575-8"})(["min-height:10px;min-width:40px;border:none;padding:0;border-radius:8px;background:",";cursor:pointer;transition:background 0.3s;&:hover{background:white;}"],({$active:e})=>e?"white":"rgba(255, 255, 255, 0.5)"),f=["https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/top1-ObxAq9J8FnnpAYCX8FLz3G1zd0BQ9K.mp4","https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/beach-ccQwfPJpQr4G5CrM8O572ocxa2jHU5.png","https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/family-EkDqRINCW1WbIQIrns88t7ZhfICDG6.jpg","https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/swiss-ZUO1AQpS2jXmdkbudVaPBUAzaqiyl0.jpg"],u=[{title:"스위스에서 시작된 탈모 재생의 표준",content:`    모낭플란트는 오늘날 스위스를 대표하는 
+                        <h3>
+                        전문 탈모 재생 기술
+                        </h3>
+                        로 자리매김하고 있습니다. 
+                        <br />
+                        <br />
+                        스위스에서는 탈모 전문 클리닉에 방문하면 
+                        <h3>
+                        최소 한 명 이상의 모낭플란트 전문가
+                        </h3>
+                        를 만날 수 있을 만큼 보편화된 직업군이며, 
+                        이는 해당 분야의 기술력, 안전성, 효과성이 이미 국가적으로 검증되었음을 보여줍니다.
+                        <br />
+                        <br />
+                        특히 스위스는 모낭 건강과 두피 재생 분야의 기술을 꾸준히 발전시키며, 
+                        현재는 
+                        <h3>
+                        전 세계 탈모 재생 산업의 선두주자
+                        </h3>
+                        로서 확고한 위치를 차지하고 있습니다.`,position:"right"},{title:"한국, 새로운 모낭플란트 인재 양성의 시작점",content:`
+     최근 대한민국에서도 탈모 인구의 증가와 함께, 탈모 개선의 중요성에 대한 사회적 인식이 빠르게 높아지고 있습니다. 
+                    <br />
+                    단순 미용 목적을 넘어 
+                    <h3>
+                    건강 관리와 삶의 질 향상을 위한 필수 분야
+                    </h3>
+                    로 자리잡고 있는 탈모 케어.  
+                    이에 따라 전문적인 교육과 실습을 갖춘 모낭플란트 전문가의 양성이 더욱 절실한 시점입니다.
+                    <br />
+                    <br />
+                    모리셋은 그 중심에서 
+                    <h3>
+                    모낭플란트 교육과 시스템 보급을 선도
+                    </h3>하고 있습니다. 
+                    이론 교육뿐 아니라 실무 중심의 커리큘럼을 바탕으로, 
+                    현장에서 바로 적용 가능한 실질적인 전문 인력을 양성하여, 국내 두피\xb7탈모 시장에 질적인 변화를 이끌고 있습니다.   `,position:"left"},{title:"전 세대를 위한 두피 전문 프로그램",content:`
+    모리셋의 모낭플란트는 
+                        <h3>
+                        학생부터 노년층까지, 
+                        </h3>
+                        두피 건강이 필요한 모든 이들을 위한 프로그램입니다. 
+                        <br />
+                        각기 다른 두피 상태, 연령, 생활습관에 맞춰 개인별 맞춤 솔루션을 제공하며, 
+                        단순 관리가 아닌 
+                        <h3>
+                        과학적이고 체계적인 두피 재생 프로그램
+                        </h3>
+                        으로 발전하고 있습니다.
+
+                        <br />
+                        <br />
+
+                        우리의 목표는, 단지 머리카락을 되살리는 것을 넘어, 
+                        <h3>
+                        자신감을 회복하고 건강한 삶을 회복하는 것
+                        </h3>
+                        입니다.`,position:"right"},{title:"탈모는 질병입니다, 모낭플란트는 해결책입니다",content:`현대 사회에서 탈모는 이제 단순한 외모 고민을 넘어, 
+                        <h3>
+                        정신적 스트레스와 사회적 위축을 유발하는 심각한 질환
+                        </h3>
+                        으로 다뤄지고 있습니다. 
+                        그렇기 때문에, 
+                        안전하고 효과적인 탈모 솔루션의 필요성
+                        은 더욱 강조되고 있습니다.
+
+                        <br />
+
+                        모리셋의 모낭플란트 시스템은 모든 사람에게 
+                        <h3>
+                        아름답고 건강한 두피를 회복시켜주는 해결책
+                        </h3>
+                        이자, 
+                        <h3>
+                        탈모를 질병으로 인식하는 현대 사회에 반드시 필요한 대안
+                        </h3>
+                        입니다.
+                        우리는 탈모로부터 자유로운 삶을 꿈꾸는 모든 이들에게, 신뢰와 과학, 그리고 확실한 결과를 약속드립니다.`,position:"left"}],j=e=>{let[t,i]=(0,n.useState)(0);return(0,n.useEffect)(()=>{let t=setInterval(()=>{i(t=>(t+1)%e)},1e5);return()=>clearInterval(t)},[e]),{currentSlide:t,setCurrentSlide:i}},w=({src:e,alt:t})=>l(e)?(0,r.jsx)(p,{src:e,autoPlay:!0,muted:!0,loop:!0,controls:!1}):(0,r.jsx)(c,{src:e,alt:t}),y=()=>{let{currentSlide:e,setCurrentSlide:t}=j(f.length);return(0,r.jsxs)(a,{children:[f.map((t,i)=>(0,r.jsxs)(d,{$active:i===e,children:[(0,r.jsx)(w,{src:t,alt:`Carousel ${i+1}`}),(0,r.jsxs)(x,{$active:i===e,$position:u[i]?.position,children:[(0,r.jsx)(h,{children:u[i]?.title}),(0,r.jsx)(b,{dangerouslySetInnerHTML:{__html:u[i]?.content}})]})]},i)),(0,r.jsx)(g,{children:[0,1,2,3].map(i=>(0,r.jsx)(m,{$active:i===e,onClick:()=>t(i)},i))})]})},v=o.Ay.div.withConfig({componentId:"sc-e4dfb9e0-0"})(["width:100%;height:100%;padding:40px 0 120px;"]),C=o.Ay.div.withConfig({componentId:"sc-e4dfb9e0-1"})(["display:flex;align-items:center;gap:100px;padding-bottom:200px;@media (min-width:768px){max-width:60%;margin:0 auto;justify-content:center;}"]),I=o.Ay.div.withConfig({componentId:"sc-e4dfb9e0-2"})(["flex:0 0 40%;"]),A=o.Ay.img.withConfig({componentId:"sc-e4dfb9e0-3"})(["width:100%;height:100%;object-fit:cover;"]),S=o.Ay.div.withConfig({componentId:"sc-e4dfb9e0-4"})(["flex:1;display:flex;flex-direction:column;gap:24px;"]),k=o.Ay.h2.withConfig({componentId:"sc-e4dfb9e0-5"})(["font-size:",";font-weight:",";margin:0;h2{margin-left:8px;display:inline-block;font-size:",";font-weight:",";position:relative;z-index:1;&::before{content:'';position:absolute;left:0;bottom:0;width:100%;height:60%;background-color:",";z-index:-1;}}"],({theme:e})=>e.fontSizes["2xl"],({theme:e})=>e.fontWeights.bold,({theme:e})=>e.fontSizes["2xl"],({theme:e})=>e.fontWeights.bold,({theme:e})=>`${e.colors.primary}80`),z=o.Ay.p.withConfig({componentId:"sc-e4dfb9e0-6"})(["font-size:",";line-height:1.6;color:",";margin:0;text-align:left;h3{display:inline-block;font-size:",";font-weight:",";margin:0;}p{margin:0;padding:0;font-weight:",";}"],({theme:e})=>e.fontSizes.md,({theme:e})=>e.colors.text,({theme:e})=>e.fontSizes.sm,({theme:e})=>e.fontWeights.bold,({theme:e})=>e.fontWeights.bold),P=o.Ay.p.withConfig({componentId:"sc-e4dfb9e0-7"})(["font-size:",";font-weight:",";color:",";text-align:center;margin:40px 0;h1{display:inline-block;font-size:",";font-weight:",";color:",";text-align:center;margin-bottom:8px;}"],({theme:e})=>e.fontSizes.lg,({theme:e})=>e.fontWeights.bold,({theme:e})=>e.colors.textLight,({theme:e})=>e.fontSizes["2xl"],({theme:e})=>e.fontWeights.bold,({theme:e})=>e.colors.primary),O=()=>{let[e,t]=(0,n.useState)("brand-info-1"),i=e=>{let t=document.getElementById(e);t&&window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-150,behavior:"smooth"})};return(0,r.jsxs)(v,{style:{position:"relative"},children:[(0,r.jsxs)(P,{id:"brand-card-container",children:[(0,r.jsx)("h1",{children:"모리셋, 당신의 두피를 스위스과학으로 되살리다"}),(0,r.jsx)("br",{}),"스위스 기술과 함께하는 탈모 재생 솔루션의 기준.",(0,r.jsx)("br",{}),"이제, 모리셋이 만들어갑니다."]}),(0,r.jsxs)("div",{style:{position:"sticky",top:"60px",zIndex:"100",width:"100%",display:"flex",justifyContent:"center",gap:"20px",padding:"20px 0",backgroundColor:"#f1f3f5",margin:"0",boxShadow:"0 2px 4px rgba(0,0,0,0.1)"},children:[(0,r.jsx)("button",{onClick:()=>i("brand-info-1"),style:{padding:"10px 20px",border:"none",borderRadius:"8px",background:"brand-1"===e?"#007bff":"#f1f3f5",color:"brand-1"===e?"white":"#495057",cursor:"pointer",transition:"all 0.3s ease",fontWeight:"brand-1"===e?"bold":"normal"},children:"이보영 대표원장"}),(0,r.jsx)("button",{onClick:()=>i("brand-info-2"),style:{padding:"10px 20px",border:"none",borderRadius:"8px",background:"brand-2"===e?"#007bff":"#f1f3f5",color:"brand-2"===e?"white":"#495057",cursor:"pointer",transition:"all 0.3s ease",fontWeight:"brand-2"===e?"bold":"normal"},children:"모리셋 모낭플란트"}),(0,r.jsx)("button",{onClick:()=>i("brand-info-3"),style:{padding:"10px 20px",border:"none",borderRadius:"8px",background:"brand-3"===e?"#007bff":"#f1f3f5",color:"brand-3"===e?"white":"#495057",cursor:"pointer",transition:"all 0.3s ease",fontWeight:"brand-3"===e?"bold":"normal"},children:"쏘팔메토 줄기세포"}),(0,r.jsx)("button",{onClick:()=>i("brand-info-4"),style:{padding:"10px 20px",border:"none",borderRadius:"8px",background:"brand-4"===e?"#007bff":"#f1f3f5",color:"brand-4"===e?"white":"#495057",cursor:"pointer",transition:"all 0.3s ease",fontWeight:"brand-4"===e?"bold":"normal"},children:"우리의 가치"}),(0,r.jsx)("button",{onClick:()=>i("brand-info-5"),style:{padding:"10px 20px",border:"none",borderRadius:"8px",background:"brand-4"===e?"#007bff":"#f1f3f5",color:"brand-4"===e?"white":"#495057",cursor:"pointer",transition:"all 0.3s ease",fontWeight:"brand-4"===e?"bold":"normal"},children:"환자 후기"}),(0,r.jsx)("button",{onClick:()=>i("brand-info-6"),style:{padding:"10px 20px",border:"none",borderRadius:"8px",background:"brand-4"===e?"#007bff":"#f1f3f5",color:"brand-4"===e?"white":"#495057",cursor:"pointer",transition:"all 0.3s ease",fontWeight:"brand-4"===e?"bold":"normal"},children:"세계 총판 지도 & 국내 지점 지도"})]}),(0,r.jsxs)(C,{id:"brand-info-1",children:[(0,r.jsx)(I,{children:(0,r.jsx)(A,{src:"https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/doc-60UdJXHVqd5vyCqZXzO0GPZ4B8A2cw.jpg",alt:"Brand"})}),(0,r.jsxs)(S,{children:[(0,r.jsx)(k,{children:"이보영 대표원장"}),(0,r.jsxs)(z,{children:["모리셋을 시작했을 당시 한국은 두피 관리 불모지였습니다.",(0,r.jsx)("br",{}),(0,r.jsx)("br",{}),"암 환자들이 사용할 수 있는 안전한 제품만을 고집 해왔던 모리셋은 엄격한 심사 과정 끝에 고품격 안전 국가인 덴마크에 본사를 둔 메조스킨라인을 선택하였습니다.",(0,r.jsx)("br",{}),(0,r.jsx)("br",{}),"모리셋의 집념이 메조스킨라인을 만나 아시아 총판을 통해 프리미엄 제품과 특허 기술을 국내에 런칭하였으며, 탈모 불모지였던 한국에 오아시스와 같은 브랜드가 되었습니다.",(0,r.jsx)("br",{}),(0,r.jsx)("br",{}),"\xb7 모낭플란트 개발자 및 기술 보유자",(0,r.jsx)("br",{}),"\xb7 스위스컬러 아시아 총판",(0,r.jsx)("br",{}),"\xb7 메조스킨라인 아시아 총판",(0,r.jsx)("br",{}),"\xb7 국내 최초 스위스컬러 국제강사"]})]})]}),(0,r.jsxs)(C,{id:"brand-info-2",children:[(0,r.jsx)(I,{children:(0,r.jsx)(A,{src:"https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/br-left1-uLBSAZDaUMDtyHJDEpneiaN0kwyLIX.png",alt:"Brand"})}),(0,r.jsxs)(S,{children:[(0,r.jsxs)(k,{children:["오직,",(0,r.jsx)("h2",{children:"모리셋 모낭플란트"})]}),(0,r.jsxs)(z,{children:[(0,r.jsxs)("p",{children:["모리셋은 25년간 누적된 메조스킨라인의 연구와 두피 개선 단계를 기반으로 '모낭플란트'를 개발하였으며,",(0,r.jsx)("br",{}),"필요한 모든 관리기간 및 단계 또한 과학적으로 설계되었습니다."]}),(0,r.jsx)("br",{}),"Only, Morisette Follicular Implant Moriset developed 'Follic Implant' based on 35 years of accumulated Swiss stem cell research and scalp improvement stages,",(0,r.jsx)("br",{}),"and all necessary management periods and stages were also scientifically designed.",(0,r.jsx)("br",{}),(0,r.jsx)("br",{}),(0,r.jsx)("p",{children:"모리셋의 혁신적 기술력과 메조스킨라인의 제품이 만나 탄생한 모낭플란트는 두피 계의 완전한 솔루션임을 자부합니다."}),(0,r.jsx)("br",{}),"Moriset's innovative technology and Swiss stem cells meet to create Follicular Implant, which is proud to be a complete solution for the scalp."]}),(0,r.jsx)("br",{}),(0,r.jsx)(A,{style:{width:"100%",height:"90%",objectFit:"cover"},src:"https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/br-right1-USUShbM6XB8NKL3gx0qdSP7imHJlAw.png",alt:"Brand"})]})]}),(0,r.jsxs)(C,{id:"brand-info-3",children:[(0,r.jsx)(I,{children:(0,r.jsx)(A,{src:"https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/br2-3-GqmI7kdzF8YHIkak9fViAp0P9cjrji.png",alt:"Brand"})}),(0,r.jsxs)(S,{children:[(0,r.jsxs)(k,{children:["모리셋 특허기술의 핵심,",(0,r.jsx)("h2",{children:"쏘팔메토 줄기세포"})]}),(0,r.jsxs)(z,{children:["모리셋의 핵심성분은 쏘팔메토 줄기세포입니다.",(0,r.jsx)("br",{}),(0,r.jsx)("br",{}),"대서양 해안에서 자생하는 쏘팔메토는 탈모에 효과적인 식물성 줄기세포입니다. 모리셋은 유럽과 미국에서 보편화되어 있는 방식 그대로 쏘팔메토를 농축하여 국소 부위에 투여해 탈모의 원인이 되는 DHT 호르몬을 표적관리 및 생성억제합니다.",(0,r.jsx)("br",{}),(0,r.jsx)("br",{}),"모리셋의 모낭플란트는 두피 건강을 위한 완전한 솔루션입니다.",(0,r.jsx)("br",{}),(0,r.jsx)("br",{}),"모리셋의 모낭플란트는 두피 건강을 위한 완전한 솔루션입니다."]})]})]}),(0,r.jsxs)(C,{id:"brand-info-4",style:{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"},children:[(0,r.jsx)(S,{children:(0,r.jsx)(k,{children:(0,r.jsx)("h2",{children:"우리의 가치"})})}),(0,r.jsxs)(S,{style:{display:"flex",flexDirection:"row",justifyContent:"center",alignItems:"flex-start",gap:"20px"},children:[(0,r.jsxs)(z,{style:{width:"100%",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",gap:"10px"},children:[(0,r.jsx)(A,{style:{width:"100%",objectFit:"cover"},src:"https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/br2-2-ZujU9pgkFGl92PjgLiF4cnCEWglrPe.png",alt:"Brand"}),(0,r.jsx)("p",{children:"혁신"}),"당사의 연구 개발 부서는 혁신적인 미적 솔루션을 개발할 수 있는 새로운 기술(예: 특허받은 CHAC 기술)을 개발하는 데 전념하고 있습니다."]}),(0,r.jsxs)(z,{style:{width:"100%",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",gap:"10px"},children:[(0,r.jsx)(A,{style:{width:"100%",objectFit:"cover"},src:"https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/br2-1-4vdj5FsOavPkHU6Req0TaBOBSU7A1H.png",alt:"Brand"}),(0,r.jsx)("p",{children:"우수"}),"품질, 안전, 효율성은 제품 개발 프로세스를 안내합니다. Suisselle의 제품은 환자의 안전과 피부 건강을 염두에 두고 설계되었으며 화장품 및 의료 기기 제조의 최고 품질 기준(ISO 22716, ISO 13485 및 ISO 9001 및 GMP)에 따라 제조됩니다."]}),(0,r.jsxs)(z,{style:{width:"100%",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",gap:"10px"},children:[(0,r.jsx)(A,{style:{width:"100%",objectFit:"cover"},src:"https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/value-hhPWrdwGcVFlhLw0HpOn16cyE8LrYu.jpg",alt:"Brand"}),(0,r.jsx)("p",{children:"고객 중심"}),"의사와 환자의 만족은 완벽을 향한 노력의 주요 목표입니다."]})]})]}),(0,r.jsxs)(C,{id:"brand-info-5",style:{marginTop:"30px",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"},children:[(0,r.jsx)(k,{children:(0,r.jsx)("h2",{children:"모리셋 모낭플란트 환자 후기"})}),(0,r.jsxs)("div",{style:{display:"flex",gap:"70px",width:"100%",justifyContent:"center"},children:[(0,r.jsx)("video",{controls:!0,muted:!1,style:{height:"50%",borderRadius:"12px"},children:(0,r.jsx)("source",{src:"https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/review1-7QbW1npXwRTcI70Di4p3jxiKqf6DD1.mp4",type:"video/mp4"})}),(0,r.jsx)("video",{controls:!0,muted:!1,style:{height:"50%",borderRadius:"12px"},children:(0,r.jsx)("source",{src:"https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/review2-NMaEbqE8hlJMi7oSlHWYl27hFJQXcY.mp4",type:"video/mp4"})})]})]}),(0,r.jsxs)(C,{id:"brand-info-6",style:{marginTop:"30px",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"},children:[(0,r.jsx)(k,{style:{marginTop:"40px"},children:(0,r.jsx)("h2",{children:"세계 총판 지도 & 국내 지점 지도"})}),(0,r.jsx)(A,{src:"https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/carousel5-6k9h6ZNOZmoFKPleF5xuYn2OdAN2b8.png"})]})]})},R=o.Ay.div.withConfig({componentId:"sc-3d54a86d-0"})(["position:relative;width:100%;height:65vh;overflow:hidden;border-radius:8px;"]),T=o.Ay.div.withConfig({componentId:"sc-3d54a86d-1"})(["display:flex;transition:transform 0.3s ease-in-out;transform:translateX(-","%);height:100%;"],e=>100*e.currentIndex),D=o.Ay.div.withConfig({componentId:"sc-3d54a86d-2"})(["min-width:100%;height:100%;padding:10px;"]),W=o.Ay.img.withConfig({componentId:"sc-3d54a86d-3"})(["width:100%;height:100%;object-fit:contain;"]),B=o.Ay.video.withConfig({componentId:"sc-3d54a86d-4"})(["width:100%;height:100%;object-fit:cover;"]),E=o.Ay.div.withConfig({componentId:"sc-3d54a86d-5"})(["position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:2;"]),L=o.Ay.button.withConfig({componentId:"sc-3d54a86d-6"})(["width:50px;height:8px;padding:0;border:1px solid ",";background:",";cursor:pointer;transition:background 0.2s;"],e=>e.active?"rgba(0,0,0, 0.5)":"rgba(0,0,0, 0.2)",e=>e.active?"white":"rgba(255, 255, 255, 0.5)"),H=({src:e,alt:t})=>l(e)?(0,r.jsx)(B,{src:e,autoPlay:!0,muted:!0,loop:!0,controls:!1}):(0,r.jsx)(W,{src:e,alt:t}),F=({images:e})=>{let[t,i]=(0,n.useState)(0),o=e=>{i(e)};return 0===e.length?(0,r.jsx)(R,{children:"이미지가 없습니다."}):(0,r.jsxs)(R,{children:[(0,r.jsx)(T,{currentIndex:t,children:e.map((e,t)=>(0,r.jsx)(D,{children:(0,r.jsx)(H,{src:e,alt:`Slide ${t+1}`})},t))}),e.length>1&&(0,r.jsx)(E,{children:e.map((e,i)=>(0,r.jsx)(L,{active:i===t,onClick:()=>o(i)},i))})]})},_=o.Ay.div.withConfig({componentId:"sc-8f75ea93-0"})(["display:flex;flex-direction:column;background:white;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.1);overflow:hidden;@media (max-width:768px){flex-direction:column;min-width:unset;width:100%;height:auto;}"]),U=o.Ay.div.withConfig({componentId:"sc-8f75ea93-1"})(["flex:1;min-width:0;@media (max-width:768px){height:200px;}"]),Y=o.Ay.div.withConfig({componentId:"sc-8f75ea93-2"})(["flex:1;padding:24px;display:flex;flex-direction:column;justify-content:center;@media (max-width:768px){padding:16px;}"]),q=o.Ay.h2.withConfig({componentId:"sc-8f75ea93-3"})(["font-size:",";font-weight:600;color:#333;margin:0 0 16px 0;line-height:1.3;@media (max-width:768px){font-size:20px;margin-bottom:12px;}"],({theme:e})=>e.fontSizes.lg),M=o.Ay.div.withConfig({componentId:"sc-8f75ea93-4"})(["font-size:",";color:",";line-height:1.6;margin:0;flex:1;h3{margin-left:8px;margin-bottom:8px;display:inline-block;font-size:",";font-weight:",";position:relative;z-index:1;&::before{content:'';position:absolute;left:0;bottom:0;width:100%;height:60%;background-color:",";z-index:-1;}}span{font-size:",";line-height:1;h2{font-size:",";font-weight:",";}}@media (max-width:768px){font-size:14px;}"],({theme:e})=>e.fontSizes.md,({theme:e})=>e.colors.textLight,({theme:e})=>e.fontSizes.md,({theme:e})=>e.fontWeights.bold,({theme:e})=>`${e.colors.primary}80`,({theme:e})=>e.fontSizes.sm,({theme:e})=>e.fontSizes.sm,({theme:e})=>e.fontWeights.bold),N=({images:e,title:t,content:i})=>(0,r.jsxs)(_,{children:[(0,r.jsx)(U,{children:(0,r.jsx)(F,{images:e})}),(0,r.jsxs)(Y,{children:[(0,r.jsx)(q,{children:t}),(0,r.jsx)(M,{dangerouslySetInnerHTML:{__html:i}})]})]}),G=o.Ay.div.withConfig({componentId:"sc-24402ba-0"})(["width:90%;height:70%;max-width:1200px;margin:0 auto;position:relative;@media (max-width:768px){width:100%;padding:0 16px;}"]),Z=({card:e})=>(0,r.jsx)(G,{children:(0,r.jsx)(N,{images:e.images,title:e.title,content:e.content})}),K=o.Ay.div.withConfig({componentId:"sc-b51b185-0"})(["padding:40px 0 120px;background:#f8f9fa;@media (max-width:768px){padding:20px 0;}"]),X=o.Ay.h3.withConfig({componentId:"sc-b51b185-1"})(["text-align:center;font-size:",";font-weight:",";color:",";margin-bottom:40px;line-height:1.6;@media (max-width:768px){font-size:",";margin-bottom:24px;}h3{margin:0 8px;display:inline-block;color:",";}"],({theme:e})=>e.fontSizes.md,({theme:e})=>e.fontWeights.medium,({theme:e})=>e.colors.text,({theme:e})=>e.fontSizes.md,({theme:e})=>e.colors.primary),V=o.Ay.h2.withConfig({componentId:"sc-b51b185-2"})(["font-size:",";color:",";text-align:center;margin-bottom:",";"],({theme:e})=>e.fontSizes["2xl"],({theme:e})=>e.colors.text,({theme:e})=>e.spacing.xl),J=o.Ay.div.withConfig({componentId:"sc-b51b185-3"})(["display:flex;justify-content:center;gap:20px;margin-bottom:40px;flex-wrap:wrap;@media (max-width:768px){gap:10px;margin-bottom:20px;}"]),Q=o.Ay.button.withConfig({componentId:"sc-b51b185-4"})(["border:none;border-radius:0;background:transparent;border-bottom:4px solid ",";color:",";padding:12px 24px;cursor:pointer;font-weight:600;font-size:16px;transition:all 0.3s ease;position:relative;margin-right:4px;&:hover{border:none;border-radius:0;background:",";color:",";}@media (max-width:768px){padding:10px 16px;font-size:14px;margin-right:2px;}"],({$isActive:e,theme:t})=>e?t.colors.primary:"transparent",({theme:e})=>e.colors.text,({$isActive:e,theme:t})=>e?t.colors.primary:t.colors.primaryHover,({$isActive:e})=>"white"),$={SS:{title:"파라스파 : SS",card:{id:"ss-1",images:["https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/ss2-1upYgC7xhfZPlVshGxZ6c3y1bHrWHZ.jpg","https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/ss1-mQ8ZDdrh8O6cdNRf3Zp1Td5INsa5Fm.png"],title:"파라스파 KEY POINT",content:`
+
+      <h3>
+      ✓ 탄산 클리닉
+      </h3>
+      <br />
+      \xb7 모리셋 탄산 클리닉은 모공을 막는 피지 얼룩을 제거하여 두피 혈액 촉진을 도모하며, 모발과 모공에 남아있는 샴푸 찌꺼기나 염색 잔여물 또는 미세먼지를 말끔히 제거하여 헤모글로빈 모발 클리닉의 흡수율을 높여줍니다. 
+      <br />
+      \xb7 모리셋 탄산 클리닉은 단순히 두피 스케일링에만 집중하는 것이 아닌 두피 면역력을 키울 수 있도록 줄기세포까지 영양투하하는 솔루션입니다. 
+      <br />
+      \xb7 탄산 클리닉에 주가 되는 탄산 성분은 모발 내 이산화탄소를 일시적으로 증가시켜 두피의 산소 흡수율을 높이고, 혈관을 확장하여 혈액순
+
+      <br />
+      <br />
+      <h3>
+      ✓ 헤모글로빈 모발 클리닉 
+      </h3>
+      <br />
+      \xb7 산소를 운반하는 적혈구의 주 구성 요소인 헤모글로빈은 단백질과 결합하여 손상된 모발을 회복시킵니다. 
+      <br />
+      \xb7 드라이, 염색, 매직 등을 자주하는 고객님께 효과가 큰 프리미엄 모발 클리닉입니다. 
+      <br />
+      <br />      
+
+
+      <h3>
+      ✓ 추천대상
+      </h3>
+      <br />
+      \xb7 샴푸를해도 피지, 각질이 제거가 안되시는 분
+      <br />
+      \xb7 염색이나 펌을 주기적으로 하시는 분
+      <br />
+      \xb7 두피가 가렵고 기름지는 지루성두피이신 분
+      <br />
+      <br />
+
+      <span>
+      <h2>20대 중반 여성</h2>
+      \xb7 두피 상태: 건조, 각질, 가려움
+      <br />
+      ✓ 염색 잔여물 제거
+      <br />
+      ✓ 각질 제거
+      <br />
+      <br />
+
+      <h2>30대 중반 여성</h2>
+      \xb7 두피 상태: 피지, 가려움
+      <br />
+      ✓ 피지 산화물 제거
+      <br />
+      ✓ 샴푸 잔여물 제거
+      <br />
+      ✓ 각질 제거
+      <br />
+      <br />
+
+
+
+      <h2>40대 여성</h2>
+      \xb7 두피 상태: 탈모 진행, 건선, 가려움, 흰머리 염색 3주 1회 진행 
+      <br />
+      ✓ 각질 제거
+      <br />
+      ✓ 염색 잔여물 제거 
+      <br />
+      <br />
+
+      <h2>10대 여성</h2>
+      \xb7 두피 상태: 피지, 호르몬 냄새, 모발 끈적임
+      <br />
+      ✓ 피지 산화물 제거
+      <br />
+      ✓ 샴푸 잔여물 제거
+      <br />
+      ✓ 헤어 제품 제거
+      <br />
+      <br />
+      </span>
+
+      `}},SC:{title:"모낭플란트 : SC",card:{id:"ss-1",images:["https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/sc1r-VOdoEALwL39BwkA7IgAqa2CYOiPZOM.png"],title:"모낭플란트란?",content:`
+      모낭플란트는 스위스, 덴마크, 독일의 두피 건강을 25년의 연구개발을 통해 개발된 모리셋 특허 기술로써 탈모 현상을 빠르고 최적의 결과로 관리하는 활성성분의 고유한 조합과 균형을 갖춘 시스템입니다. 
+      <br />
+      <br />
+      진피층 모낭 주변까지 쏘팔메토 줄기세포가 전달되는 두피 전용 고출력 저진동 하이진 니들로 60초당 15,000번 미세순환 시켜 상처없는 관리로 모리셋의 특화된 기술입니다. 
+      <br />
+모낭플란트는 전체탈모 기준 약 40분 정도 소요되며, 탈모가 고민인 부위를 정확하게 자극하여 관리합니다.
+      
+      `}},SR:{title:"모플란트 : SR",card:{id:"ss-1",images:["https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/sc2-iH8xk5Hb2u7TuKynzv2trVv06skSIM.jpg","https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/sc3-BfbYAKGTfjmg0lKrUAWC6S4qDzO7f2.jpg","https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/sc4-0v6vjxWmhOEgv8XMwugTn7wYW4cVrB.jpg","https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/sc5-a25Xfr8PXlvlY2tWfBOescC0GsSF6G.jpg","https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/sc6-Olx6t0ZimVO8tmV94RHwQTCsuoKaOR.jpg","https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/sc7-fMzgbKRBLjmjgcbIbWnDF9YUYacuVA.jpg"],title:"모플란트 : SR",content:`
+      모낭 플란트 이후 요요현상이 없이 모발의 성장기를 지연시켜 최소 2년에서 7년 까지 모발굵기, 밀도, 윤기, 흰머리 지연 시켜 주는 단계
+      <br />
+      <br />
+      모플란트는 스위스, 덴마크, 독일의 두피 건강을 25년의 연구개발을 통해 개발된 모리셋 특허 기술로써 탈모 현상을 빠르고 최적의 결과로 관리하는 활성성분의 고유한 조합과 균형을 갖춘 시스템입니다. 
+      <br />
+      <br />
+      남녀 모두에게 탈모개선효과가 입증된 유럽 줄기세포로  
+      모낭플란트 단계이후 요요현상없이 모발탈락을 지연시키고 
+      모발 밀도, 굵기, 윤기, 흰머리 억제 및 차단 유지해주는 모발강화 솔루션입니다
+      유지해주는 모발강화 솔루션입니다
+
+      <br />
+      <br />
+      
+      <span>
+
+       <h2>50대 여성</h2>
+      \xb7 가르마 확산성 탈모 
+      <br />
+      \xb7 모플란트 관리후 모발빠짐이 눈에 띄게 줄어듬 ,모발건조함이 덜하고 흰머리 억제효과
+      <br />
+      <br />
+
+       <h2>40대 남성</h2>
+      \xb7 유전적 O자 남성탈모 
+      <br />
+      \xb7 모플란트 관리 후 모발빠짐 덜함,정수리 밀도 보강
+      <br />
+      <br />
+
+          <h2>40대 여성</h2>
+      \xb7 유전적 모발 약함 고민으로 모플란트 관리 후 밀도보강,모발 굵어짐
+      <br />
+      <br />
+
+          <h2>50대 여성</h2>
+      \xb7 유전적 O자 남성탈모 
+      <br />
+      \xb7 20년 넘게 새치커버 염색을 해오다 모플란트 관리 후 염색주기가 길어짐
+      <br />
+      <br />
+
+      </span>
+      `}},ST:{title:"Cindy : ST",card:{id:"ss-1",images:["https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/st1-y5P0PGNupLZy2CWRvzU2WWLkJKFPb3.jpg","https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/st2-PYVR0Fg0PjroKlEcwYfRfQbMvdZN2S.png"],title:"Cindy : ST",content:`
+      더 자세한 내용은 본사 문의 부탁드립니다.
+      `}}},ee=()=>{let[e,t]=(0,n.useState)("SS"),[i,o]=(0,n.useState)(0),[s,l]=(0,n.useState)(!1),[a,d]=(0,n.useState)("프로그램 소개");(0,n.useEffect)(()=>{let e=localStorage.getItem("selectedProgram"),i=localStorage.getItem("selectedCardIndex");e&&$[e]?(t(e),i&&!isNaN(Number(i))?o(Number(i)):o(0),localStorage.removeItem("selectedProgram"),localStorage.removeItem("selectedCardIndex")):(t("SS"),o(0)),l(!0)},[]);let c=e=>{t(e),o(0)},p=$[e];return((0,n.useEffect)(()=>{switch(e){case"SS":d(`
+두피의 원인과 증상을 정확히 파악해 
+<br />
+두피 유수분 밸런스와 피지산화물을 제거하여 두피환경을 개선하는 프로그램`);break;case"SC":d(`
+ 모낭까지 영양분을 주입시키는 국내유일 비침습 탈모 특허기술
+<br />
+탈모완화에 도움되는 쏘팔메토 줄기세포를 두피에 투하하여
+<br />
+약해진 헤어사이클을 정상으로 되돌려 발모 촉진
+`);break;case"SR":d(`
+          모낭 플란트 이후 요요현상이 없이 모발의 성장기를 지연시켜
+<br />
+최소 2년에서 7년 까지 모발굵기, 밀도, 윤기, 흰머리 지연시키는 단계
+          `);break;case"ST":d("");break;default:d("프로그램 소개")}},[e]),s)?(0,r.jsxs)(K,{children:[(0,r.jsx)(V,{children:"프로그램 소개"}),(0,r.jsx)(J,{children:Object.keys($).map(t=>(0,r.jsx)(Q,{$isActive:e===t,onClick:()=>c(t),children:$[t].title},t))}),(0,r.jsxs)("div",{children:[(0,r.jsx)(X,{dangerouslySetInnerHTML:{__html:a}}),(0,r.jsx)(Z,{card:p.card,initialIndex:i})]})]}):(0,r.jsxs)(K,{children:[(0,r.jsx)(X,{children:"프로그램 소개"}),(0,r.jsx)("div",{style:{textAlign:"center",padding:"40px"},children:"로딩 중..."})]})},et=o.Ay.section.withConfig({componentId:"sc-9a671c8b-0"})(["background:#f8f9fa;padding:40px 0 120px;"]),ei=o.Ay.h2.withConfig({componentId:"sc-9a671c8b-1"})(["font-size:",";color:",";text-align:center;margin-bottom:",";"],({theme:e})=>e.fontSizes["2xl"],({theme:e})=>e.colors.text,({theme:e})=>e.spacing.xl),er=o.Ay.div.withConfig({componentId:"sc-9a671c8b-2"})(["display:grid;gap:",";"],({theme:e})=>e.spacing.xl),en=o.Ay.div.withConfig({componentId:"sc-9a671c8b-3"})(["background:white;border-radius:",";box-shadow:",";overflow:hidden;transition:transform 0.2s ease;width:fit-content;width:50vw;height:100%;padding:20px 10px 40px 10px;display:flex;flex-direction:row;align-items:flex-start;justify-content:center;&:hover{transform:translateY(-4px);box-shadow:",";}"],({theme:e})=>e.borderRadius.lg,({theme:e})=>e.shadows.md,({theme:e})=>e.shadows.lg),eo=o.Ay.img.withConfig({componentId:"sc-9a671c8b-4"})(["width:30%;height:80%;object-fit:contain;padding:10px;"]),es=o.Ay.h3.withConfig({componentId:"sc-9a671c8b-5"})(["padding-left:",";padding-top:30px;font-size:",";font-weight:",";color:",";cursor:pointer;transition:color 0.2s ease;&:hover{color:",";}"],({theme:e})=>e.spacing.md,({theme:e})=>e.fontSizes.md,({theme:e})=>e.fontWeights.medium,({theme:e})=>e.colors.textLight,({theme:e})=>e.colors.primary),el=o.Ay.p.withConfig({componentId:"sc-9a671c8b-6"})(["font-size:",";line-height:1.2;color:",";margin-top:4px;margin-left:17px;h3{font-weight:bold;font-size:",";line-height:1.6;}span{color:",";line-height:1.6;}"],({theme:e})=>e.fontSizes.sm,({theme:e})=>e.colors.text,({theme:e})=>e.fontSizes.sm,({theme:e})=>e.colors.textLight),ea=o.Ay.div.withConfig({componentId:"sc-9a671c8b-7"})(["display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:70vh;"]),ed=({product:e})=>(0,r.jsx)(r.Fragment,{children:(0,r.jsxs)(en,{children:[(0,r.jsx)(eo,{src:e.image,alt:e.name}),(0,r.jsxs)("div",{children:[(0,r.jsx)(es,{children:e.name}),(0,r.jsx)(el,{dangerouslySetInnerHTML:{__html:e.description}})]})]})}),ec=[{id:1,name:"Hair Loss Control",image:"https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/1-fznpFnHMbzRrdeDXKPk2ynBuR1F44a.png",title:"프리미엄 스킨케어 세트 - 완벽한 피부 관리",description:`
+    Hair Loss Control은 비침습적 모낭플란트 관리에 사용됩니다. 
+    <br />
+    <br />
+    쏘팔메토 줄기세포의 활성 성분이 혈액 및 림프 순환을 자극하고 두피의 제품 침투를 최대 97%까지 증가시키도록 설계되어 있습니다.
+    <br />
+    혈액순환을 촉진하고 두피에 더 많은 산소를 공급하며, 신생모에 중요한 비타민인 아미노산도 풍부하게 함유되어 있습니다. 
+    <br />
+    <br />
+
+    <h3>
+    Hair Loss Control을 통한 꾸준한 모낭플란트는 탈모를 완화할 수 있습니다. 
+    </h3>
+
+    <br />
+    <br />
+
+    <span>
+    ✓ 모발 성장 촉진
+
+    ✓ 혈관 확장\xb7산소공급
+
+    ✓ 모발 영양공급
+
+    ✓ 유전적 탈모
+
+    ✓ 만성 탈모
+    </span>
+
+    <br />
+    <br />
+
+    <h3>
+    유효 성분:
+    </h3>
+    <span>
+    \xb7 쏘팔메토(Saw Palmetto): 탈모완화에 도움이 되는 식물성 줄기세포. 모낭 표적 교정하는 동안 모발 성장을 촉진하는 것으로 입증.
+    <br />
+    \xb7 비오틴, 비타민 B7: 세포 재생/대사에 사용.
+    <br />
+    \xb7 인삼뿌리 추출물: 세포 성장과 콜라겐 생성 촉진.
+    <br />
+    \xb7 판테놀, 프로비타민 B5: 피부가 더 많은 수분을 저장.
+    <br />
+    \xb7 아미노산: 모발의 케라틴 흡수 증가.
+    <br />
+    \xb7 알륨 구근 추출물: 양파 추출물. 두피 재생 및 강화.
+    <br />
+    \xb7 아연 PCA: 항산화 효과, 피지 조절.
+    </span>
+    `},{id:2,name:"Hair Loss Control+",image:"https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/2-blttVKIfaD0iRUanMyTQltHUOl0RNu.png",title:"자연주의 바디워시 - 순한 클렌징",description:`
+    Hair Loss Control+는 혈류를 개선시켜 두피에 수분과 산소를 공급하는 데 도움이 됩니다. 과학적으로 구성된 비타민, 아미노산 및 미네랄의 조화는 최적의 신체대사를 지원하며 탈모를 촉진하는 모든 요소에 작용하는 고농축 제품입니다.
+    <br />
+    <br />
+    <span>
+      ✓ 아르기닌, 타우린 활성성분 강화
+      ✓ 신경성 탈모
+      ✓ 원형 탈모
+</span>
+    <br />
+    <br />
+
+    <h3>
+    유효 성분:
+    </h3>
+    <span>
+    \xb7 쏘팔메토 추출물: 탈모완화에 도움이 되는 식물성 줄기세포. 모낭 표적 교정하는 동안 모발 성장을 촉진하는 것으로 입증.
+    <br />
+    \xb7 병풀 추출물
+    <br />
+    \xb7 비오틴 (비타민 B7): 세포 재생 지원 및 지방산 결합 독려. 두꺼운 머리카락이 자라는 데 도움.
+    <br />
+    \xb7 판토텐산(비타민 B5) 및 인삼 뿌리 추출물(모발 성장의 주요 요인인 스트레스에 대한 저항력을 높이는 데 도움)
+    <br />
+    \xb7 시스테인
+    <br />
+    \xb7 타우린
+    </span>
+    `},{id:3,name:"Tricocure 헤어 세럼",image:"https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/3-Gj0KqSpKUBO0MTW5N7yBVcYq8PS6U5.JPG",title:"아로마테라피 디퓨저 - 편안한 공간 연출",description:`
+    Tricocure는 홈케어용으로 특별히 개발된 세럼입니다. 
+    <br />
+    지속적인 도포를 통해 혈관을 확장하고 다양한 유효 영양분을 활성화합니다.
+    <br />
+    <br />
+    <span>
+    ✓ 요요현상 없는 홈케어 세럼
+    ✓ 혈액순환 촉진
+    ✓ 발모 유지력 강화 솔루션
+    </span>
+    <br />
+    <br />
+
+    <h3>
+    사용법: 
+    </h3>
+    스포이드를 이용해 하루 1~2회(3~6ml) 문제 부위 또는 두피 전체에 도포한 후 부드럽게 마사지합니다. 
+    <br />
+    <br />
+
+    <h3>
+    유효 성분:
+    </h3>
+    <span>
+    \xb7 코펙실 (2.4 Diamino Pyridine – 3 oxide) (2.4 DPO): 혈관 확장제로서 미녹시딜과 유사하게 작용. 화끈거림이나 가려움증 등 부작용 없이 두피에 산소 공급 촉진. 
+    <br />
+    \xb7 비오틴 (비타민 B7): 세포 재생 지원 및 지방산 결합 독려. 두꺼운 머리카락이 자라는 데 도움.
+    <br />
+    \xb7 CG-VEGF: 혈관 신생(새로운 혈관 형성)과 모낭 기저부의 관련 영양분 공급을 자극하는 성장 인자.
+    <br />
+    \xb7 쏘팔메토 추출물 (Serenoa Repens): 호르몬 신호를 방해하고 모낭의 DHT 흡수 감소.
+    <br />      
+    \xb7 베타-시토스테롤: 안드로겐(호르몬)을 억제하는 천연 식물 추출물.
+    <br />
+    \xb7 니아신 (비타민 B3): 혈관 확장제로서 두피의 혈액순환 촉진하여 모발 성장 자극.
+    <br />
+    \xb7 카픽실(Capixyl): 두 가지 성분의 혼합물. 
+    <br />
+    \xb7 바이오카닌 A: 레드 클로버에서 추출. 남성형 탈모증에서 테스토스테론이 DHT로 전환되는 것을 방지하는 데 도움. 
+    <br />
+    \xb7 아세틸테트라펩타이드-3 (Acetyltetrapeptide-3): 조직 리모델링을 자극하는 펩타이드.
+    <br />
+    \xb7 피리딘(비타민B6): 멜라닌 생성 촉진
+    <br />
+    \xb7 판토텐산(비타민 B5) 및 인삼 뿌리 추출물(모발 성장의 주요 요인인 스트레스에 대한 저항력을 높이는 데 도움)
+    </span>
+    `},{id:4,name:"Tricocure 무스 탈모 샴푸",image:"https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/4-370bc4wikrEFYyIESc15wT0uOpTL8l.png",title:"유기농 핸드크림 - 촉촉한 손 관리",description:`
+    Tricocure 무스 탈모 샴푸는 포도당 기반 원료의 결합을 통해 카페인과 케라틴의 조화로운 효과를 가지고 있습니다. 
+    <br />
+    손상된 모발 깊숙이 침투하여 구조를 재구성하고, 모발을 강화시켜 회복시키는 특별한 작용 메커니즘을 가지고 있습니다. 
+    <br />
+    니코틴산과 상쾌한 천연 멘톨을 결합한 새로운 천연 제품으로 온/냉 효과를 통해 미세순환을 동시에 자극하여 기분 좋은 느낌을 선사합니다.
+    <br />
+    <br />
+    <span>
+    ✓ 유수분 밸런스 조절
+    ✓ 탈모 완화\xb7개선
+    ✓ 민감, 염증 두피 개선 
+    ✓ 모발 영양
+    </span>
+    <br />    
+    <br />
+
+    <h3>
+    사용법: 
+    </h3>
+    주 2-3회 거품을 손바닥에 덜어 두피를 부드럽게 마사지하여 미세순환을 자극합니다.
+    <br />
+    유효성분이 두피에 흡수될 수 있도록 제품을 10분간 그대로 방치합니다. 
+    <br />
+    따뜻한 물로 헹구고 수건으로 가볍게 두드려 모발을 건조시킵니다.
+    <br />
+    <br />
+    <h3>
+    유효 성분:
+    </h3>
+    <span>
+    \xb7 CAFFEINE ANHYDRA: 카페인은 활력을 주는 힘으로 모발성장을 자극하며 모발을 더 강하고 단단하게 도움. 1회 세척 후 카페인의 효과는 24시간 지속되기에 지속적인 사용을 요함. 
+    <br />
+    \xb7 HYDROLYZED KERATIN: 모발의 견고성 보장. 
+    <br />
+    \xb7 FIBERHANCE BM SOLUTION: 모발 강화를 위해 고안된 새로운 특허 솔루션. 포도당을 기반으로한 독특한 작용 메커니즘을 통해 모발 뿌리까지 깊숙이 침투하여 손상된 부분을 강화.
+    <br />
+    \xb7 SALICYLIC ACID: 두피정화 및 비듬 제거를 촉진. 가려움증 감소, 두피와 모발의 죽은 세포 제거. 두피 표피를 깨끗하고 위생적으로 유지하며 수분 공급.
+    <br />
+    </span>
+    <br />
+    <h3>
+    Dermatology tested
+    </h3>
+    <span>
+    민감한 피부도 안심할 수 있도록 피부자극테스트를 완료하였습니다.
+    </span>
+    `},{id:5,name:"Tricocure 무스 포스트 임플란트 샴푸",image:"https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/5-AOsZfackszaJi8GwHoP2xKwqt23rve.png",title:"천연 마스크팩 - 집중 케어",description:`
+    Tricocure 무스 포스트 임플란트 샴푸는 모발이식 후 두피 및 모발의 세정을 위해 만들어진 샴푸입니다. 
+    <br />
+    활성 성분이 풍부하여 진정 효과에 탁월하며, 미생물 증식을 줄여 두피 위생에 효과적입니다. 
+    <br />
+    이식된 모발이 다시 자라기 위한 최적의 생리적 조건을 회복하도록 하여 재상피화에 기여하며, 
+    <br />
+    모발이식의 성공을 좌우하는 수술 후 첫 달에 임플란트 샴푸를 사용함으로써 세척 중 두피 스트레스를 최소화할 수 있습니다. 
+    <br />
+    <br />
+    <span>
+    ✓ 모발 건강 증진 
+    ✓ 두피 청결 유지  
+    ✓ 자극 없는 순한 성분
+    </span>
+    <br />
+    <br />
+
+    <h3>
+    사용법: 
+    </h3>
+    <span>
+    거품을 손바닥에 덜어 모발의 뿌리부터 감싸듯 도포합니다. 
+    <br />
+    유효성분이 두피에 흡수될 수 있도록 제품을 2~3분 정도 그대로 방치합니다. 
+    <br />
+    따뜻한 물로 헹구고 수건으로 가볍게 두드려 모발을 건조시킵니다.
+    <br />
+    *사용주기는 전문가와 상담하세요.
+    </span>
+    <br />
+    <br />
+
+    <h3>
+    유효 성분:
+    </h3>
+    <span>
+    \xb7 Allatoin: 치유 효과로 알려져 있으며, 활성 보습 성분으로써 피부의 치유를 촉진하고 진정시켜주는 안전한 항-자극제 성분. 
+    <br />
+    \xb7 Pantrofina: 강한 바람과 햇볕으로부터 방어기제를 체득한 해송 소나무 껍질 추출물로 구성된 기능성 식물 성분. 모근부터의 관리를 통해 모발까지 풍부한 영양을 공급하며 일상적인 오염으로부터 보호하는 역할. 
+    <br />
+    \xb7 Salicylic Acid (BHA): 두피에 정화작용을 하여 각질 제거를 통해 가려움증 완화. 두피와 모발에 붙어있는 죽은 각질 제거를 통해 표피를 깨끗하게 유지하며 보습 강화. 
+    <br />
+    \xb7 Urea: 보습, 연화 및 각질제거에 탁월한 성분. BHA와 마찬가지로 죽은 각질 세포의 제거를 통해 효과적인 피부 재생 촉진. 
+    <br />
+    \xb7 Amino Acids Complex (Sodium PCA, Sodium Lactate, Arginine, Aspartic Acid, PCA, Glycine, Alanine, Serine, Valine Proline, Threonine, Isoleucine, Histidine, Phenylalanine): 모발 케어를 위해 개발된 아미노산 블랜드. 모발 습윤, 영양 공급, 보습의 역할을 함과 동시에 염색모의 색빠짐 최소화. 
+    </span>
+    <br />
+    <br />
+
+    <h3>
+    Dermatology tested
+    </h3>
+    <span>
+    민감한 피부도 안심할 수 있도록 피부자극테스트를 완료하였습니다.
+    </span>
+    `}],ep=()=>(0,r.jsxs)(et,{id:"product-section",children:[(0,r.jsx)(ei,{children:"제품 소개"}),(0,r.jsx)(ea,{children:(0,r.jsx)(er,{children:ec.map(e=>(0,r.jsx)(ed,{product:e},e.id))})})]});var ex=i(1317),eh=i(7209);let eb=o.Ay.div.withConfig({componentId:"sc-bfc3c12-0"})(["padding:100px 0 120px 0;height:100%;"]),eg=o.Ay.div.withConfig({componentId:"sc-bfc3c12-1"})(["max-width:1200px;margin:0 auto;display:flex;gap:40px;align-items:start;height:100%;& > *:first-child{flex:0 0 40%;}& > *:last-child{flex:0 0 55%;}@media (max-width:768px){flex-direction:column;gap:20px;padding:0 20px;& > *:first-child,& > *:last-child{flex:1;width:100%;}}"]),em=o.Ay.div.withConfig({componentId:"sc-bfc3c12-2"})(["height:100%;background:white;padding:30px;border-radius:12px;border:2px solid #e9ecef;&:hover{transform:translateY(-5px);transition:transform 0.3s ease;box-shadow:",";}"],({theme:e})=>e.shadows.md),ef=o.Ay.h3.withConfig({componentId:"sc-bfc3c12-3"})(["font-size:18px;font-weight:700;color:",";margin-bottom:20px;display:flex;align-items:center;gap:10px;"],({theme:e})=>e.colors.text),eu=o.Ay.div.withConfig({componentId:"sc-bfc3c12-4"})(["display:flex;align-items:flex-start;gap:15px;margin-bottom:20px;padding:15px;background:#f8f9fa;border-radius:8px;transition:background 0.3s ease;&:hover{background:#e9ecef;}"]),ej=o.Ay.div.withConfig({componentId:"sc-bfc3c12-5"})(["display:flex;align-items:center;justify-content:center;width:40px;height:40px;background:",";color:white;border-radius:50%;flex-shrink:0;"],({theme:e})=>e.colors.primary),ew=o.Ay.div.withConfig({componentId:"sc-bfc3c12-6"})(["flex:1;"]),ey=o.Ay.div.withConfig({componentId:"sc-bfc3c12-7"})(["font-weight:600;color:#333;margin-bottom:5px;font-size:16px;display:flex;justify-content:space-between;align-items:center;"]),ev=o.Ay.div.withConfig({componentId:"sc-bfc3c12-8"})(["color:#666;line-height:1.5;font-size:14px;"]),eC=o.Ay.button.withConfig({componentId:"sc-bfc3c12-9"})(["font-size:16px;background:",";color:white;border:none;padding:6px 16px;border-radius:8px;justify-self:end;"],({theme:e})=>e.colors.text),eI=o.Ay.h3.withConfig({componentId:"sc-bfc3c12-10"})(["font-size:",";font-weight:",";color:",";text-align:center;margin:40px 0;h1{display:inline-block;font-size:",";font-weight:",";color:",";text-align:center;margin-right:8px;}"],({theme:e})=>e.fontSizes["2xl"],({theme:e})=>e.fontWeights.bold,({theme:e})=>e.colors.textLight,({theme:e})=>e.fontSizes["3xl"],({theme:e})=>e.fontWeights.bold,({theme:e})=>e.colors.primary),eA=()=>(0,r.jsxs)(eb,{children:[(0,r.jsxs)(eI,{children:[(0,r.jsx)("h1",{children:"모리셋"}),(0,r.jsx)("br",{}),"모낭플란트의 미래를 만들어갑니다"]}),(0,r.jsxs)(eg,{children:[(0,r.jsxs)(em,{children:[(0,r.jsx)(ef,{children:"문의사항"}),(0,r.jsxs)(eu,{children:[(0,r.jsx)(ej,{children:(0,r.jsx)(eh.EZw,{size:20})}),(0,r.jsxs)(ew,{children:[(0,r.jsx)(ey,{children:"대표전화"}),(0,r.jsx)(ev,{children:"02-535-2033"})]})]}),(0,r.jsxs)(eu,{children:[(0,r.jsx)(ej,{children:(0,r.jsx)(eh.gwi,{size:20})}),(0,r.jsxs)(ew,{children:[(0,r.jsx)(ey,{children:"주소"}),(0,r.jsx)(ev,{children:"서울특별시 서초구 서초중앙로 230 동화반포프라자 304호 (지하철 7호선 반포역 3번 출구에서 730m)"})]})]}),(0,r.jsxs)(eu,{children:[(0,r.jsx)(ej,{children:(0,r.jsx)(eh.dDC,{size:20})}),(0,r.jsx)(ew,{children:(0,r.jsxs)(ey,{children:["네이버 예약",(0,r.jsx)(eC,{style:{marginLeft:"10px"},onClick:()=>window.open("https://map.naver.com/p/entry/place/1375935590?placePath=%252Fhome%253Fentry%253Dplt&searchType=place&lng=127.0120781&lat=37.5021689&c=15.00,0,0,0,dh","_blank"),children:"바로가기"})]})})]}),(0,r.jsxs)(eu,{children:[(0,r.jsx)(ej,{children:(0,r.jsx)(eh.qHX,{size:20})}),(0,r.jsx)(ew,{children:(0,r.jsxs)(ey,{children:["카톡 상담",(0,r.jsx)(eC,{style:{marginLeft:"10px"},onClick:()=>window.open("https://pf.kakao.com/_bNapxj","_blank"),children:"바로가기"})]})})]})]}),(0,r.jsxs)(em,{children:[(0,r.jsx)(ef,{children:"오시는 길"}),(0,r.jsx)("iframe",{src:"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12661.2793486145!2d127.015719!3d37.500374!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca1643fd50c8d%3A0xde64a41507d3102f!2z64yA7ZWc66-86rWtIOyEnOyauO2KueuzhOyLnCDshJzstIjqtawg67CY7Y-s64-ZIDMyLTI!5e0!3m2!1sko!2sus!4v1750489916971!5m2!1sko!2sus",width:"100%",height:"400PX",style:{border:0},allowFullScreen:!0,loading:"lazy",referrerPolicy:"no-referrer-when-downgrade"})]})]}),(0,r.jsx)("div",{style:{display:"flex",justifyContent:"center",width:"100%"},children:(0,r.jsxs)(em,{style:{display:"flex",flexDirection:"column",border:"2px solid #e9ecef",borderRadius:"12px",padding:"30px",background:"white",transition:"all 0.3s ease",marginTop:"40px"},children:[(0,r.jsx)(ef,{children:"상담 신청"}),(0,r.jsx)("p",{style:{fontSize:"16px",fontWeight:"400",color:"#323232",marginBottom:"20px"},children:"상담을 신청하시거나, 모리셋의 새로운 소식을 받아보시려면 연락처를 남겨주세요."}),(0,r.jsxs)("div",{style:{display:"flex",flexDirection:"column",gap:"20px",marginTop:"20px"},children:[(0,r.jsx)("div",{style:{display:"flex",alignItems:"center",gap:"10px"},children:(0,r.jsx)("input",{type:"email",placeholder:"이메일을 입력해주세요",style:{padding:"10px",borderRadius:"5px",border:"1px solid #ddd",flex:1}})}),(0,r.jsx)("div",{style:{display:"flex",alignItems:"center",gap:"10px"},children:(0,r.jsx)("input",{type:"tel",placeholder:"휴대폰 번호를 입력해주세요",style:{padding:"10px",borderRadius:"5px",border:"1px solid #ddd",flex:1}})}),(0,r.jsx)(eC,{onClick:()=>{alert("상담 신청이 완료되었습니다.")},style:{width:"100%",padding:"15px",fontSize:"16px"},children:"상담 신청하기"})]})]})})]}),eS=o.Ay.div.withConfig({componentId:"sc-b819d719-0"})(["min-height:100vh;width:100%;background-color:",";color:",";font-family:",";font-size:",";font-weight:",";padding-top:60px;"],({theme:e})=>e.colors.background,({theme:e})=>e.colors.text,({theme:e})=>e.fonts.body,({theme:e})=>e.fontSizes.md,({theme:e})=>e.fontWeights.normal),ek=()=>((0,n.useEffect)(()=>{window.scrollTo(0,0)},[]),(0,r.jsxs)("div",{style:{margin:0},children:[(0,r.jsx)(y,{}),(0,r.jsx)("div",{id:"brand-section",style:{margin:0},children:(0,r.jsx)(O,{})}),(0,r.jsx)("div",{id:"program-section",style:{margin:0},children:(0,r.jsx)(ee,{})}),(0,r.jsx)(ep,{}),(0,r.jsx)("div",{id:"info-section",style:{margin:0},children:(0,r.jsx)(eA,{})}),(0,r.jsx)(ex.w,{})]}));function ez(){let[e,t]=(0,n.useState)(void 0);return(0,r.jsxs)(eS,{children:[(0,r.jsx)(s.Y,{backgroundColor:e}),(0,r.jsx)(ek,{})]})}},1204:(e,t,i)=>{"use strict";i.r(t),i.d(t,{default:()=>r});let r=(0,i(2907).registerClientReference)(function(){throw Error("Attempted to call the default export of \"C:\\\\Users\\\\USER\\\\OneDrive\\\\바탕 화면\\\\mo-reset\\\\src\\\\app\\\\page.tsx\" from the server, but it's on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.")},"C:\\Users\\USER\\OneDrive\\바탕 화면\\mo-reset\\src\\app\\page.tsx","default")},1602:(e,t,i)=>{"use strict";i.r(t),i.d(t,{GlobalError:()=>s.a,__next_app__:()=>p,pages:()=>c,routeModule:()=>x,tree:()=>d});var r=i(5239),n=i(8088),o=i(8170),s=i.n(o),l=i(893),a={};for(let e in l)0>["default","tree","pages","GlobalError","__next_app__","routeModule"].indexOf(e)&&(a[e]=()=>l[e]);i.d(t,a);let d=["",{children:["__PAGE__",{},{page:[()=>Promise.resolve().then(i.bind(i,1204)),"C:\\Users\\USER\\OneDrive\\바탕 화면\\mo-reset\\src\\app\\page.tsx"]}]},{layout:[()=>Promise.resolve().then(i.bind(i,4431)),"C:\\Users\\USER\\OneDrive\\바탕 화면\\mo-reset\\src\\app\\layout.tsx"],"not-found":[()=>Promise.resolve().then(i.t.bind(i,7398,23)),"next/dist/client/components/not-found-error"],forbidden:[()=>Promise.resolve().then(i.t.bind(i,9999,23)),"next/dist/client/components/forbidden-error"],unauthorized:[()=>Promise.resolve().then(i.t.bind(i,5284,23)),"next/dist/client/components/unauthorized-error"]}],c=["C:\\Users\\USER\\OneDrive\\바탕 화면\\mo-reset\\src\\app\\page.tsx"],p={require:i,loadChunk:()=>Promise.resolve()},x=new r.AppPageRouteModule({definition:{kind:n.RouteKind.APP_PAGE,page:"/page",pathname:"/",bundlePath:"",filename:"",appPaths:[]},userland:{loaderTree:d}})},3033:e=>{"use strict";e.exports=require("next/dist/server/app-render/work-unit-async-storage.external.js")},3295:e=>{"use strict";e.exports=require("next/dist/server/app-render/after-task-async-storage.external.js")},3666:(e,t,i)=>{Promise.resolve().then(i.bind(i,1204))},3873:e=>{"use strict";e.exports=require("path")},7910:e=>{"use strict";e.exports=require("stream")},9121:e=>{"use strict";e.exports=require("next/dist/server/app-render/action-async-storage.external.js")},9294:e=>{"use strict";e.exports=require("next/dist/server/app-render/work-async-storage.external.js")}};var t=require("../webpack-runtime.js");t.C(e);var i=e=>t(t.s=e),r=t.X(0,[34,209,705],()=>i(1602));module.exports=r})();
