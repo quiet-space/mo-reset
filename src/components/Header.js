@@ -18,6 +18,7 @@ const HeaderContainer = styled.header`
   align-items: center;
 
   z-index: 1000;
+
 `;
 const LinkContainer = styled.div`
   display: flex;

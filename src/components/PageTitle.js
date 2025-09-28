@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import transparent_logo from "../img/transparent_logo.png";
 
 const Wrapper = styled.section`
   display: flex;
@@ -34,7 +35,7 @@ export const PageTitle = ({ subtitle }) => {
   return (
     <Wrapper>
       <BrandLine>
-        <BrandEn>Mo Reset</BrandEn>
+        <img src={transparent_logo} alt="logo" />
       </BrandLine>
       {subtitle && <Subtitle>{subtitle}</Subtitle>}
     </Wrapper>

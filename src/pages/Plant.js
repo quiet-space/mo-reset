@@ -1,6 +1,7 @@
 import { PageTitle } from "../components/PageTitle";
 import license from "../img/license.png";
 import styled from "styled-components";
+import cor_video from "../img/cor_video.mp4";
 
 const Wrap = styled.div`
   display: flex;
@@ -28,6 +29,29 @@ const Content = styled.p`
   text-align: left;
 `;
 
+const VideoSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  background-color: #d3d3d3;
+
+  padding: 2rem;
+
+  width: 80%;
+  margin: 8rem auto;
+
+    /* 풀-블리드: 레이아웃의 패딩/중앙정렬을 무시하고 화면 너비로 확장 */
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+
+  /* 주변과 동일한 내부 여백 유지 */
+  padding: var(--spacing-6) var(--spacing-8);
+`;
+
 export const Plant = () => {
   return (
     <div>
@@ -49,7 +73,18 @@ export const Plant = () => {
             모낭플란트는 두피 계의 완전한 솔루션임을 자부합니다. 
           </Content>
         </div>
+
+
       </Wrap>
+
+
+      <VideoSection>
+          <video src={cor_video} alt="cor_video"  
+          autoPlay
+          loop
+          muted
+          />
+      </VideoSection>
     </div>
   );
 };
