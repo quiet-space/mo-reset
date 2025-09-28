@@ -80,14 +80,7 @@ code {
   min-height: 100vh;
 }
 
-header {
-  position: sticky;
-  top: 0;
-  background: rgba(17, 24, 39, 0.8);
-  backdrop-filter: blur(6px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  padding: var(--spacing-4) var(--spacing-8);
-}
+/* header 스타일을 제거하여 Header 컴포넌트가 자체 스타일을 사용하도록 함 */
 
 main {
   padding: var(--spacing-6) var(--spacing-8);
