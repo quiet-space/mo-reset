@@ -11,19 +11,13 @@ import product_7 from "../img/product_7.png"
 import dim_background from "../img/dim_background.png"
 
 const ProgramCard = styled.div`
-    /* 풀-블리드: 레이아웃의 패딩/중앙정렬을 무시하고 화면 너비로 확장 */
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-
-  /* 주변과 동일한 내부 여백 유지 */
-  padding: var(--spacing-6) var(--spacing-8);
-
   background-image: url(${({ $img }) => $img});
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
+  min-width: 70vw;
+  
   /* 이미지 원본 비율에 맞춘 최소 높이 설정 */
   min-height: ${({ $img }) => {
     // program_1.png의 경우 (예: 1920x1080 비율)
@@ -32,20 +26,17 @@ const ProgramCard = styled.div`
     }
     // program_2.png의 경우 (예: 1920x1200 비율)
     if ($img.includes('program_2')) {
-      return '120.5vw'; // 5:3 비율 (1200/1920 * 100)
+      return '100.5vw'; // 5:3 비율 (1200/1920 * 100)
     }
     return '50vh'; // 기본값
   }};
-
-  /* 또는 고정 높이를 원한다면 */
-  /* min-height: 600px; */
 `
 
 const DeviceCard = styled.div`
   background: #FFFFFF;
   
     /* 풀-블리드: 레이아웃의 패딩/중앙정렬을 무시하고 화면 너비로 확장 */
-  width: 100vw;
+  width: calc(100vw - 10px);
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
 
@@ -70,7 +61,7 @@ const DeviceTitle = styled.h1`
 `
 
 const DeviceSubtitle = styled.h2`
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: #333;
   margin-bottom: 3rem;
   font-weight: normal;
@@ -84,11 +75,10 @@ const DeviceImage = styled.img`
 `
 
 const DeviceDescription = styled.p`
-  font-size: 1.1rem;
+  font-size: 1.6rem;
   color: #333;
   line-height: 1.6;
   margin: 2rem 0 3rem 0;
-  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 `
@@ -112,14 +102,14 @@ const FeatureTitle = styled.h3`
   color: white;
   padding: 1rem;
   margin: -2rem -2rem 1.5rem -2rem;
-  font-size: 1.1rem;
+  font-size: 1.6rem;
   font-weight: bold;
 `
 
 const FeatureDescription = styled.p`
   color: #333;
   line-height: 1.6;
-  font-size: 0.95rem;
+  font-size: 1.4rem;
 `
 
 const MorissetProductCard = styled.div`
@@ -129,7 +119,7 @@ const MorissetProductCard = styled.div`
   background-repeat: no-repeat;
   
   /* 풀-블리드: 레이아웃의 패딩/중앙정렬을 무시하고 화면 너비로 확장 */
-  width: 100vw;
+  width: calc(100vw - 10px);
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
 
@@ -152,7 +142,7 @@ const ResearchSection = styled.div`
   background: #FFFFFF;
   
   /* 풀-블리드: 레이아웃의 패딩/중앙정렬을 무시하고 화면 너비로 확장 */
-  width: 100vw;
+  width: calc(100vw - 10px)   ;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
 
@@ -201,18 +191,18 @@ const ResearchCard = styled.div`
 `
 
 const ResearchYear = styled.h3`
-  color: #6a0dad;
-  font-size: 1.1rem;
+  color: #1800AD;
+  font-size: 1.4rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  border-bottom: 2px solid #6a0dad;
+  border-bottom: 2px solid #1800AD;
   padding-bottom: 0.5rem;
 `
 
 const ResearchContent = styled.p`
   color: #333;
   line-height: 1.6;
-  font-size: 0.95rem;
+  font-size: 1.4rem;
   margin: 0;
   
   strong {
@@ -231,7 +221,7 @@ const MesoProductSection = styled.div`
   background: #FFFFFF;
   
   /* 풀-블리드: 레이아웃의 패딩/중앙정렬을 무시하고 화면 너비로 확장 */
-  width: 100vw;
+  width: calc(100vw - 10px);
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
 
@@ -294,14 +284,14 @@ const EfficacyItem = styled.div`
 
 const Checkmark = styled.span`
   color: #4caf50;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin-right: 1rem;
   font-weight: bold;
 `
 
 const EfficacyText = styled.span`
   color: #333;
-  font-size: 1rem;
+  font-size: 1.4rem;
   line-height: 1.4;
 `
 
@@ -309,7 +299,7 @@ const TricocureSection = styled.div`
   background: #FFFFFF;
   
   /* 풀-블리드: 레이아웃의 패딩/중앙정렬을 무시하고 화면 너비로 확장 */
-  width: 100vw;
+  width: calc(100vw - 10px);
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
 
@@ -334,7 +324,7 @@ const TricocureTitle = styled.h1`
 `
 
 const TricocureSubtitle = styled.h2`
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: #666;
   margin-bottom: 3rem;
   font-weight: normal;
@@ -356,7 +346,7 @@ const AntiDHTTitle = styled.h2`
 `
 
 const AntiDHTDescription = styled.p`
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   color: #666;
   margin-bottom: 3rem;
   line-height: 1.6;
@@ -379,7 +369,7 @@ const AntiDHTItem = styled.div`
 
 const AntiDHTCheckmark = styled.span`
   color: #333;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin-right: 1rem;
   font-weight: bold;
   margin-top: 0.2rem;
@@ -387,14 +377,14 @@ const AntiDHTCheckmark = styled.span`
 
 const AntiDHTText = styled.span`
   color: #333;
-  font-size: 1rem;
+  font-size: 1.4rem;
   line-height: 1.5;
 `
 
 
 export const Program = () => {
   return (
-    <div>
+    <div >
       <ProgramCard $img={program_1}>
         <PageTitle subtitle="프로그램 소개" />
       </ProgramCard>
@@ -445,10 +435,10 @@ export const Program = () => {
 
         <DeviceDescription>
              대서양 해안에서 자생하는 톱 야자나무의 추출물인 쏘팔메토는 식물성 줄기세포에서 탈모를 유발하는 DHT 호르몬을 억제 및 차단합니다.
-        </DeviceDescription>
-           
-        <DeviceDescription>
-              남성의 양성 전립성 비대증 완화를 위해 주로 사용되었으나, 쏘팔메토의 주 성분 중 하나인 로르산이 남성호르몬의 일종이자 탈모를 유발하는 DHT를 억제하는 기전을 가지고 있기에 그 효과성이 인증된 안전한 줄기세포입니다.
+             <br />
+              남성의 양성 전립성 비대증 완화를 위해 주로 사용되었으나, 
+              <br />
+              쏘팔메토의 주 성분 중 하나인 로르산이 남성호르몬의 일종이자 탈모를 유발하는 DHT를 억제하는 기전을 가지고 있기에 그 효과성이 인증된 안전한 줄기세포입니다.
         </DeviceDescription>
         
         <FeatureCardsContainer>
@@ -607,22 +597,22 @@ export const Program = () => {
           
           <AntiDHTGrid>
             <AntiDHTItem>
-              <AntiDHTCheckmark>✓</AntiDHTCheckmark>
+              <AntiDHTCheckmark>·</AntiDHTCheckmark>
               <AntiDHTText>비안드로겐 탈모증을 효과적으로 완화</AntiDHTText>
             </AntiDHTItem>
             
             <AntiDHTItem>
-              <AntiDHTCheckmark>✓</AntiDHTCheckmark>
+              <AntiDHTCheckmark>·</AntiDHTCheckmark>
               <AntiDHTText>비듬, 지루 및 가는 모발 완화</AntiDHTText>
             </AntiDHTItem>
             
             <AntiDHTItem>
-              <AntiDHTCheckmark>✓</AntiDHTCheckmark>
+              <AntiDHTCheckmark>·</AntiDHTCheckmark>
               <AntiDHTText>환경적 모발 손상 복구, 성장 촉진, 탈모 방지</AntiDHTText>
             </AntiDHTItem>
             
             <AntiDHTItem>
-              <AntiDHTCheckmark>✓</AntiDHTCheckmark>
+              <AntiDHTCheckmark>·</AntiDHTCheckmark>
               <AntiDHTText>모발 밀도, 유연성, 성장기 증가 및 퇴행기 감소</AntiDHTText>
             </AntiDHTItem>
           </AntiDHTGrid>

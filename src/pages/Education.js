@@ -83,12 +83,12 @@ export const Education = () => {
 
       <VideoContainer>
         <SubTitle>인터뷰</SubTitle>
-        <video
+        {/* <video
           controls
           src="https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/edu1-DUirBKvUmvYekhpIdoNo7HXeHHQiZs.mp4"
           type="video/mp4"
           width="80%"
-        />
+        /> */}
         <video
           controls
           src="https://atmae3hxlxg2drrv.public.blob.vercel-storage.com/edu2-Oq4BvsxSvlZavUFsCE1uGv4TaAY3hm.mp4"

@@ -6,7 +6,7 @@ const FooterRoot = styled.footer`
   background: transparent;
   //   color: rgba(255, 255, 255, 0.8);
   padding: 2rem 1rem;
-  z-index: 999;
+  z-index: 999999;
 `;
 
 const FooterContainer = styled.div`

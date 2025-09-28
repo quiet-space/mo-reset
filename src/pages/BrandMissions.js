@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const TextWrap = styled.div`
   margin: 0 auto;
-  width: 80%;
+  width: 60%;
 `;
 
 const SubTitle = styled.p`
@@ -14,7 +14,6 @@ const SubTitle = styled.p`
   margin: 2rem 0 1rem 0;
 `;
 const Content = styled.p`
-  max-width: 80%;
   font-size: 1.2rem;
   font-weight: 500;
   text-align: left;
@@ -36,7 +35,7 @@ const CoreValueWrap = styled.div`
   /* 주변과 동일한 내부 여백 유지 */
   padding: var(--spacing-6) var(--spacing-8);
 
-  background-color: #fafdff;
+  background-color: #ffffff;
 
   padding-bottom: 4rem;
 `;
@@ -56,7 +55,7 @@ const LineWrap = styled.div`
 `;
 const ValueLabel = styled.p`
   font-size: 3rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 2;
   color: #f7c84c;
 
@@ -69,13 +68,14 @@ const ValueLabel = styled.p`
 `;
 
 const ValueContent = styled.p`
-  color: rgb(126, 126, 126);
-  font-size: 1.2rem;
+  color: #333;
+  font-size: 1.4rem;
   font-weight: 600;
   line-height: 1.6;
   text-align: left;
   max-width: 50%;
   white-space: nowrap;
+  margin-top: 1rem;
 `;
 
 const ColorWrap = styled.div`
@@ -83,8 +83,11 @@ const ColorWrap = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: left;
-
+  margin: 0 auto;
+margin-bottom: 7rem;
   gap: 2rem;
+
+  width: 80%;
 `;
 
 const ColorChipContainer = styled.div`
