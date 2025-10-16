@@ -23,6 +23,8 @@ const FullImageContainer = styled.div`
 
   @media (max-width: 768px) {
     width: 100vw;
+    margin-left: 0;
+    margin-right: 0;
   }
 `;
 

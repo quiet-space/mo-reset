@@ -17,12 +17,19 @@ const Wrapper = styled.section`
 
 const BrandLine = styled.div`
   display: flex;
-  align-items: baseline;
+  align-items: center;
+  justify-content: center;
   gap: 1rem;
+  width: 100%;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 
   @media (max-width: 768px) {
     img {
-      max-width: 80%;
+      max-width: 70%;
       height: auto;
     }
   }

@@ -76,7 +76,7 @@ const LogoLink = styled.a`
   @media (max-width: 768px) {
     left: 1rem;
     top: 0.3rem;
-    
+
     img {
       height: 60px !important;
     }
@@ -171,8 +171,8 @@ const MobileMenuItem = styled(Link)`
   }
 
   &.active {
-    color: #F7C84C !important;
-    border-bottom: 2px solid #F7C84C !important;
+    color: #f7c84c !important;
+    border-bottom: 2px solid #f7c84c !important;
   }
 `;
 
@@ -206,6 +206,28 @@ const MobileSNSLink = styled.a`
 
   &:hover {
     transform: scale(1.1) !important;
+  }
+`;
+
+const MobileCloseButton = styled.button`
+  position: absolute !important;
+  top: 1rem !important;
+  right: 1rem !important;
+  width: 40px !important;
+  height: 40px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: transparent !important;
+  border: none !important;
+  color: #ffffff !important;
+  font-size: 2rem !important;
+  line-height: 1 !important;
+  cursor: pointer !important;
+  z-index: 1001 !important;
+
+  &:hover {
+    opacity: 0.85 !important;
   }
 `;
 
@@ -356,6 +378,11 @@ export const Header = () => {
 
       {/* 모바일 메뉴 */}
       <MobileMenu className={isMobileMenuOpen ? "active" : ""}>
+        {isMobileMenuOpen && (
+          <MobileCloseButton onClick={closeMobileMenu} aria-label="메뉴 닫기">
+            ×
+          </MobileCloseButton>
+        )}
         <div>
           <MobileMenuItem
             to="#"
@@ -369,28 +396,19 @@ export const Header = () => {
           </MobileMenuItem>
           {isMobileAboutOpen && (
             <MobileSubMenu>
-              <MobileSubMenuItem
-                to="/about"
-                onClick={closeMobileMenu}
-              >
+              <MobileSubMenuItem to="/about" onClick={closeMobileMenu}>
                 개요
               </MobileSubMenuItem>
-              <MobileSubMenuItem
-                to="/missions"
-                onClick={closeMobileMenu}
-              >
+              <MobileSubMenuItem to="/missions" onClick={closeMobileMenu}>
                 경영이념
               </MobileSubMenuItem>
-              <MobileSubMenuItem
-                to="/plant"
-                onClick={closeMobileMenu}
-              >
+              <MobileSubMenuItem to="/plant" onClick={closeMobileMenu}>
                 모낭플란트
               </MobileSubMenuItem>
             </MobileSubMenu>
           )}
         </div>
-        
+
         <MobileMenuItem
           to="/program"
           onClick={closeMobileMenu}
@@ -398,7 +416,7 @@ export const Header = () => {
         >
           프로그램 소개
         </MobileMenuItem>
-        
+
         <MobileMenuItem
           to="/education"
           onClick={closeMobileMenu}
@@ -406,7 +424,7 @@ export const Header = () => {
         >
           창업 및 교육
         </MobileMenuItem>
-        
+
         <MobileMenuItem
           to="/location"
           onClick={closeMobileMenu}
@@ -423,7 +441,10 @@ export const Header = () => {
           <MobileSNSLink href="https://naver.me/xoH8tl8W" target="_blank">
             <img src={naver} alt="naver" height={40} />
           </MobileSNSLink>
-          <MobileSNSLink href="https://www.instagram.com/mo_reset/" target="_blank">
+          <MobileSNSLink
+            href="https://www.instagram.com/mo_reset/"
+            target="_blank"
+          >
             <img src={instagram} alt="instagram" height={40} />
           </MobileSNSLink>
         </MobileSNSContainer>

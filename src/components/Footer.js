@@ -6,7 +6,8 @@ const FooterRoot = styled.footer`
   background: transparent;
   //   color: rgba(255, 255, 255, 0.8);
   padding: 2rem 1rem;
-  z-index: 999999;
+  position: relative;
+  z-index: 10;
 `;
 
 const FooterContainer = styled.div`
@@ -55,9 +56,7 @@ const Dot = styled.span`
 
 export const Footer = () => {
   const { pathname } = useLocation();
-  if (pathname === "/") {
-    return null;
-  }
+  // Home 페이지에서도 Footer 표시
   return (
     <FooterRoot>
       <FooterContainer>

@@ -12,7 +12,7 @@ import dim_background from "../img/dim_background.png";
 
 const ProgramCard = styled.div`
   background-image: url(${({ $img }) => $img});
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 
@@ -30,9 +30,25 @@ const ProgramCard = styled.div`
     }
     return "50vh"; // 기본값
   }};
+  height: ${({ $img }) => {
+    if ($img.includes("program_1")) {
+      return "92.25vw";
+    }
+    if ($img.includes("program_2")) {
+      return "100.5vw";
+    }
+    return "auto";
+  }};
 
   @media (max-width: 768px) {
     min-width: 100vw;
+    background-size: contain;
+    height: ${({ $img }) => {
+      if ($img.includes("program_2")) {
+        return "130vw"; // 모바일에서 높이 증가로 텍스트 간격 확보
+      }
+      return "92.25vw";
+    }};
   }
 `;
 
@@ -56,6 +72,9 @@ const DeviceCard = styled.div`
   justify-content: center;
 
   @media (max-width: 768px) {
+    width: 100vw;
+    margin-left: 0;
+    margin-right: 0;
     padding: 3rem 1rem;
   }
 `;
@@ -93,6 +112,7 @@ const DeviceImage = styled.img`
 
   @media (max-width: 768px) {
     max-width: 90%;
+    margin: 24px 0;
   }
 `;
 
@@ -114,7 +134,7 @@ const DeviceDescription = styled.p`
 const FeatureCardsContainer = styled.div`
   width: 80%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 5rem;
   margin-top: 3rem;
 
@@ -130,6 +150,9 @@ const FeatureCard = styled.div`
   background: white;
   padding: 2rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   @media (max-width: 768px) {
     padding: 1.5rem;
@@ -140,13 +163,25 @@ const FeatureTitle = styled.h3`
   background: #1800ad;
   color: white;
   padding: 1rem;
-  margin: -2rem -2rem 1.5rem -2rem;
   font-size: 1.6rem;
   font-weight: bold;
+  text-align: center;
+  width: 100%;
+  margin-top: -2rem;
+  margin-bottom: 1.5rem;
+  margin-left: -2rem;
+  margin-right: -2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 
   @media (max-width: 768px) {
     font-size: 1.3rem;
-    margin: -1.5rem -1.5rem 1rem -1.5rem;
+    margin-top: -1.5rem;
+    margin-bottom: 1rem;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 `;
 
@@ -186,6 +221,9 @@ const MorissetProductCard = styled.div`
   overflow: hidden;
 
   @media (max-width: 768px) {
+    width: 100vw;
+    margin-left: 0;
+    margin-right: 0;
     padding: 3rem 1rem;
     min-height: auto;
   }
@@ -211,6 +249,9 @@ const ResearchSection = styled.div`
   justify-content: center;
 
   @media (max-width: 768px) {
+    width: 100vw;
+    margin-left: 0;
+    margin-right: 0;
     padding: 3rem 1rem;
   }
 `;
@@ -318,6 +359,9 @@ const MesoProductSection = styled.div`
   justify-content: center;
 
   @media (max-width: 768px) {
+    width: 100vw;
+    margin-left: 0;
+    margin-right: 0;
     padding: 3rem 1rem;
   }
 `;
@@ -429,6 +473,9 @@ const TricocureSection = styled.div`
   justify-content: center;
 
   @media (max-width: 768px) {
+    width: 100vw;
+    margin-left: 0;
+    margin-right: 0;
     padding: 3rem 1rem;
   }
 `;

@@ -52,6 +52,12 @@ const CoreValueWrap = styled.div`
   background-color: #ffffff;
 
   padding-bottom: 4rem;
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 2rem 1rem 2rem 1rem;
+  }
 `;
 
 const SectionTitle = styled.p`

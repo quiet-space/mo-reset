@@ -73,7 +73,10 @@ const VideoSection = styled.div`
   padding: var(--spacing-6) var(--spacing-8);
 
   @media (max-width: 768px) {
-    margin: 4rem auto;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
     padding: 1.5rem 1rem;
     gap: 1rem;
 
