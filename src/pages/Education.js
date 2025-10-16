@@ -10,12 +10,20 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   gap: 2rem;
+
+  @media (max-width: 768px) {
+    gap: 1.5rem;
+  }
 `;
 
 const FullImageContainer = styled.div`
   width: 99vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
+
+  @media (max-width: 768px) {
+    width: 100vw;
+  }
 `;
 
 const FullImage = styled.img`
@@ -29,6 +37,12 @@ const SubTitle = styled.p`
   line-height: 2;
   text-align: left;
   margin: 3rem 0 1rem 0;
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+    margin: 2rem 1rem 0.8rem 1rem;
+    text-align: center;
+  }
 `;
 
 const Content = styled.p`
@@ -39,6 +53,13 @@ const Content = styled.p`
   line-height: 1.6;
   text-align: left;
   margin: 2rem 0 1rem 0;
+
+  @media (max-width: 768px) {
+    width: 95%;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 1.5rem 1rem;
+  }
 `;
 
 const VideoContainer = styled.div`
@@ -49,6 +70,16 @@ const VideoContainer = styled.div`
   gap: 2rem;
 
   margin: 5rem 0;
+
+  @media (max-width: 768px) {
+    margin: 3rem 0;
+    gap: 1.5rem;
+    width: 95%;
+
+    video {
+      width: 100% !important;
+    }
+  }
 `;
 
 export const Education = () => {
@@ -79,7 +110,11 @@ export const Education = () => {
       </Content>
 
       <SubTitle>창업 세미나</SubTitle>
-      <img src={education1} alt="education1" />
+      <img
+        src={education1}
+        alt="education1"
+        style={{ maxWidth: "100%", height: "auto" }}
+      />
 
       <VideoContainer>
         <SubTitle>인터뷰</SubTitle>
@@ -104,7 +139,11 @@ export const Education = () => {
       </VideoContainer>
 
       <SubTitle>창업 절차</SubTitle>
-      <img src={education2} alt="education2" />
+      <img
+        src={education2}
+        alt="education2"
+        style={{ maxWidth: "100%", height: "auto" }}
+      />
     </Container>
   );
 };

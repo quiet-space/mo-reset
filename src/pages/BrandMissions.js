@@ -4,6 +4,10 @@ import styled from "styled-components";
 const TextWrap = styled.div`
   margin: 0 auto;
   width: 60%;
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `;
 
 const SubTitle = styled.p`
@@ -12,12 +16,22 @@ const SubTitle = styled.p`
   line-height: 2;
   text-align: left;
   margin: 2rem 0 1rem 0;
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+    margin: 1.5rem 0 0.8rem 0;
+  }
 `;
 const Content = styled.p`
   font-size: 1.2rem;
   font-weight: 500;
   text-align: left;
   line-height: 1.6;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
 `;
 
 const CoreValueWrap = styled.div`
@@ -46,12 +60,22 @@ const SectionTitle = styled.p`
   line-height: 2;
 
   margin: 2rem 0 1rem 0;
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
 `;
 
 const LineWrap = styled.div`
   display: flex;
   align-items: center;
   gap: 2rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
 `;
 const ValueLabel = styled.p`
   font-size: 3rem;
@@ -65,6 +89,15 @@ const ValueLabel = styled.p`
 
   display: flex;
   justify-content: flex-end;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    justify-content: center;
+    line-height: 1.5;
+  }
 `;
 
 const ValueContent = styled.p`
@@ -76,6 +109,14 @@ const ValueContent = styled.p`
   max-width: 50%;
   white-space: nowrap;
   margin-top: 1rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+    max-width: 100%;
+    text-align: center;
+    white-space: normal;
+    margin-top: 0;
+  }
 `;
 
 const ColorWrap = styled.div`
@@ -84,10 +125,15 @@ const ColorWrap = styled.div`
   align-items: center;
   text-align: left;
   margin: 0 auto;
-margin-bottom: 7rem;
+  margin-bottom: 7rem;
   gap: 2rem;
 
   width: 80%;
+
+  @media (max-width: 768px) {
+    width: 95%;
+    margin-bottom: 3rem;
+  }
 `;
 
 const ColorChipContainer = styled.div`
@@ -97,6 +143,12 @@ const ColorChipContainer = styled.div`
   gap: 1rem;
 
   margin-top: 2rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+  }
 `;
 
 const ColorChipWrap = styled.div`
@@ -122,6 +174,12 @@ const ColorCircle = styled.div`
     $color === "#1800AD" ? "white" : "var(--color-text)"};
   font-weight: 600;
   letter-spacing: 0.1em;
+
+  @media (max-width: 768px) {
+    width: 120px;
+    height: 120px;
+    font-size: 0.9rem;
+  }
 `;
 
 const ColorCircleTitle = styled.div`
@@ -129,6 +187,10 @@ const ColorCircleTitle = styled.div`
   font-size: 1.2rem;
   font-weight: 600;
   line-height: 1.6;
+
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+  }
 `;
 
 const ColorCircleText = styled.p`
@@ -137,6 +199,11 @@ const ColorCircleText = styled.p`
   font-size: 1.2rem;
   font-weight: 500;
   line-height: 1.6;
+
+  @media (max-width: 768px) {
+    max-width: 90%;
+    font-size: 1rem;
+  }
 `;
 
 export const BrandMissions = () => {

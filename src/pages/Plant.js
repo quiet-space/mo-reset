@@ -11,6 +11,17 @@ const Wrap = styled.div`
   width: 80%;
 
   margin: 0 auto;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    width: 95%;
+    gap: 1rem;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
 `;
 
 const SubTitle = styled.p`
@@ -19,6 +30,11 @@ const SubTitle = styled.p`
   line-height: 2;
   text-align: left;
   margin: 2rem 0 1rem 0;
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+    margin: 1.5rem 0 0.8rem 0;
+  }
 `;
 
 const Content = styled.p`
@@ -27,6 +43,11 @@ const Content = styled.p`
   line-height: 1.6;
 
   text-align: left;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
 `;
 
 const VideoSection = styled.div`
@@ -43,13 +64,24 @@ const VideoSection = styled.div`
   width: 80%;
   margin: 8rem auto;
 
-    /* 풀-블리드: 레이아웃의 패딩/중앙정렬을 무시하고 화면 너비로 확장 */
+  /* 풀-블리드: 레이아웃의 패딩/중앙정렬을 무시하고 화면 너비로 확장 */
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
 
   /* 주변과 동일한 내부 여백 유지 */
   padding: var(--spacing-6) var(--spacing-8);
+
+  @media (max-width: 768px) {
+    margin: 4rem auto;
+    padding: 1.5rem 1rem;
+    gap: 1rem;
+
+    video {
+      width: 100%;
+      height: auto;
+    }
+  }
 `;
 
 export const Plant = () => {
@@ -73,17 +105,10 @@ export const Plant = () => {
             모낭플란트는 두피 계의 완전한 솔루션임을 자부합니다. 
           </Content>
         </div>
-
-
       </Wrap>
 
-
       <VideoSection>
-          <video src={cor_video} alt="cor_video"  
-          autoPlay
-          loop
-          muted
-          />
+        <video src={cor_video} alt="cor_video" autoPlay loop muted />
       </VideoSection>
     </div>
   );

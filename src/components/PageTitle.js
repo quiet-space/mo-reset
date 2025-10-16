@@ -9,12 +9,23 @@ const Wrapper = styled.section`
   gap: 0.5rem;
   padding: 2rem 1rem 4rem 1rem;
   text-align: center;
+
+  @media (max-width: 768px) {
+    padding: 1.5rem 1rem 2.5rem 1rem;
+  }
 `;
 
 const BrandLine = styled.div`
   display: flex;
   align-items: baseline;
   gap: 1rem;
+
+  @media (max-width: 768px) {
+    img {
+      max-width: 80%;
+      height: auto;
+    }
+  }
 `;
 
 const BrandEn = styled.h1`
@@ -23,12 +34,20 @@ const BrandEn = styled.h1`
   font-size: 48px;
   line-height: 1;
   letter-spacing: -0.02em;
+
+  @media (max-width: 768px) {
+    font-size: 36px;
+  }
 `;
 
 const Subtitle = styled.p`
   margin-top: 8px;
   font-size: 18px;
   color: var(--color-text);
+
+  @media (max-width: 768px) {
+    font-size: 15px;
+  }
 `;
 
 export const PageTitle = ({ subtitle }) => {

@@ -9,6 +9,10 @@ const TitleWrap = styled.div`
   margin-top: 5rem;
   position: relative;
   z-index: 3;
+
+  @media (max-width: 768px) {
+    margin-top: 3rem;
+  }
 `;
 const Image = styled.div`
   position: absolute;

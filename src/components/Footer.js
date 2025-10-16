@@ -17,18 +17,35 @@ const FooterContainer = styled.div`
   align-items: flex-start;
   justify-content: space-between;
   gap: 24px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    gap: 16px;
+  }
 `;
 
 const Brand = styled.div`
   font-weight: 700;
   margin-bottom: 15px;
   text-align: left;
+
+  @media (max-width: 768px) {
+    text-align: center;
+    font-size: 0.95rem;
+  }
 `;
 
 const Line = styled.p`
   font-size: 14px;
   line-height: 1.7;
   opacity: 0.85;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+    text-align: center;
+  }
 `;
 
 const Dot = styled.span`

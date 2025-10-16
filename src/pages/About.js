@@ -23,12 +23,22 @@ const WorldMapWrap = styled.div`
 
 const WorldMap = styled.img`
   width: 80%;
+
+  @media (max-width: 768px) {
+    width: 95%;
+  }
 `;
 
 const Description = styled.p`
   display: flex;
   flex-direction: column;
   text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    padding: 0 1rem;
+  }
 `;
 
 const Logo3 = styled.img`
@@ -36,6 +46,12 @@ const Logo3 = styled.img`
   margin-top: 60px;
   justify-self: center;
   align-self: center;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    height: auto;
+    margin-top: 30px;
+  }
 `;
 
 const Ceos = styled.img`
@@ -43,6 +59,12 @@ const Ceos = styled.img`
   margin-top: 60px;
   justify-self: center;
   align-self: center;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    height: auto;
+    margin-top: 30px;
+  }
 `;
 
 const SubTitle = styled.p`
@@ -51,6 +73,12 @@ const SubTitle = styled.p`
   line-height: 2;
 
   margin: 7rem 0 3rem 0;
+
+  @media (max-width: 768px) {
+    font-size: 1.3rem;
+    margin: 4rem 1rem 2rem 1rem;
+    text-align: center;
+  }
 `;
 
 export const About = () => {
